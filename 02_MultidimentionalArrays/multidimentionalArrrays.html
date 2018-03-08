@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Multidimentional Arrays</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        img {
+            width: 220px;
+            height: 140px;
+        }
+
+        body {
+            height: 1500px;
+        }
+
+        .card-body {
+            background-color: grey;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../index.html">ALL COURSES</a>
+
+                <a class="navbar-brand" href="#">Current Theme</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sections<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#theory">Arrays</a></li>
+                            <li><a href="#commands">Multidimentional Arrays</a></li>
+                            <li><a href="#" target="_blank">Theme -3</a></li>
+                            <!--<li><a href="#">Something else here</a></li>-->
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="margin-top:80px">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <h1>Arrays</h1>
+                    <div class="col-sm-3 ">
+                        <div class="card well">
+                            <img class="card-img-top img-fluid" src="http://www.introprogramming.info/wp-content/uploads/2017/08/csharp-book-nakov-bg-v2015-cover.jpg" alt="Card image cap">
+                            <div class="card-block">
+                                <h4 class="card-title">Arrays</h4>
+                                <p class="card-text">Arrays are vital for most programming languages. They are collections of variables, which we call elements</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <a href="http://www.introprogramming.info/intro-csharp-book/read-online/glava7-masivi/" class="btn btn-primary">See theme details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card well">
+                            <img class="card-img-top img-fluid" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAToAAACgCAMAAACrFlD/AAAAeFBMVEX////+/v4AAAC6urqhoaH19fXu7u7CwsLd3d1KSkpvb29gYGD7+/vY2NidnZ3r6+t+fn5oaGhSUlIfHx9NTU2IiIiCgoLKysrj4+OXl5dDQ0Otra3U1NSvr694eHg3NzdZWVmOjo48PDwuLi4pKSkcHBwSEhIWFhYGZuNLAAAeg0lEQVR4nO1dh4KrOK+2Md2mBjC9hcl5/ze8riSZSQjJZPbfe2Y1BYXi8kW2JcsWACiCALJfcPURAP335aBvAjepNEYgE9gkniO8uI2z1+nrcgB128MkJZmG8eBWeKPsEoJP9Xyco0oKyqqwf0T8gxckUyFwrQsE8CY8ECDDIHvyVNhBDSLL9VxinjuB59s0r++9nbmgh9BdJXBZSZ7pZS7g07d7KykAIgLOj8CrLHT5+SleIbLetAHdLuxU5roSYP26+CeyYqW/V3Dx7W6I9WPo5J/+9lUNL3NY5eVBPdhl1xhP7TlVMgwfvu3rGq1U9pfPofh2ehy6x7LOrlvLvIxEZdHSz3e0yZk1op2tFTyGDoKmulGasQTQ/vOlFJvosUsDBe0xqBIKpj5islVbEHcoqPzGRyBMSjolZZuEESJ531ldX5GOXd+E7iFBYNUAZC3iuSZtj8s8CWjlu1FfIBrZDvVLvy9RHgCQpxVAuRmaDUZdZCGEu/tfzgPoGBRdVfqxHSRT4Po5JV3SwqmfWcVR3QNaheaEcOO4ANGkItvYQYP9X/KEZmFfjbZr1zZA/lglaKGeiZu0n7pkNHOE88lZzMEZu945dt+CjhXIOvo4awennnoHm2FXdUlfdHHfhGPRtpj2VddPdW4B2wtSspgJRgXKCtNJDoh9w69Bx4FowgolYeok1ejEvp+iuoidA4Mucz17LKqj47dD6Lt4aOJ2o2vgvRirK1mqDqR4rrM8dTILTFNSITcBGA91mtAooenoJLiEVZzAouvx8E3oWIOdHZSZH/W8BMBGTpsy5NooGa0oyZk80L4bvQrbADjGYAQJ8AMbJ16ZjG4z+/bdEf5Rg0VRVzVpXY0ATSOgfr14w1DyBuueBqPzo8aEvr+UY49olpZwqzIQTGObTGEDMiaqrD+Dx6Za3LRqghGOZk/73inHmPq5X/XNR5NaRZLSJfxmg4XWAMHYpa0/JR3/+qtw9GnZx1OcTFORUJyhJE6ZeKUUdIkPksDB6ED8LMLBcl8aHkgdKPI+HBGexmYMsZnEccLkO+mMCOQhaDMcmaY701MQflgJHZsHjR92SQfaAHTAnFhRiTmZJUFtYCOACJpKWtqOOzWsrzMraiFI3aZqmi9d6pPQkYYNxxHNW9BNpRUGLEnWkVE6Tb5dmU7EsuyazmL3EWA3CDiRFZpmNJmAFuh+wlvQcVG188pqJ9R1VRI6lZ9DJ28hq48FOhuQrrM4EFXXOj1op4ZI1W3HqCc1qvXDjvu/0N4GC8FZLbk8b47Z5ZdyVk/kZ2e2t1O+D91ZyeIU47GccBboElyoW/zgLoF+ZnOogEp3v1BooD6nCw+vdJ77WulOqftcgjOzodqs9sVGSlvQPV+uzSc1LloyoVZOyaVKvaqIlwjeTG8XdMR6B91MegM6YMX5CxQ/IQqQDWqRrqQ+9bjBS3oMHcO8MN5B5FaRtqCzjcMLdDufO3UDCTatKQ6nLseosdl4zZTQnfK+CzrXeQOhm4L/Iw12730QlDOtS8PBuTN1dY7M/IjyPYYpp13QvYuelLr90nP52CNT9vJWYC7ph5MyTSoY/TQak8jE/oOBbaU90L0JvGel7iXkHtixn+60hgCYdQowM2PDIxl7e0SD+7a+7mfp8XzdzxGDDkEQdRRQ22oQsnsHtGG7tzyvQAfv8PfObNH/Erq1U1AFQAnRU2t76AnoLuYbP5+64NaZvW2ANf1vofsWPQXdy7l8Y6rzfYQS/zVKotvp7Zx0EmTmUz5NufzLFZOLv0nqo9PKqZs4U1n30fkHoWtm7zUavgOdFJsCdw2jrptHxaR1IwhhI+8ka8Tq2ocvz6DBKP8N0L09l/1SB3KscjdHZVShTH0fjtepO/tcMXmv0g3HeWO4/yf7uhfzudfb7JU6AqpEJdGM6gmUKe3RqUt1W1yoBybtGakGK/uXQPdm2gOdmGsIjaZjzbDrKsPsBJnGxA9NZ54mxC82Xf8hL3W50UhmYqjWvxU66b0jc5wXgo69ZPLBV8ycKCZe1D3FQR3zE5NHz72f+l8LndDOgpIznjbtfNU4QdwqpnAUY+mmDHRvCDx2d/0boeMt1RlH7rL09Aid6ObXy+lhCGKkZjXtVKkhMNVAe79V6rjYHd1qYkx9AZ2kXs+sx9r3wKGTj63Q1b8YOuKSFD0DnTAK/5M6MRuYmuAedLLSW1Kn+rrfN8LyofWYO3yckH0dvO7rbkPHnmLQyWuswVb/Dmvi7fQQOmsqeMskUuqYFDLo5BMKOjVM8JFCDRMKOnHOs0P8b7Em3kyPhwl5JJ5WN55TTtI+I9lv7OvOPl5ST6GkOpdH04sVk/mm5KqhUjcN6m5zYfLHhom7s05/L3Srb5xBV0mac3kMvV4xmR9KbjrqmzQTLr9VJRbCEvE+jazWRPK0NfErlRMuc3TgkyBqhAXw8QjLFx2oYeKXQ2ebPW+xAjr4GTqoRlhJWjkBZ+Xk10IHxLIMnzfYWkL3SSUWtb6C7oYN+ytHWHmLv0qdarCSbhtiV9BBDp3759dC5/QX0G3YsPAMHThDF5Xz6bdCBwnHY5/5f9aEdYPN6ELT/w/WhK1pt0f/EXR6JwfxXJV00sqj5TuK6TtLcmVaqps0Y3kG+ueGiZcSYtUjEEx/huPAfutT/h7vvzYluNSxlAWdRBacWRTzZ1GXjoZiBs3MDLnvqcQs710LH7e2BG2SqGLFuxq+vrMx/L0PPp50AhZRDVYaZVw5EdmJEZYzBVIMb7DyptRWFtx3lRM+TX06CpqXP0fF/Vk0c1DM6cuent3EfVa1AqE7OMle6X3cYNEylyz5jfk6tUIdQgGdYN821clU8qUknBgTCIbA3rfkqWlUjGn0r6zsUKuKm1F9RktZ4ndBB8Cx7PqzbwJ+8U2cR1h4NdV5pRK/tOVEVIwelOEXfGjDL8faO55pX/qh85/v6eSKawJa4zjLDmeIAIduHz1qsAAuhOnEL/smVuju0OaCWPbbDgo5d9D5Vro3OvvSjbLd3UVd5gBBwDpJp49KQbyib4MOCOiS70F3fBk6vhLbq2f2U5/+eDWjuR4M9nnmvCEuMGI6N30JOlAaAVNc9ZKFIHkfdLz3wBM2vwWd7xP4UoNlF6LaDTi51AskufmkTpmFYpoYvAYdgDhl0KFCaWDBO6WOb0kMO7hOsCtDTFj919BBZU2AT+a/HeOtVcF3obPTmfVt0ag+Rpkupmnqok+Kob2E7tnODrK0pvaG1L1xVSfXeF6cYB/HcXMfw23o+Loqs00ZYqk6c4YuvAfd88MEybJTAq+hc/HehHZAJ/prMvhxHPd9HB8SdmQ/xYL5Z8Yc01hSf+KfOTFGXCwMDDe/xTvQMakLvOo56J5WTsSaQfda6qx5t/jug47p9BQxctTfSo5zxZ0/rWc+Lyv+RHelLrJQDZ+Abrcme5ELX8NORF8nKfBh5r/LmrjIhlHb6dK16iG30eMB0q0WtKqxUhTIR7eqdFfq/MYdiISO95W3oZMaLYOO1I0u5BMAKsfLCp07zlX0zga7El3ilIexANZ0EmYZcJdpFkCVYzJWMjxIaYiVUSDwTOdxKe4OE1EytrLBCv2OQSe3DHLo5IAtpY4xNCaeeX7yiS0nUFp6KRJrAVFomLyv20n7oYNg6kBm822QViMsWlZoB8gFnZFZ5pVUz32uyvHJ5XoqH1fjntTJWBznBmufR9hGMY42W2mPawepRZEogDsCt8hclJQ6x0L21cl7VeILYtoIdqX9giNt8Ouv3hlC8TWa3VTKEw3KHid9HzrCIYiOqjdtBtWROn4vTzl5oq6FRpIbiah+ERvjbrFjtspx4MqJXv9cvlElviYzhLOYGgFklA02mh3ZudDRKlOxpa+oT1hMAnTRWaHZSPNOg1XbDey+NzKxeYExdS+YeDQSyWADi2smwKF6rs9291XsPp92yQ9ZE9cZlcchlx0EUbswmiVJZF/X10dT7cSbZF/nHOfqG32dXneQ63gPoR76rFRZLxDrtjvqtpvgcnwCOoueEPii1+2kZ3brACtQmga0ZVQMKyoj2SkBt1RmJ5/fkyK5sV5ipbvQybRgPgdBG7RtMB2ZzdUypp1zt+VMkPauOBFg7Lbipj6F7rhzkOWdQmt16SV0P9XXqcBNsl5quFvrCcHayNbj/ammM92HTvxGxph5medltTHyI+OWYcz4mWxYGMPYbD5whp2aBwtw6HZT2jT4k9SZyeYTF7Q7RIyMTAZ1GDP9p6q9XoKX9LLUSXcIuLBh7XR94ssI2+o27fIGp5/YQ1GR29fQNad3q8TnTYlaqtYLnMhVyDJ4jgn3ELz71kQy0vuGGH9EWRNCJZbU4iehk89fWBPdTN/cYPnSkyLPTd2NCOulMCFyVe5nKpE+wYcT03qA3Yb57867bNiv0O1WTuR3DJwYcscQIYHh2W+eOeGFsdvZcUAJI+IirnwUU5BMKIho2bbAcloYBRTaKCodQCkz3h1CnNaqrQcVuWuIuRZKnjD/BbWywe63JuTRMWo5ezrUNh8m3ruVmKeWlll5CpKm9jEbMYqO1avoTv4fnwl5nFY4rZu0z5ywGtMwzrCZ9zMaX4OOEckT+2mpY9ChcUd1VKVYqzAtvryB+5GjyKY/McJy90cW9eFQJQUFSZWEHLox7kYyWnk+V0XmRd1U+CadUsvGuGxjVHnmi9CxM1XWBp+hEzdyG1YWfVJj+CV07cdWILbPlDO9+mKYcH9IJSZehIzuTzeZVuaWdmHa+VR0o5XaRZVRFKZRMyFaT1Xa0gS7tPAc30ytV4eJrojN60knhYiCDoqZE3HqDJ3P3Wb7Q1VA0+JCKqDjT/2UNUF6O8KRX9qsPbKPZu31pEKFFVshDdMUFTZqppSZNjT12qlszXzEcfwidHqgYdDJkTpKdWTQ0FSnnEkxDDrJBPWRgs0Qdl+qP/yUW+eqOkTZDYCosUlq/IQXVoU5VcGxzlc2pzk5bVgT0iOW4BEzGk9YMnieE3HE9aCYbJFHnBoU3Pcgfc0CNAn3oVxB927lZK2MRuOs3q2fpKycFb5Pxzt03/yX0ydud0LS74VOnfSAlb3XSmY6TL4bXFC5PSX9mciY9M211AV/3jnBrmoihUlONblyzbAoZ+Ta2qTYX+iVtp2JEJSe8rvZqZ6GRtpnRJeA5l+e2E8Q8mH1Uur8cni3ISacip2QLBLxGLCszMIvbZkdmqeXQJO0vXACWsuQi1nIol5y5TsysJqZXChT1K9a6JPBjPRU5zpfV9c0ertyAqEbAiuKAOotUASg6UYuc1Xhgi5/O3TaHgbRoDxFzaA9Rn6sTuXTRVt7iaBcc+LM1SQoNpwf0OsgnFJgHj3XnzsOHZm4rJEUdz8CnRBzDt2oztipvuts/n8XOqgycTxTUv4jk04cJlbqqm2ZZpIz6MSiGcujo/UD0PHsgl75JsRlrhJf6XVSJf4mdFY3XjZY9/3ef9GHWBkInal18pZBR5zSI8iBOMD2j0gdCGYPPDbEvgcdCMaUQ6cnrX5Kr7Mm4LSdG2ETFJRMI2u3M0CpCZsfkDqmOER8qPtZ6NgAnl1NOv2USmwBvoQSMM0g7ktC5UK3FtLxR6ADNg9J8wi6Kr+nkOxQU7j9kX1WicsfcWEre4HH7hRbdyKhX7nOxibrh7QDurWvk3Rpw6K5/PogvPi/ScLP/hm6960lviqSsh60H0L/f00ZlnQfOqvXNiz/pM1/bcPyole0voHcRYEfFIsvX/A/QUdPu5dM/WsDTrLhDz7wTaSn2lfWa5J8YfDjNe1QhHMWfZ0QiKB3h+7d1sSP0Zb5z6oTGb6fMPKxkfSJ4Oa5l6e8A52OtBWORfOPw480aAwkzrTImB9mrlrR2ZqY6zZ6s3JykdszN++gBy5s0nZGQzkxLEwquX5wBBPRWS3ODQa1TLI8apN3COvHuYsJH+Ac1arAxKDvn2A/V2f/zZ+fvPnotvlPzla/hfWKZWdUC9NaT+8LmDVys0buWJH50ffMlZNSJKjW+lT++1Xii9xWt6Kearp0a5+vnH2xnx78RA9WsFvDoAJYeotiYiOZioJzp5GfYuzBm/ghn4ZZ3jTVE3v0YWWAM9TdxdLEn7AmztV5vcHentXYDOnMVzqpOJbh0ChKVCDLJk4Uk6eKmTx998xfy/K4TInTekKvlvX6gWXYF3UBSAbhCE0VoOPM3Dh1Zpo7i7HvTnXKf5vm/7q+7tKQkndnu6CDaWl55Ocn2KXImbUMzGHWg2BCMz2ouByVkchT4WlUNx0yxczGnX1i90fYropWawJee8RU0SdZKuHWEZPU3IUtPRneHuggGINy/uyb2O0CfxK6plYztI7egtKuWzbzXmVZJSrJZo2HWg/B7UTvmv9orPArLmx59y7oWO64L66hI6P5A9Ax+7VbkdNbt9oVk8LXyOndb43es4OMcgyeabDsTOwQj+yHTlT3DB0zTcnDYYJVyUHkaoId4Hx3h757vo4niJi+qXSspuVc65xCyQT5QuW16sORTHO+uwXZc1IHQUyt7HXoPP4N7uvuL1ewJ1wIfwA64Bx8qdAPJ6Xj11rZz4xaXTsNijks8lp/ZIomSJ+FLu+smXzq6wTtlDpz2IjBfZUXcLRbzTGKJzZz75zqFAuC1p2pR4VDOajdxJGXqJbcrbGKZ90ZDvy556SOp10PzbN93TrCRrg72jud2Xz6JOVrHLPUm8gT+tfuaNgXe3qXC6tHIjdoTb+rNXJH3Rkabeo+L3UQiEAXUV2WLt+qSj1XMuVUyc2rZVMopktKV1xDozrTGgw5sq8Tv/CowdVDuod2LxJrTzQqI0bBAUWC3KGRTFmHtrzWLYE85RyoZFrDEWETnpQ6aanwJfL1S8Rfo3dT6D7hAuGVmMFLINdzd2jfC2J4YCK1yXs4LbUMJrEyfw71GmhivmZExAlPSt1zI6xcenE28j6bI9oMBOe3V53vuSM+ly8gXqumJh6B/jmfXU3KV6GTRbmIS6ynF9f9sMWXEDFfNrBby7N93Q/Qta0NlEARcAkTWJeCaEzJPcHbAV3H3+JIbgYmkml+3YUNPoVNIKnxb4AOwCap1mltBk0XhgHsIFgBkzdaiAC9VkTE77tJj6ELPmw2ol6FOZVZXEYSk3nei19XZub4T0F3PzF2ZRpd3weElcXmtSBL13y0oUVc4BLA/hOLyUVgWSG7zk6UrBYtdwjfpMfQRQFhYyu5G7/uRnDdT8E6xmP+5Aj7tdJfnTWy+7tk9If7ZLB+5KM7pL078L2MkNlETd83RrakWVSn+bTUVYGPjk+P6QcdsmPrjTO947Dc0WDdj+689/9h2ARZm8sgbGCOX9DrrqkMgPIriTELitV+lOfm6DC+5/7pNvE7Tuw4hyEYkj485Ji7hZCfhCaz+XGcmDN2bD8eOxdjSvICwxw15uLktxPcIXUGjbaCsMFHof98vkH2m1LX9YC7LiPCfdu8UPwdmFxfLA2+ttMCNij51o2Nl/bxFlM7wD12DRh8k1aBU84lSU1cNQEmOM5p6NOopy2ufOyQOMekmEZavy51zvF4jK6jYUu6Hb9Osmeps/0ie16vu6oyh27qlqNjHj7iwDv+cfFQlMcj/0rCisnGAS8jruvJ3NoLyXMpT8dTgDqmaR6Wip2qT0Zh4bALEpiU8zHPaVRMy4D89rAMLSZ5U8+HYrqd4F4bdl/ECT1nAs6hJ8aEjbDwWw2WT0FNFPnTSFA/VWCsUnT0RHA3OJtLmyCEgeks1NuKOyEbs9zPy0pncQnlggqIMDPFKeWk1x8ke29n8q6wCXzMrLF6q9aimWOqmCHTL9w66Fd1rcwJQ6ESZ0+pxNfZg4k6eRzG1Ui6Pq9AVmEnxA6PAUrnyo/7sguj2qlLX9vU92sCoDYZtB0hHG9nnU5pdVrL2+g/90Ansqo79bLStJFHikPNTOpSVyPFaYaytv5d6JhmeVy6fjz6lbckrecZbNzD7SEzXOAjYHkjg84+YgPRw8NYfGd9V7zrl1iWXtFwgRWAas25BPJOonsarG1xlfhLSOdb1oROa9WNlTXRGN+QOsg328KSlIXT505OWVFcvhfX4isEILBsHhPTiog9VZvKCbskBmWBiHOqLMS+2vEKVG3KKTNPCuSd5PaEOT3wDTCXKrFUnz4NE/Acvw5eKyd11Hn1d6DTJWz7kMBGWjFaRJQbWqj9lbU57cEuVaIWpGaSHIIOd9D1HtT+Pu2AzuSu9duGmKTbhpgkDl0aHqxvWROf5jeAnh94kthAbZB2+aCVkQMUApPVwM2eTWWlPQ3Wp9+E7hR9c4S1St3vAGfJgV3SI1Oz+zmsnwkgxhLw7TJrJ5BxpyjTeObyR6FjTfR7Uudw0/970AXS5WqyjBqTFSgBZc/VJBj5z8gee9J2CzrZ2CYMuhL67Q9LHaZPGGKyjOc3OkV0WF6ZYL8kuzZBPPvBYXFA0wB3zEHJpM6PgOXvX7vAsymscmpNkKUEmaAbMCm9l2cf9khdad2cr4vvz9edR9gUfZSpUk5ulXGfDdsWTA3x7YrlyMyoPPRhJKGzn5A6KDZJ6CHTGUxmzrXZ+JPQyZGsptxn1AYBRip8YdJpxlSXaEbVZi1PMW5ttCJ20et6Hf/yOHSBb0/U5tCF48GNeiV1z0CnSGwMtEomC9Byox+ETqvEdSbdRh+18h8dZnVmGVIZNSM7ZerUyVMMdyTWT0+wfy4A69kLN7Y7JimswQJ7AkLq7OegA3p74KoavzZSK9rT1/H8dkZN1MVYW24mXxATHZ5dc3JJXLMTIZ5YD4o8Pmcd8MhViY/63ctXr5LTh6upvmdpj143TlvvTNzxCrbSPnasd7k1Uf3kLDHTU1qXVdimLN2yLenmOuydSb5Ij6ErF2tuvxVcN2tnk2kVhl7ddUnPQacdXhB8o6G9i3bM1yUg774F3XjgWx1IdRGeb6XnfROrBfZgVvjHaR906EXohA1rLaGQkTdAt0qdNs3+3dBFh2AItFuHlfieMxGqCXZRI+XW4dCRtIoqfuubpO5fQ7v8sOZ55uT+MAHvSB2ewBzyZSodugHSXw2drBiXOqlOJq7qY9b3TcTqfRN80klNuKa2ZEBa53x2Ymr40sYbzevvhk72K/WodhAdUsUsnmKOtWLGD33TH8UkRgFAgDl0t7umvxo6JVEls6pcvoRP/OkQGa7mVkbdsN5N+EYQ0Hcqqc+J/93QcRK1K/1Y6Ryl6vGj2JeDhm0moULAymWCQRwLvzM7XYxZ9MV7L+kXQMfVAtxVcpEyrROpIBQVktsMwiXQcyPFIjwloDBbSxo7hK/ouIPPL4COO4bSKFAhlgIFXWB1cpo2cpshUh5TEVuXgHEc3dXRtDbV39XXaeLQjbKndxM5oUImLJuwZQWYj7N8R6BwhkLo2N26ROi+3v87oIPYMQv5HmzxUgbuW+5LCV3hRbHYHW1V+UFgSBI33BF251dAB4F5+HDkMgIOHRcjPHu5qDg6zR+ucr1gSxz9wWj/g04Qa560Vc1Oe6jKlooRFpJIvOFeOE1dqRVb1N1hnf8K6K512hud18VSA3VxBya/ALrzigz1cf1dp6nVwg09h60DVGwD89dDt4ra5bQPVFfI1TJ5uC4f0ouKNumvhw6UPFCBWGzCPymkIuoEoFQvydLLQIBY4qzu5J+DzTcn/P3QBeFpqjy5pI+/fFYs4DXHqm46xOMVWUBsTCI8lDBwK2DxfUY21/fAsPHuut8AHX+XWvRnxEGKqxTbVca3DZsmKL0G9Wk6ZmGEU8dMPSdMcRu6We2EY905qRdkm56Xvx86PtVZDlbfHN0B4X5AcxU2jQnsNA/TKKHhHPdNnSCnx5PJ/tFyxF0bI5R06W+HjjDoajA1iXU0p2po8i5smNS1YxViy3ebOenNyW9pT82siseImbBBmfdTjLbehP0boCMaOgziJKW4Z+CAZhmPVEAXmAPK/Kln0Pl9XRXIS6u+LfPE9/J048W6vwE6CEtISmDbESBtCSy+0YNYQWDzUzAizLwoKbGJZRNakggELTtJbMuJguiFdyb+v6An5uvOihpZFyqflx6sWsvZ5Xd+9j799dDJNbvwrAmfp5G0PnyFoLYswEN77K+HDvDWqhReEHqtRfkrYQgIAiF/1ELZ6u9/jv566CC05EYpHlo3piT2RbQ8NDZ8oV+f4CjyXls48wug833QpEmUHUz+SlWL7yiCEIu3IpI28myyrb7dpb8eOgCjFJh53tIK8FjYVjqxk1ZdCXc/GRH4D7o7BBlYIqAzagiTOqaFeLCMrJH4URTx1Tz/QXeP+Cs5QUintj30oChJimPgZ2BKE1DMdpr2BIz/QXebILSBRSzCp03ipCQtd+kw7ZiA0Id2ZDvx4T/o7tBFkBG7tPRs3Krv2m75GgC/ALpr0nrx+vnl/H8ddO+j/6B7mf6D7mX6D7qX6R+B7v8AYt01/6/mrjsAAAAASUVORK5CYII=" alt="Card image cap">
+                            <div class="card-block">
+                                <h4 class="card-title">Multidimensional Arrays</h4>
+                                <p class="card-text">Those arrays we will call two-dimensional, because they have two dimensions. They are also known as matrices (it is mathematical term). In general arrays with more than one dimension we will call multidimensional.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <a href="http://www.introprogramming.info/english-intro-csharp-book/read-online/chapter-7-arrays/#_Toc362296434" class="btn btn-primary">Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card well">
+
+                            <img class="card-img-top img-fluid" src="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded" alt="Card image cap">
+                            <div class="card-block">
+                                <h4 class="card-title">Article</h4>
+                                <p class="card-text">What are the differences between a multidimensional array and an array of arrays in C#?</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <a href="https://stackoverflow.com/questions/597720/what-are-the-differences-between-a-multidimensional-array-and-an-array-of-arrays/597729#597729" class="btn btn-primary">Go to Article</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card well">
+                            <img class="card-img-top img-fluid" src="http://placehold.it/220x140" alt="Card image cap">
+                            <div class="card-block">
+                                <h4 class="card-title">Copy arrays - Shallow copy</h4>
+                                <p class="card-text">Copy arrays - Shallow copy</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <a href="http://net-informations.com/faq/net/shallow-deep-copy.htm" class="btn btn-primary">Article 1</a>
+                                <a href="https://www.experts-exchange.com/articles/3019/Deep-copy-Vs-Shallow-Copy-in-NET.html" class="btn btn-primary">Article 2</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                        
+                        <div class="col-sm-3 ">
+                                <div class="card well">
+                                        <img class="card-img-top img-fluid" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAToAAACgCAMAAACrFlD/AAAAeFBMVEX////+/v4AAAC6urqhoaH19fXu7u7CwsLd3d1KSkpvb29gYGD7+/vY2NidnZ3r6+t+fn5oaGhSUlIfHx9NTU2IiIiCgoLKysrj4+OXl5dDQ0Otra3U1NSvr694eHg3NzdZWVmOjo48PDwuLi4pKSkcHBwSEhIWFhYGZuNLAAAeg0lEQVR4nO1dh4KrOK+2Md2mBjC9hcl5/ze8riSZSQjJZPbfe2Y1BYXi8kW2JcsWACiCALJfcPURAP335aBvAjepNEYgE9gkniO8uI2z1+nrcgB128MkJZmG8eBWeKPsEoJP9Xyco0oKyqqwf0T8gxckUyFwrQsE8CY8ECDDIHvyVNhBDSLL9VxinjuB59s0r++9nbmgh9BdJXBZSZ7pZS7g07d7KykAIgLOj8CrLHT5+SleIbLetAHdLuxU5roSYP26+CeyYqW/V3Dx7W6I9WPo5J/+9lUNL3NY5eVBPdhl1xhP7TlVMgwfvu3rGq1U9pfPofh2ehy6x7LOrlvLvIxEZdHSz3e0yZk1op2tFTyGDoKmulGasQTQ/vOlFJvosUsDBe0xqBIKpj5islVbEHcoqPzGRyBMSjolZZuEESJ531ldX5GOXd+E7iFBYNUAZC3iuSZtj8s8CWjlu1FfIBrZDvVLvy9RHgCQpxVAuRmaDUZdZCGEu/tfzgPoGBRdVfqxHSRT4Po5JV3SwqmfWcVR3QNaheaEcOO4ANGkItvYQYP9X/KEZmFfjbZr1zZA/lglaKGeiZu0n7pkNHOE88lZzMEZu945dt+CjhXIOvo4awennnoHm2FXdUlfdHHfhGPRtpj2VddPdW4B2wtSspgJRgXKCtNJDoh9w69Bx4FowgolYeok1ejEvp+iuoidA4Mucz17LKqj47dD6Lt4aOJ2o2vgvRirK1mqDqR4rrM8dTILTFNSITcBGA91mtAooenoJLiEVZzAouvx8E3oWIOdHZSZH/W8BMBGTpsy5NooGa0oyZk80L4bvQrbADjGYAQJ8AMbJ16ZjG4z+/bdEf5Rg0VRVzVpXY0ATSOgfr14w1DyBuueBqPzo8aEvr+UY49olpZwqzIQTGObTGEDMiaqrD+Dx6Za3LRqghGOZk/73inHmPq5X/XNR5NaRZLSJfxmg4XWAMHYpa0/JR3/+qtw9GnZx1OcTFORUJyhJE6ZeKUUdIkPksDB6ED8LMLBcl8aHkgdKPI+HBGexmYMsZnEccLkO+mMCOQhaDMcmaY701MQflgJHZsHjR92SQfaAHTAnFhRiTmZJUFtYCOACJpKWtqOOzWsrzMraiFI3aZqmi9d6pPQkYYNxxHNW9BNpRUGLEnWkVE6Tb5dmU7EsuyazmL3EWA3CDiRFZpmNJmAFuh+wlvQcVG188pqJ9R1VRI6lZ9DJ28hq48FOhuQrrM4EFXXOj1op4ZI1W3HqCc1qvXDjvu/0N4GC8FZLbk8b47Z5ZdyVk/kZ2e2t1O+D91ZyeIU47GccBboElyoW/zgLoF+ZnOogEp3v1BooD6nCw+vdJ77WulOqftcgjOzodqs9sVGSlvQPV+uzSc1LloyoVZOyaVKvaqIlwjeTG8XdMR6B91MegM6YMX5CxQ/IQqQDWqRrqQ+9bjBS3oMHcO8MN5B5FaRtqCzjcMLdDufO3UDCTatKQ6nLseosdl4zZTQnfK+CzrXeQOhm4L/Iw12730QlDOtS8PBuTN1dY7M/IjyPYYpp13QvYuelLr90nP52CNT9vJWYC7ph5MyTSoY/TQak8jE/oOBbaU90L0JvGel7iXkHtixn+60hgCYdQowM2PDIxl7e0SD+7a+7mfp8XzdzxGDDkEQdRRQ22oQsnsHtGG7tzyvQAfv8PfObNH/Erq1U1AFQAnRU2t76AnoLuYbP5+64NaZvW2ANf1vofsWPQXdy7l8Y6rzfYQS/zVKotvp7Zx0EmTmUz5NufzLFZOLv0nqo9PKqZs4U1n30fkHoWtm7zUavgOdFJsCdw2jrptHxaR1IwhhI+8ka8Tq2ocvz6DBKP8N0L09l/1SB3KscjdHZVShTH0fjtepO/tcMXmv0g3HeWO4/yf7uhfzudfb7JU6AqpEJdGM6gmUKe3RqUt1W1yoBybtGakGK/uXQPdm2gOdmGsIjaZjzbDrKsPsBJnGxA9NZ54mxC82Xf8hL3W50UhmYqjWvxU66b0jc5wXgo69ZPLBV8ycKCZe1D3FQR3zE5NHz72f+l8LndDOgpIznjbtfNU4QdwqpnAUY+mmDHRvCDx2d/0boeMt1RlH7rL09Aid6ObXy+lhCGKkZjXtVKkhMNVAe79V6rjYHd1qYkx9AZ2kXs+sx9r3wKGTj63Q1b8YOuKSFD0DnTAK/5M6MRuYmuAedLLSW1Kn+rrfN8LyofWYO3yckH0dvO7rbkPHnmLQyWuswVb/Dmvi7fQQOmsqeMskUuqYFDLo5BMKOjVM8JFCDRMKOnHOs0P8b7Em3kyPhwl5JJ5WN55TTtI+I9lv7OvOPl5ST6GkOpdH04sVk/mm5KqhUjcN6m5zYfLHhom7s05/L3Srb5xBV0mac3kMvV4xmR9KbjrqmzQTLr9VJRbCEvE+jazWRPK0NfErlRMuc3TgkyBqhAXw8QjLFx2oYeKXQ2ebPW+xAjr4GTqoRlhJWjkBZ+Xk10IHxLIMnzfYWkL3SSUWtb6C7oYN+ytHWHmLv0qdarCSbhtiV9BBDp3759dC5/QX0G3YsPAMHThDF5Xz6bdCBwnHY5/5f9aEdYPN6ELT/w/WhK1pt0f/EXR6JwfxXJV00sqj5TuK6TtLcmVaqps0Y3kG+ueGiZcSYtUjEEx/huPAfutT/h7vvzYluNSxlAWdRBacWRTzZ1GXjoZiBs3MDLnvqcQs710LH7e2BG2SqGLFuxq+vrMx/L0PPp50AhZRDVYaZVw5EdmJEZYzBVIMb7DyptRWFtx3lRM+TX06CpqXP0fF/Vk0c1DM6cuent3EfVa1AqE7OMle6X3cYNEylyz5jfk6tUIdQgGdYN821clU8qUknBgTCIbA3rfkqWlUjGn0r6zsUKuKm1F9RktZ4ndBB8Cx7PqzbwJ+8U2cR1h4NdV5pRK/tOVEVIwelOEXfGjDL8faO55pX/qh85/v6eSKawJa4zjLDmeIAIduHz1qsAAuhOnEL/smVuju0OaCWPbbDgo5d9D5Vro3OvvSjbLd3UVd5gBBwDpJp49KQbyib4MOCOiS70F3fBk6vhLbq2f2U5/+eDWjuR4M9nnmvCEuMGI6N30JOlAaAVNc9ZKFIHkfdLz3wBM2vwWd7xP4UoNlF6LaDTi51AskufmkTpmFYpoYvAYdgDhl0KFCaWDBO6WOb0kMO7hOsCtDTFj919BBZU2AT+a/HeOtVcF3obPTmfVt0ag+Rpkupmnqok+Kob2E7tnODrK0pvaG1L1xVSfXeF6cYB/HcXMfw23o+Loqs00ZYqk6c4YuvAfd88MEybJTAq+hc/HehHZAJ/prMvhxHPd9HB8SdmQ/xYL5Z8Yc01hSf+KfOTFGXCwMDDe/xTvQMakLvOo56J5WTsSaQfda6qx5t/jug47p9BQxctTfSo5zxZ0/rWc+Lyv+RHelLrJQDZ+Abrcme5ELX8NORF8nKfBh5r/LmrjIhlHb6dK16iG30eMB0q0WtKqxUhTIR7eqdFfq/MYdiISO95W3oZMaLYOO1I0u5BMAKsfLCp07zlX0zga7El3ilIexANZ0EmYZcJdpFkCVYzJWMjxIaYiVUSDwTOdxKe4OE1EytrLBCv2OQSe3DHLo5IAtpY4xNCaeeX7yiS0nUFp6KRJrAVFomLyv20n7oYNg6kBm822QViMsWlZoB8gFnZFZ5pVUz32uyvHJ5XoqH1fjntTJWBznBmufR9hGMY42W2mPawepRZEogDsCt8hclJQ6x0L21cl7VeILYtoIdqX9giNt8Ouv3hlC8TWa3VTKEw3KHid9HzrCIYiOqjdtBtWROn4vTzl5oq6FRpIbiah+ERvjbrFjtspx4MqJXv9cvlElviYzhLOYGgFklA02mh3ZudDRKlOxpa+oT1hMAnTRWaHZSPNOg1XbDey+NzKxeYExdS+YeDQSyWADi2smwKF6rs9291XsPp92yQ9ZE9cZlcchlx0EUbswmiVJZF/X10dT7cSbZF/nHOfqG32dXneQ63gPoR76rFRZLxDrtjvqtpvgcnwCOoueEPii1+2kZ3brACtQmga0ZVQMKyoj2SkBt1RmJ5/fkyK5sV5ipbvQybRgPgdBG7RtMB2ZzdUypp1zt+VMkPauOBFg7Lbipj6F7rhzkOWdQmt16SV0P9XXqcBNsl5quFvrCcHayNbj/ammM92HTvxGxph5medltTHyI+OWYcz4mWxYGMPYbD5whp2aBwtw6HZT2jT4k9SZyeYTF7Q7RIyMTAZ1GDP9p6q9XoKX9LLUSXcIuLBh7XR94ssI2+o27fIGp5/YQ1GR29fQNad3q8TnTYlaqtYLnMhVyDJ4jgn3ELz71kQy0vuGGH9EWRNCJZbU4iehk89fWBPdTN/cYPnSkyLPTd2NCOulMCFyVe5nKpE+wYcT03qA3Yb57867bNiv0O1WTuR3DJwYcscQIYHh2W+eOeGFsdvZcUAJI+IirnwUU5BMKIho2bbAcloYBRTaKCodQCkz3h1CnNaqrQcVuWuIuRZKnjD/BbWywe63JuTRMWo5ezrUNh8m3ruVmKeWlll5CpKm9jEbMYqO1avoTv4fnwl5nFY4rZu0z5ywGtMwzrCZ9zMaX4OOEckT+2mpY9ChcUd1VKVYqzAtvryB+5GjyKY/McJy90cW9eFQJQUFSZWEHLox7kYyWnk+V0XmRd1U+CadUsvGuGxjVHnmi9CxM1XWBp+hEzdyG1YWfVJj+CV07cdWILbPlDO9+mKYcH9IJSZehIzuTzeZVuaWdmHa+VR0o5XaRZVRFKZRMyFaT1Xa0gS7tPAc30ytV4eJrojN60knhYiCDoqZE3HqDJ3P3Wb7Q1VA0+JCKqDjT/2UNUF6O8KRX9qsPbKPZu31pEKFFVshDdMUFTZqppSZNjT12qlszXzEcfwidHqgYdDJkTpKdWTQ0FSnnEkxDDrJBPWRgs0Qdl+qP/yUW+eqOkTZDYCosUlq/IQXVoU5VcGxzlc2pzk5bVgT0iOW4BEzGk9YMnieE3HE9aCYbJFHnBoU3Pcgfc0CNAn3oVxB927lZK2MRuOs3q2fpKycFb5Pxzt03/yX0ydud0LS74VOnfSAlb3XSmY6TL4bXFC5PSX9mciY9M211AV/3jnBrmoihUlONblyzbAoZ+Ta2qTYX+iVtp2JEJSe8rvZqZ6GRtpnRJeA5l+e2E8Q8mH1Uur8cni3ISacip2QLBLxGLCszMIvbZkdmqeXQJO0vXACWsuQi1nIol5y5TsysJqZXChT1K9a6JPBjPRU5zpfV9c0ertyAqEbAiuKAOotUASg6UYuc1Xhgi5/O3TaHgbRoDxFzaA9Rn6sTuXTRVt7iaBcc+LM1SQoNpwf0OsgnFJgHj3XnzsOHZm4rJEUdz8CnRBzDt2oztipvuts/n8XOqgycTxTUv4jk04cJlbqqm2ZZpIz6MSiGcujo/UD0PHsgl75JsRlrhJf6XVSJf4mdFY3XjZY9/3ef9GHWBkInal18pZBR5zSI8iBOMD2j0gdCGYPPDbEvgcdCMaUQ6cnrX5Kr7Mm4LSdG2ETFJRMI2u3M0CpCZsfkDqmOER8qPtZ6NgAnl1NOv2USmwBvoQSMM0g7ktC5UK3FtLxR6ADNg9J8wi6Kr+nkOxQU7j9kX1WicsfcWEre4HH7hRbdyKhX7nOxibrh7QDurWvk3Rpw6K5/PogvPi/ScLP/hm6960lviqSsh60H0L/f00ZlnQfOqvXNiz/pM1/bcPyole0voHcRYEfFIsvX/A/QUdPu5dM/WsDTrLhDz7wTaSn2lfWa5J8YfDjNe1QhHMWfZ0QiKB3h+7d1sSP0Zb5z6oTGb6fMPKxkfSJ4Oa5l6e8A52OtBWORfOPw480aAwkzrTImB9mrlrR2ZqY6zZ6s3JykdszN++gBy5s0nZGQzkxLEwquX5wBBPRWS3ODQa1TLI8apN3COvHuYsJH+Ac1arAxKDvn2A/V2f/zZ+fvPnotvlPzla/hfWKZWdUC9NaT+8LmDVys0buWJH50ffMlZNSJKjW+lT++1Xii9xWt6Kearp0a5+vnH2xnx78RA9WsFvDoAJYeotiYiOZioJzp5GfYuzBm/ghn4ZZ3jTVE3v0YWWAM9TdxdLEn7AmztV5vcHentXYDOnMVzqpOJbh0ChKVCDLJk4Uk6eKmTx998xfy/K4TInTekKvlvX6gWXYF3UBSAbhCE0VoOPM3Dh1Zpo7i7HvTnXKf5vm/7q+7tKQkndnu6CDaWl55Ocn2KXImbUMzGHWg2BCMz2ouByVkchT4WlUNx0yxczGnX1i90fYropWawJee8RU0SdZKuHWEZPU3IUtPRneHuggGINy/uyb2O0CfxK6plYztI7egtKuWzbzXmVZJSrJZo2HWg/B7UTvmv9orPArLmx59y7oWO64L66hI6P5A9Ax+7VbkdNbt9oVk8LXyOndb43es4OMcgyeabDsTOwQj+yHTlT3DB0zTcnDYYJVyUHkaoId4Hx3h757vo4niJi+qXSspuVc65xCyQT5QuW16sORTHO+uwXZc1IHQUyt7HXoPP4N7uvuL1ewJ1wIfwA64Bx8qdAPJ6Xj11rZz4xaXTsNijks8lp/ZIomSJ+FLu+smXzq6wTtlDpz2IjBfZUXcLRbzTGKJzZz75zqFAuC1p2pR4VDOajdxJGXqJbcrbGKZ90ZDvy556SOp10PzbN93TrCRrg72jud2Xz6JOVrHLPUm8gT+tfuaNgXe3qXC6tHIjdoTb+rNXJH3Rkabeo+L3UQiEAXUV2WLt+qSj1XMuVUyc2rZVMopktKV1xDozrTGgw5sq8Tv/CowdVDuod2LxJrTzQqI0bBAUWC3KGRTFmHtrzWLYE85RyoZFrDEWETnpQ6aanwJfL1S8Rfo3dT6D7hAuGVmMFLINdzd2jfC2J4YCK1yXs4LbUMJrEyfw71GmhivmZExAlPSt1zI6xcenE28j6bI9oMBOe3V53vuSM+ly8gXqumJh6B/jmfXU3KV6GTRbmIS6ynF9f9sMWXEDFfNrBby7N93Q/Qta0NlEARcAkTWJeCaEzJPcHbAV3H3+JIbgYmkml+3YUNPoVNIKnxb4AOwCap1mltBk0XhgHsIFgBkzdaiAC9VkTE77tJj6ELPmw2ol6FOZVZXEYSk3nei19XZub4T0F3PzF2ZRpd3weElcXmtSBL13y0oUVc4BLA/hOLyUVgWSG7zk6UrBYtdwjfpMfQRQFhYyu5G7/uRnDdT8E6xmP+5Aj7tdJfnTWy+7tk9If7ZLB+5KM7pL078L2MkNlETd83RrakWVSn+bTUVYGPjk+P6QcdsmPrjTO947Dc0WDdj+689/9h2ARZm8sgbGCOX9DrrqkMgPIriTELitV+lOfm6DC+5/7pNvE7Tuw4hyEYkj485Ji7hZCfhCaz+XGcmDN2bD8eOxdjSvICwxw15uLktxPcIXUGjbaCsMFHof98vkH2m1LX9YC7LiPCfdu8UPwdmFxfLA2+ttMCNij51o2Nl/bxFlM7wD12DRh8k1aBU84lSU1cNQEmOM5p6NOopy2ufOyQOMekmEZavy51zvF4jK6jYUu6Hb9Osmeps/0ie16vu6oyh27qlqNjHj7iwDv+cfFQlMcj/0rCisnGAS8jruvJ3NoLyXMpT8dTgDqmaR6Wip2qT0Zh4bALEpiU8zHPaVRMy4D89rAMLSZ5U8+HYrqd4F4bdl/ECT1nAs6hJ8aEjbDwWw2WT0FNFPnTSFA/VWCsUnT0RHA3OJtLmyCEgeks1NuKOyEbs9zPy0pncQnlggqIMDPFKeWk1x8ke29n8q6wCXzMrLF6q9aimWOqmCHTL9w66Fd1rcwJQ6ESZ0+pxNfZg4k6eRzG1Ui6Pq9AVmEnxA6PAUrnyo/7sguj2qlLX9vU92sCoDYZtB0hHG9nnU5pdVrL2+g/90Ansqo79bLStJFHikPNTOpSVyPFaYaytv5d6JhmeVy6fjz6lbckrecZbNzD7SEzXOAjYHkjg84+YgPRw8NYfGd9V7zrl1iWXtFwgRWAas25BPJOonsarG1xlfhLSOdb1oROa9WNlTXRGN+QOsg328KSlIXT505OWVFcvhfX4isEILBsHhPTiog9VZvKCbskBmWBiHOqLMS+2vEKVG3KKTNPCuSd5PaEOT3wDTCXKrFUnz4NE/Acvw5eKyd11Hn1d6DTJWz7kMBGWjFaRJQbWqj9lbU57cEuVaIWpGaSHIIOd9D1HtT+Pu2AzuSu9duGmKTbhpgkDl0aHqxvWROf5jeAnh94kthAbZB2+aCVkQMUApPVwM2eTWWlPQ3Wp9+E7hR9c4S1St3vAGfJgV3SI1Oz+zmsnwkgxhLw7TJrJ5BxpyjTeObyR6FjTfR7Uudw0/970AXS5WqyjBqTFSgBZc/VJBj5z8gee9J2CzrZ2CYMuhL67Q9LHaZPGGKyjOc3OkV0WF6ZYL8kuzZBPPvBYXFA0wB3zEHJpM6PgOXvX7vAsymscmpNkKUEmaAbMCm9l2cf9khdad2cr4vvz9edR9gUfZSpUk5ulXGfDdsWTA3x7YrlyMyoPPRhJKGzn5A6KDZJ6CHTGUxmzrXZ+JPQyZGsptxn1AYBRip8YdJpxlSXaEbVZi1PMW5ttCJ20et6Hf/yOHSBb0/U5tCF48GNeiV1z0CnSGwMtEomC9Byox+ETqvEdSbdRh+18h8dZnVmGVIZNSM7ZerUyVMMdyTWT0+wfy4A69kLN7Y7JimswQJ7AkLq7OegA3p74KoavzZSK9rT1/H8dkZN1MVYW24mXxATHZ5dc3JJXLMTIZ5YD4o8Pmcd8MhViY/63ctXr5LTh6upvmdpj143TlvvTNzxCrbSPnasd7k1Uf3kLDHTU1qXVdimLN2yLenmOuydSb5Ij6ErF2tuvxVcN2tnk2kVhl7ddUnPQacdXhB8o6G9i3bM1yUg774F3XjgWx1IdRGeb6XnfROrBfZgVvjHaR906EXohA1rLaGQkTdAt0qdNs3+3dBFh2AItFuHlfieMxGqCXZRI+XW4dCRtIoqfuubpO5fQ7v8sOZ55uT+MAHvSB2ewBzyZSodugHSXw2drBiXOqlOJq7qY9b3TcTqfRN80klNuKa2ZEBa53x2Ymr40sYbzevvhk72K/WodhAdUsUsnmKOtWLGD33TH8UkRgFAgDl0t7umvxo6JVEls6pcvoRP/OkQGa7mVkbdsN5N+EYQ0Hcqqc+J/93QcRK1K/1Y6Ryl6vGj2JeDhm0moULAymWCQRwLvzM7XYxZ9MV7L+kXQMfVAtxVcpEyrROpIBQVktsMwiXQcyPFIjwloDBbSxo7hK/ouIPPL4COO4bSKFAhlgIFXWB1cpo2cpshUh5TEVuXgHEc3dXRtDbV39XXaeLQjbKndxM5oUImLJuwZQWYj7N8R6BwhkLo2N26ROi+3v87oIPYMQv5HmzxUgbuW+5LCV3hRbHYHW1V+UFgSBI33BF251dAB4F5+HDkMgIOHRcjPHu5qDg6zR+ucr1gSxz9wWj/g04Qa560Vc1Oe6jKlooRFpJIvOFeOE1dqRVb1N1hnf8K6K512hud18VSA3VxBya/ALrzigz1cf1dp6nVwg09h60DVGwD89dDt4ra5bQPVFfI1TJ5uC4f0ouKNumvhw6UPFCBWGzCPymkIuoEoFQvydLLQIBY4qzu5J+DzTcn/P3QBeFpqjy5pI+/fFYs4DXHqm46xOMVWUBsTCI8lDBwK2DxfUY21/fAsPHuut8AHX+XWvRnxEGKqxTbVca3DZsmKL0G9Wk6ZmGEU8dMPSdMcRu6We2EY905qRdkm56Xvx86PtVZDlbfHN0B4X5AcxU2jQnsNA/TKKHhHPdNnSCnx5PJ/tFyxF0bI5R06W+HjjDoajA1iXU0p2po8i5smNS1YxViy3ebOenNyW9pT82siseImbBBmfdTjLbehP0boCMaOgziJKW4Z+CAZhmPVEAXmAPK/Kln0Pl9XRXIS6u+LfPE9/J048W6vwE6CEtISmDbESBtCSy+0YNYQWDzUzAizLwoKbGJZRNakggELTtJbMuJguiFdyb+v6An5uvOihpZFyqflx6sWsvZ5Xd+9j799dDJNbvwrAmfp5G0PnyFoLYswEN77K+HDvDWqhReEHqtRfkrYQgIAiF/1ELZ6u9/jv566CC05EYpHlo3piT2RbQ8NDZ8oV+f4CjyXls48wug833QpEmUHUz+SlWL7yiCEIu3IpI28myyrb7dpb8eOgCjFJh53tIK8FjYVjqxk1ZdCXc/GRH4D7o7BBlYIqAzagiTOqaFeLCMrJH4URTx1Tz/QXeP+Cs5QUintj30oChJimPgZ2BKE1DMdpr2BIz/QXebILSBRSzCp03ipCQtd+kw7ZiA0Id2ZDvx4T/o7tBFkBG7tPRs3Krv2m75GgC/ALpr0nrx+vnl/H8ddO+j/6B7mf6D7mX6D7qX6R+B7v8AYt01/6/mrjsAAAAASUVORK5CYII=" alt="Card image cap">" alt="Card image cap">
+                                        <div class="card-block">
+                                            <h4 class="card-title">Arrays of Arrays</h4>
+                                            <p class="card-text">In C# we can have arrays of arrays, which we call jagged arrays.Jagged arrays are arrays of arrays, or arrays in which each row contains an array of its own, and that array can have length different than those in the other rows.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            <a href="#" class="btn btn-primary">See theme details</a>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="col-sm-3">
+                                <div class="card well">
+                                        <img class="card-img-top img-fluid" src="http://cdn-thumbshot.pearltrees.com/44/93/4493c23193d5f177b8f0bd46f4a765d1-pearlsquare.jpg" alt="Card image cap">
+                                        <div class="card-block">
+                                            <h4 class="card-title">More about Arrays</h4>
+                                            <p class="card-text">Lear more</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            <a href="https://www.dotnetperls.com/array" class="btn btn-primary">More Arrays</a>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="col-sm-3">
+                                <div class="card well">
+                                        <img class="card-img-top img-fluid" src="http://placehold.it/220x140" alt="Card image cap">
+                                        <div class="card-block">
+                                            <h4 class="card-title">Card title</h4>
+                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card well">
+                                <img class="card-img-top img-fluid" src="http://placehold.it/220x140" alt="Card image cap">
+                                <div class="card-block">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+            </div>
+        </section>
+        <section>
+            <!-- Theory section -->
+            <div id="theory" class="row text-center">
+                <h2>Theory</h2>
+                <div class="card well text-center">
+                    <h4>Arrays</h4>
+                    <div class="card-body well">
+                        <p>An array’s elements in C# are numbered with 0, 1, 2, … N-1. Those numbers are called indices. The total number of elements in a given array we call length of an array.</p>
+<p>All elements of a given array are of the same type, no matter whether they are primitive or reference types. This allows us to represent a group of similar elements as an ordered sequence and work on them as a whole.</p>                    
+<p>Arrays can be in different dimensions, but the most used are the one-dimensional and the two-dimensional arrays. One-dimensional arrays are also called vectors and two-dimensional are also known as matrices.</p>                   
+<p>In C# the arrays have fixed length, which is set at the time of their instantiation and determines the total number of elements. Once the length of an array is set we cannot change it anymore.</p>
+
+<img src="http://www.introprogramming.info/wp-content/uploads/2013/07/clip_image0048.png" alt="">
+<p>When we declare an array type variable, it is a reference, which does not have a value (it points to null). This is because the memory for the elements is not allocated yet.</p>
+
+<p>In C# we create an array with the help of the keyword new, which is used to allocate memory:</p>
+</div>
+
+                </div>
+            </div>
+            <div  class="row text-center">
+                    <h2>Multidimentional Arrays</h2>
+                    <div class="card well text-center">
+    
+                        <div class="card-body well">
+                                <p>The one-dimensional arrays are known also as vectors in mathematics. Often we need arrays with more than one dimension. For example we can easily represent the standard chess board as a two-dimensional array with size 8 by 8 (8 cells in a horizontal direction and 8 cells in a vertical direction).</p>
+                                <p>Those arrays we will call two-dimensional, because they have two dimensions. They are also known as matrices (it is mathematical term). In general arrays with more than one dimension we will call multidimensional.</p>                         
+                            </div>
+    
+                    </div>
+                </div>
+                <div  class="row text-center">
+                        <h2>Arrays of Arrayss</h2>
+                        <div class="card well text-center">
+        
+                            <div class="card-body well">
+                                    <p>In C# we can have arrays of arrays, which we call jagged arrays.Jagged arrays are arrays of arrays, or arrays in which each row contains an array of its own, and that array can have length different than those in the other rows.</p>
+                                    <h4>Memory Allocation</h4>
+
+                                    <p>The figure below depicts how the now declared jagged array myJaggedArray is allocated in the memory. As we see the jagged arrays are an aggregation of references. A jagged array does not directly contain any arrays, but rather has elements pointing to them. The size is unknown and that is why CLR just keeps references to the internal arrays. After we allocate memory for one array-element of the jagged array, then the reference starts pointing to the newly created block in the dynamic memory. The variable myJaggedArray is stored in the execution stack of the program and points to a block in the dynamic memory, which contains a sequence of three references to other three blocks in memory; each of them contains an array of integer numbers – the elements of the jagged array:
+                                </div>
+        
+                        </div>
+                    </div>
+            <!-- Theory 
+            <div  class="row text-center">
+                    <h2>Theory</h2>
+                    <div class="card well text-center">
+    
+                        <div class="card-body well">
+    
+                        </div>
+    
+                    </div>
+                </div>
+            -->
+        </section>
+        <section>
+            <!-- Exercises section -->
+            <div id="commands" class="row text-center">
+
+                <div class="card well text-center">
+                    <div class="card-header">
+                        <h4>Arrays Examples</h4>
+                    </div>
+                    <div class="card-body well">
+                        <a class="btn btn-info" href="Examples/Arrays">Open Example</a>
+                    </div>
+
+                </div>
+
+                <div class="card well text-center">
+                        <div class="card-header">
+                            <h4>Multidimentional Examples</h4>
+                        </div>
+                        <div class="card-body well">
+                            <a class="btn btn-info" href="Examples/MultidimentionalArrays">Open Example</a>
+                        </div>
+    
+                    </div>
+                    <div class="card well text-center">
+                            <div class="card-header">
+                                <h4>Pascal’s Triangle – Example</h4>
+                            </div>
+                            <div class="card-body well">
+                                <a class="btn btn-info" href="Examples/JaggedArrays">Open Example</a>
+                            </div>
+        
+                        </div>
+                        <div class="card well text-center">
+                                <div class="card-header">
+                                    <h4>Exercises</h4>
+                                </div>
+                                <div class="card-body well">
+                                    <a class="btn btn-info" href="Examples/ArraysExercises">Open Example</a>
+                                </div>
+            
+                            </div>
+            </div>
+            <!-- Template 
+            <div  class="row text-center">
+
+                    <div class="card well text-center">
+                        <div class="card-header">
+                            <h4></h4>
+                        </div>
+                        <div class="card-body well">
+                            <p></p>
+                        </div>
+    
+                    </div>
+                </div>
+            -->
+        </section>
+    </div>
+</body>
+
+</html>
