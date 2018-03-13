@@ -11,6 +11,9 @@ namespace MobilePhone.Mobile
         private decimal price;
         private string owner;
 
+        private Battery battery;
+        private Display display;
+
         public GSM(string model, string manufacturer)
         {
             if (string.IsNullOrWhiteSpace(model))
@@ -25,6 +28,9 @@ namespace MobilePhone.Mobile
 
             this.model = model;
             this.manufacturer = manufacturer;
+
+            this.battery = new Battery();
+            this.display = new Display();
         }
 
         public GSM(string model, string manufacturer, decimal price)
@@ -87,6 +93,22 @@ namespace MobilePhone.Mobile
             }
         }
 
+        public string Battery
+        {
+            get
+            {
+                return this.battery.ToString();
+            }
+        }
+
+        public string Display
+        {
+            get
+            {
+                return this.display.ToString();
+            }
+        }
+
         public static void ChechPrice(decimal value)
         {
             if (value < 0)
@@ -107,7 +129,13 @@ namespace MobilePhone.Mobile
         {
             StringBuilder result = new StringBuilder();
 
-            result.AppendFormat($"GSM model : {this.Model} , manufacturer : {this.Manufacturer}");
+            result.AppendLine($"GSM INFO\n\r");
+            result.AppendLine($"--Model : {this.Model}");
+            result.AppendLine($"--Manufacturer : {this.Manufacturer}");
+            result.AppendLine($"--Price : {this.Price}");
+            result.AppendLine($"--Owner : {this.Owner}\n\r");
+            result.AppendLine(this.Battery);
+            result.AppendLine(this.Display);
 
             return result.ToString();
         }

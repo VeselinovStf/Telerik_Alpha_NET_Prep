@@ -17,8 +17,6 @@ namespace MobilePhone
             GSM gsm = new GSM("s", "s", 2);
 
             Console.WriteLine(gsm);
-
-            gsm.Price -= 10;
         }
     }
 }

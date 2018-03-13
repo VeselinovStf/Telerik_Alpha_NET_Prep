@@ -5,7 +5,7 @@ using MobilePhone.Mobile;
 namespace MobilePhone.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class GSMTests
     {
         [TestMethod]
         public void ShoudThrowExceptionIfArgumentModelToCTORIsNull()

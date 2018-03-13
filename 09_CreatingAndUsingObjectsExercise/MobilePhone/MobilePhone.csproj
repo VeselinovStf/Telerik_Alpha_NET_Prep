@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mobile\Battery.cs" />
+    <Compile Include="Mobile\BatteryTypes.cs" />
+    <Compile Include="Mobile\Display.cs" />
     <Compile Include="Mobile\GSM.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
