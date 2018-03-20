@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8E8CE003-3B37-4D7A-B020-D8F007EAA555}</ProjectGuid>
+    <ProjectGuid>{77C56233-A153-4545-A697-38E0F85B11B0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MobilePhone</RootNamespace>
-    <AssemblyName>MobilePhone</AssemblyName>
+    <RootNamespace>FefinePersons</RootNamespace>
+    <AssemblyName>FefinePersons</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,12 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mobile\Actions\Call.cs" />
-    <Compile Include="Mobile\Core\Battery.cs" />
-    <Compile Include="Mobile\Core\BatteryTypes.cs" />
-    <Compile Include="Mobile\Core\Display.cs" />
-    <Compile Include="Mobile\Core\GSM.cs" />
-    <Compile Include="Mobile\GSMTest.cs" />
+    <Compile Include="Family.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

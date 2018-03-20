@@ -4,8 +4,8 @@ namespace MobilePhone.Mobile
 {
     public class Display
     {
-        private double size;
-        private int colours;
+        private double? size;
+        private int? colours;
 
         public Display()
         {
@@ -13,7 +13,13 @@ namespace MobilePhone.Mobile
             this.colours = 0;
         }
 
-        public double Size
+        public Display(double? size, int? colour = null)
+        {
+            this.size = size;
+            this.colours = colour;
+        }
+
+        public double? Size
         {
             get
             {
@@ -21,7 +27,7 @@ namespace MobilePhone.Mobile
             }
         }
 
-        public int Colours
+        public int? Colours
         {
             get
             {

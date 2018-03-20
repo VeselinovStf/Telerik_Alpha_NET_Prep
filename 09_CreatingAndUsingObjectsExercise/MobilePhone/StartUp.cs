@@ -14,9 +14,7 @@ namespace MobilePhone
     {
         private static void Main()
         {
-            GSM gsm = new GSM("s", "s", 2);
-
-            Console.WriteLine(gsm);
+            GSMTest.TestGsm();
         }
     }
 }
