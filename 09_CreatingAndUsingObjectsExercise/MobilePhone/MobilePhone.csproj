@@ -42,10 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mobile\Battery.cs" />
-    <Compile Include="Mobile\BatteryTypes.cs" />
-    <Compile Include="Mobile\Display.cs" />
-    <Compile Include="Mobile\GSM.cs" />
+    <Compile Include="Mobile\Actions\Call.cs" />
+    <Compile Include="Mobile\Core\Battery.cs" />
+    <Compile Include="Mobile\Core\BatteryTypes.cs" />
+    <Compile Include="Mobile\Core\Display.cs" />
+    <Compile Include="Mobile\Core\GSM.cs" />
+    <Compile Include="Mobile\GSMTest.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
