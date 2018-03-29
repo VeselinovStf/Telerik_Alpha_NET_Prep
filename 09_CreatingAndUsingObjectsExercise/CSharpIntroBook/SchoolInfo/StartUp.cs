@@ -2,11 +2,12 @@
 
 namespace CSharpIntroBook
 {
-    class Program
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine()
         }
     }
 }
