@@ -1,2 +1,20 @@
-AddSchool Ivan Vazov
-AddSchool Ivan Vazov
+AddSchool(Ivan Vazov)
+AddSchool(Vasil Levski)
+AddStudent(Ivan Vazov, Pesho, 5)
+AddStudent(Ivan Vazov, Gosho, 6)
+AddStudent(Ivan Vazov, Maria, 5)
+AddStudent(Ivan Vazov, Doncho, 4)
+AddStudent(Ivan Vazov, Pesho, 4)
+PrintStudents(Ivan Vazov)
+PrintStudents(Vasil Levski)
+AddDiscipline(Ivan Vazov, Math, 4,5)
+AddDiscipline(Ivan Vazov, Literature, 14,5)
+AddDiscipline(Vasil Levski, Math, 9,14)
+AddDiscipline(Vasil Levski, Cooking, 14,25)
+AddDiscipline(Vasil Levski, Mechanics, 44,45)
+AddTeacher(Vasil Levski, PETUR LUDIQ, Math)
+Print(Ivan Vazov)
+PrintAllData
+PrintDisciplines(Ivan Vazov)
+PrintTeachers(Vasil Levski)
+End

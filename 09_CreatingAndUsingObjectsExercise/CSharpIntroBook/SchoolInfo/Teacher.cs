@@ -17,10 +17,9 @@ namespace SchoolInfo
         public string Name { get => name; }
         public List<Discipline> Disciplines { get => disciplines; }
 
-        public void AddDiscipline (string name, int totalLessons, int totalExercises)
+        public void AddTeacherDiscipline (Discipline discipline)
         {
-            Discipline discipline = new Discipline (name, totalLessons, totalExercises);
-
+            
             this.disciplines.Add (discipline);
         }
 

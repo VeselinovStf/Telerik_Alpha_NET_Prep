@@ -8,7 +8,13 @@ namespace SchoolInfo
         private int totalLessons;
         private int totalExercises;
 
+        public Discipline(string name)
+        {
+            this.name = name;
+        }
+
         public Discipline (string name, int totalLessons, int totalExercises)
+            :this(name)
         {
             this.name = name;
             this.totalLessons = totalLessons;
