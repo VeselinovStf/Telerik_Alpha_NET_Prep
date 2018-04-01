@@ -75,10 +75,20 @@ namespace CompanyRoster
                 
             }
 
-            //TODO FINISH SOLUTION
-            //NOTE : USE DICTIONARY!
+            string bestPeidDepartment = employee
+                  .GroupBy(e => e.Department)
+                  .Select(g => new { Department = g.Key, AvgSalary = g.Average(e => e.Salary) })
+                  .OrderBy(o => o.AvgSalary)
+                  .Last()
+                  .Department;
 
-          
+            Console.WriteLine($"Highest Avarage Salary: {bestPeidDepartment}");
+
+            employee
+                .Where(e => e.Department == bestPeidDepartment)
+                .OrderByDescending(e => e.Salary)
+                .ToList()
+                .ForEach(Console.WriteLine);
            
         }
     }
