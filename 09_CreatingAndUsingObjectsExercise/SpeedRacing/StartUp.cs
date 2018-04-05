@@ -1,12 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace SpeedRacing
 {
     public class StartUp
     {
+        public static void FakeInput()
+        {
+            string input = @"3
+AudiA4 18 0.34
+BMW-M2 33 0.41
+Ferrari-488Spider 50 0.47
+Drive Ferrari-488Spider 97
+Drive Ferrari-488Spider 35
+Drive AudiA4 85
+Drive AudiA4 50
+End";
+
+            Console.SetIn(new StringReader(input));
+        }
+
         public static void Main()
         {
+            FakeInput();
+
             int carTrackCount = int.Parse(Console.ReadLine());
 
             Dictionary<string, Car> cars = new Dictionary<string, Car>();
@@ -55,6 +73,11 @@ namespace SpeedRacing
                 }
 
                 line = Console.ReadLine();
+            }
+
+            foreach (var car in cars)
+            {
+                Console.WriteLine(car.Value);
             }
         }
     }

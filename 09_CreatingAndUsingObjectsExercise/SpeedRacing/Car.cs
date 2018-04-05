@@ -30,12 +30,12 @@ namespace SpeedRacing
             bool isMoving = DistenceMove(distence);
             if (isMoving)
             {
-                this.fuelAmount -= distence * this.FuelAmount;
+                this.fuelAmount -= distence * this.FuelConsulption;
                 this.distanceTravelled += distence;
             }
             else
             {
-                Console.WriteLine("Car can't move!");
+                Console.WriteLine("Insufficient fuel for the drive.");
             }
         }
 
@@ -55,7 +55,7 @@ namespace SpeedRacing
         {
             StringBuilder result = new StringBuilder();
 
-            result.AppendLine($"{this.Model} {this.FuelAmount:F2} {this.DistanceTravelled}");
+            result.Append($"{this.Model} {this.FuelAmount:F2} {this.DistanceTravelled}");
 
             return result.ToString();
         }
