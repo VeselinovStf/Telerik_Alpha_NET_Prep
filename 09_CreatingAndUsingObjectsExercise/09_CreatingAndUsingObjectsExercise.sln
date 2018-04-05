@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateModifier", "DateModifie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompanyRoster", "CompanyRoster\CompanyRoster.csproj", "{38D81CC8-0E58-4A86-A054-6C687A423CEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedRacing", "SpeedRacing\SpeedRacing.csproj", "{F05918E2-0B3A-4F19-8483-9B80B09DBA73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeedRacing", "SpeedRacing\SpeedRacing.csproj", "{F05918E2-0B3A-4F19-8483-9B80B09DBA73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawData", "RawData\RawData.csproj", "{450F77C9-E80A-4DC9-B832-60B8CB915669}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +109,10 @@ Global
 		{F05918E2-0B3A-4F19-8483-9B80B09DBA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F05918E2-0B3A-4F19-8483-9B80B09DBA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F05918E2-0B3A-4F19-8483-9B80B09DBA73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{450F77C9-E80A-4DC9-B832-60B8CB915669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450F77C9-E80A-4DC9-B832-60B8CB915669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450F77C9-E80A-4DC9-B832-60B8CB915669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450F77C9-E80A-4DC9-B832-60B8CB915669}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,6 +136,7 @@ Global
 		{D0A6C8B3-9D73-4CFB-8FEE-59443DF40C9B} = {F8258ADA-BC07-48D3-9676-923B23E1877E}
 		{38D81CC8-0E58-4A86-A054-6C687A423CEB} = {F8258ADA-BC07-48D3-9676-923B23E1877E}
 		{F05918E2-0B3A-4F19-8483-9B80B09DBA73} = {F8258ADA-BC07-48D3-9676-923B23E1877E}
+		{450F77C9-E80A-4DC9-B832-60B8CB915669} = {F8258ADA-BC07-48D3-9676-923B23E1877E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D708ACC7-127B-4DD9-96BD-5ACF2073E4EC}
