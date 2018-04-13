@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonTrainer", "PokemonTr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google", "Google\Google.csproj", "{A82A7807-EDE7-4F6B-BD9A-75E26F6B6518}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forum.App", "C:\Users\Mikasa\Downloads\07. CSharp-OOP-Basics-Workshop-Skeleton\Forum.App.csproj", "{3BB70120-6267-44F5-A4BE-C01DD4CAB898}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +133,10 @@ Global
 		{A82A7807-EDE7-4F6B-BD9A-75E26F6B6518}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A82A7807-EDE7-4F6B-BD9A-75E26F6B6518}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A82A7807-EDE7-4F6B-BD9A-75E26F6B6518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BB70120-6267-44F5-A4BE-C01DD4CAB898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BB70120-6267-44F5-A4BE-C01DD4CAB898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BB70120-6267-44F5-A4BE-C01DD4CAB898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BB70120-6267-44F5-A4BE-C01DD4CAB898}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -158,6 +164,7 @@ Global
 		{6DEC0419-C243-465C-B4BF-8B5657DE30C8} = {F8258ADA-BC07-48D3-9676-923B23E1877E}
 		{05A1FA37-5D3B-4A40-888B-57D5C80D1AB6} = {F8258ADA-BC07-48D3-9676-923B23E1877E}
 		{A82A7807-EDE7-4F6B-BD9A-75E26F6B6518} = {F8258ADA-BC07-48D3-9676-923B23E1877E}
+		{3BB70120-6267-44F5-A4BE-C01DD4CAB898} = {C2E2DB98-A397-4907-BA49-094F80EC2D27}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D708ACC7-127B-4DD9-96BD-5ACF2073E4EC}

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharpBook", "CSharpBook", "{7F4C80A6-35D6-42CB-B0BF-1F04F2A856CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex_01_School", "Ex_01_School\Ex_01_School.csproj", "{09B4D78A-9A45-49E3-8770-288664718496}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09B4D78A-9A45-49E3-8770-288664718496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09B4D78A-9A45-49E3-8770-288664718496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09B4D78A-9A45-49E3-8770-288664718496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09B4D78A-9A45-49E3-8770-288664718496}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{09B4D78A-9A45-49E3-8770-288664718496} = {7F4C80A6-35D6-42CB-B0BF-1F04F2A856CF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDD7EDD6-DA0F-4259-B7BD-BB47A2964495}
+	EndGlobalSection
+EndGlobal
