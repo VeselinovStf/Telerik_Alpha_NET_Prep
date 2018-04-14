@@ -11,7 +11,7 @@ namespace PersonSalary
             this.score = score;
         }
 
-        public int Score { get => score;  }
+        public int Score { get => score; }
 
         public int CompareTo(object s1)
         {

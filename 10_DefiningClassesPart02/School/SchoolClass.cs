@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -15,7 +14,7 @@ namespace School
         {
             this.name = name;
             this.students = new List<Student>();
-            this.teachers = new List<Teacher>();          
+            this.teachers = new List<Teacher>();
         }
 
         public void AddStudent(string studentName, int studentId)
@@ -28,7 +27,7 @@ namespace School
             this.teachers.Add(new Teacher(teacherName));
         }
 
-        public void AddTeacherDisciplines(string teacherName,List<Discipline> disciplines)
+        public void AddTeacherDisciplines(string teacherName, List<Discipline> disciplines)
         {
             foreach (var teacher in teachers.Where(x => x.Name == teacherName))
             {

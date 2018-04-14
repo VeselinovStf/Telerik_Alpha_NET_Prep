@@ -13,7 +13,6 @@ namespace AnimalFarm
             animals[3] = new Kitten("Dundi", 5, "Who knows");
             animals[4] = new Tomcat("Tom", 6, "Female");
 
-
             foreach (var animal in animals)
             {
                 Console.WriteLine($"{animal.Name} at age {animal.Age} and gender of {animal.Gender} says : {animal.MakeNoice()}");

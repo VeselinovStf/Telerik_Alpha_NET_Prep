@@ -13,9 +13,9 @@
             this.gender = gender;
         }
 
-        public string Name { get => name;  }
+        public string Name { get => name; }
         public int Age { get => age; }
-        public string Gender { get => gender;  }
+        public string Gender { get => gender; }
 
         public virtual string MakeNoice()
         {

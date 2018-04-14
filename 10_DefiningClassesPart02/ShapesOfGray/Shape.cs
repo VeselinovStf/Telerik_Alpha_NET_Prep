@@ -11,7 +11,7 @@
             this.height = height;
         }
 
-        public double Width { get => width;  }
+        public double Width { get => width; }
         public double Height { get => height; }
 
         public virtual double CalculateSurface()

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace School
+﻿namespace School
 {
     public class Human
     {
@@ -13,6 +9,6 @@ namespace School
             this.name = name;
         }
 
-        public string Name { get => name;  }
+        public string Name { get => name; }
     }
 }

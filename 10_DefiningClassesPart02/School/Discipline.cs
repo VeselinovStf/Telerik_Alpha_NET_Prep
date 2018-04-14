@@ -17,12 +17,12 @@
         }
 
         public Discipline(string name, int totalHours, int exerciseHours) : this(name, totalHours)
-        {        
+        {
             this.exerciseHours = exerciseHours;
         }
 
         public string Name { get => name; }
-        public int TotalHours { get => totalHours;}
+        public int TotalHours { get => totalHours; }
         public int ExerciseHours { get => exerciseHours; }
     }
 }

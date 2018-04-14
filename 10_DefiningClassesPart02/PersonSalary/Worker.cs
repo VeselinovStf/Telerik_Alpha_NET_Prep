@@ -40,7 +40,7 @@ namespace PersonSalary
             }
         }
 
-        public int WorkedHours { get => workedHours;  }
-        public decimal Salary { get => salary;  }
+        public int WorkedHours { get => workedHours; }
+        public decimal Salary { get => salary; }
     }
 }

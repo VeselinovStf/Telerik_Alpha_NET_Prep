@@ -21,12 +21,12 @@ Print";
 
             Console.SetIn(new StringReader(input));
         }
+
         public static void Main()
         {
             FakeInput();
 
             int inputCount = int.Parse(Console.ReadLine());
-
 
             for (int i = 0; i < inputCount; i++)
             {
@@ -39,12 +39,14 @@ Print";
                         string className = parameters[1];
                         AddClass(className);
                         break;
+
                     case "Student":
                         string studentClass = parameters[1];
                         string studentName = parameters[2];
                         int studentId = int.Parse(parameters[3]);
                         AddStudent(studentClass, studentName, studentId);
                         break;
+
                     case "Teacher":
                         string teacherClass = parameters[1];
                         string teacherName = parameters[2];
@@ -53,11 +55,13 @@ Print";
                         {
                             disciplines.Add(new Discipline(parameters[j]));
                         }
-                        AddTeacher(teacherClass,teacherName, disciplines);
+                        AddTeacher(teacherClass, teacherName, disciplines);
                         break;
+
                     case "Print":
                         PrintSchoolInfo();
                         break;
+
                     default:
                         break;
                 }
@@ -67,7 +71,7 @@ Print";
         private static void PrintSchoolInfo()
         {
             foreach (var clas in classes)
-            {             
+            {
                 Console.WriteLine(clas.Value);
             }
         }
@@ -77,7 +81,7 @@ Print";
             if (classes.ContainsKey(teacherClass))
             {
                 classes[teacherClass].AddTeacher(teacherName);
-                classes[teacherClass].AddTeacherDisciplines(teacherName,disciplines);
+                classes[teacherClass].AddTeacherDisciplines(teacherName, disciplines);
             }
             else
             {

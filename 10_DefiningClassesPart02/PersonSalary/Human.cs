@@ -11,7 +11,7 @@
             this.fammilyName = fammilyName;
         }
 
-        public string SureName { get => sureName;  }
-        public string FammilyName { get => fammilyName;  }
+        public string SureName { get => sureName; }
+        public string FammilyName { get => fammilyName; }
     }
 }

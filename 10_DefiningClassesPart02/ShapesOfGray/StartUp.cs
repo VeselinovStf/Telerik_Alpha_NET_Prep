@@ -12,7 +12,7 @@ namespace ShapesOfGray
             shapes[1] = new Rectangle(5, 5);
             shapes[2] = new Circle(10, 0);
 
-            foreach (var shape  in shapes)
+            foreach (var shape in shapes)
             {
                 Console.WriteLine(shape.CalculateSurface());
             }
