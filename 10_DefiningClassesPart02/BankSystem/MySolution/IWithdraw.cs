@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BankSystem.MySolution
+﻿namespace BankSystem.MySolution
 {
     public interface IWithdraw
     {

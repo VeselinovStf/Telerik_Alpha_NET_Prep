@@ -2,8 +2,6 @@
 {
     public class Customer
     {
-
-
         public Customer(ClientTypes clientType, string name)
         {
             this.ClientType = clientType;
