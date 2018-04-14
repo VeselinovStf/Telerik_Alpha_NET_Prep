@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FanFactoryPart2
+﻿namespace FanFactoryPart2
 {
     public class StartUp
     {

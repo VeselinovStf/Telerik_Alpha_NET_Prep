@@ -1,6 +1,4 @@
-﻿using System;
-
-/// <summary>
+﻿/// <summary>
 /// Source: https://www.codeproject.com/Articles/1131770/Factory-Patterns-Simple-Factory-Pattern
 /// </summary>
 namespace FanIndustry
