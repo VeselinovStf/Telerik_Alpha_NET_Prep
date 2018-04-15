@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExtensionMethods", "ExtensionMethods", "{D3274C3E-1CDD-4573-A7B1-867C0FB72F65}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AnonyType", "AnonyType", "{DB820A17-38F0-4E82-A271-F0013B8A9871}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoExtensionMethods", "DemoExtensionMethods\DemoExtensionMethods.csproj", "{144E6843-CC83-4D2E-BEEE-1BB3D76954A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplyLazyExtensions_V01", "SimplyLazyExtensions_V01\SimplyLazyExtensions_V01.csproj", "{C9A21742-3B25-493B-B892-90B3DC6788E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointsEx", "PointsEx\PointsEx.csproj", "{BE7F094A-B57D-4CA3-BBED-8FEA36D59D30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Delegates", "Delegates", "{2297010F-942B-4835-8E97-47E28E666FFE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesEx", "DelegatesEx\DelegatesEx.csproj", "{DD394674-3A05-4FBF-94CA-14AA35A381A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MulticastDelegates", "MulticastDelegates\MulticastDelegates.csproj", "{F76E2477-7945-4506-BD04-E4966E48CE70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{144E6843-CC83-4D2E-BEEE-1BB3D76954A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{144E6843-CC83-4D2E-BEEE-1BB3D76954A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{144E6843-CC83-4D2E-BEEE-1BB3D76954A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{144E6843-CC83-4D2E-BEEE-1BB3D76954A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9A21742-3B25-493B-B892-90B3DC6788E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A21742-3B25-493B-B892-90B3DC6788E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A21742-3B25-493B-B892-90B3DC6788E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A21742-3B25-493B-B892-90B3DC6788E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE7F094A-B57D-4CA3-BBED-8FEA36D59D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE7F094A-B57D-4CA3-BBED-8FEA36D59D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE7F094A-B57D-4CA3-BBED-8FEA36D59D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE7F094A-B57D-4CA3-BBED-8FEA36D59D30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD394674-3A05-4FBF-94CA-14AA35A381A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD394674-3A05-4FBF-94CA-14AA35A381A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD394674-3A05-4FBF-94CA-14AA35A381A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD394674-3A05-4FBF-94CA-14AA35A381A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F76E2477-7945-4506-BD04-E4966E48CE70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F76E2477-7945-4506-BD04-E4966E48CE70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F76E2477-7945-4506-BD04-E4966E48CE70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F76E2477-7945-4506-BD04-E4966E48CE70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{144E6843-CC83-4D2E-BEEE-1BB3D76954A3} = {D3274C3E-1CDD-4573-A7B1-867C0FB72F65}
+		{C9A21742-3B25-493B-B892-90B3DC6788E2} = {D3274C3E-1CDD-4573-A7B1-867C0FB72F65}
+		{BE7F094A-B57D-4CA3-BBED-8FEA36D59D30} = {DB820A17-38F0-4E82-A271-F0013B8A9871}
+		{DD394674-3A05-4FBF-94CA-14AA35A381A8} = {2297010F-942B-4835-8E97-47E28E666FFE}
+		{F76E2477-7945-4506-BD04-E4966E48CE70} = {2297010F-942B-4835-8E97-47E28E666FFE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5D1AE4F-AEE3-4A5D-BA23-3A48EB7AC63E}
+	EndGlobalSection
+EndGlobal
