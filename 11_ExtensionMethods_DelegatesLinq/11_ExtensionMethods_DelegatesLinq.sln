@@ -17,7 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Delegates", "Delegates", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesEx", "DelegatesEx\DelegatesEx.csproj", "{DD394674-3A05-4FBF-94CA-14AA35A381A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MulticastDelegates", "MulticastDelegates\MulticastDelegates.csproj", "{F76E2477-7945-4506-BD04-E4966E48CE70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MulticastDelegates", "MulticastDelegates\MulticastDelegates.csproj", "{F76E2477-7945-4506-BD04-E4966E48CE70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TelericExercises", "TelericExercises", "{FC3E63E5-D2BB-46D9-84ED-4D3313D9A82F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

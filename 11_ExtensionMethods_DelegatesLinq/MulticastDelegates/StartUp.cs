@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Linq;
 
 namespace MulticastDelegates
 {
-    delegate void Print(string str);
-    delegate void MulticastGenericDelegate(string str);
+    internal delegate void Print(string str);
+
+    internal delegate void MulticastGenericDelegate(string str);
 
     public class StartUp
     {
@@ -49,7 +49,6 @@ namespace MulticastDelegates
             Console.WriteLine("------------");
             Console.WriteLine("---" + text);
             Console.WriteLine("------------");
-
         }
 
         public static void PrintUpperText(string text)

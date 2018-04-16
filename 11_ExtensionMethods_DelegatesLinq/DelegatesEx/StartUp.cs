@@ -1,4 +1,5 @@
 ﻿using SimplyLazyExtensions_V01;
+using System;
 using System.Collections.Generic;
 
 namespace DelegatesEx
@@ -34,6 +35,18 @@ namespace DelegatesEx
             {
                 return value < 5;
             }).WriteCollection(" ");
+
+            //Func Delegate
+            Func<int, bool> isOdd = x => x % 2 == 1;
+            Action<int> isPrintingAction = x => Console.WriteLine(x);
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (isOdd(numbers[i]))
+                {
+                    isPrintingAction(numbers[i]);
+                }
+            }
         }
 
         public static IEnumerable<T> Filter<T>(IEnumerable<T> numbers, Predicate<T> predicate)
