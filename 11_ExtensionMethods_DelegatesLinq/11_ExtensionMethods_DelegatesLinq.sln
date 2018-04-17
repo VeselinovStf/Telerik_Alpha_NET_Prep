@@ -20,8 +20,15 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MulticastDelegates", "MulticastDelegates\MulticastDelegates.csproj", "{F76E2477-7945-4506-BD04-E4966E48CE70}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TelericExercises", "TelericExercises", "{FC3E63E5-D2BB-46D9-84ED-4D3313D9A82F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_StringBuilderSubstring", "01_StringBuilderSubstring\01_StringBuilderSubstring.csproj", "{157DBCFB-4E6B-4634-8D14-EA3E7C2A0D83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_StringBuilderSubstring", "01_StringBuilderSubstring\01_StringBuilderSubstring.csproj", "{157DBCFB-4E6B-4634-8D14-EA3E7C2A0D83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_IEnumerableExtensions", "02_IEnumerableExtensions\02_IEnumerableExtensions.csproj", "{0D99BD44-7797-4C2F-B344-FC185292D562}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_FirstBeforeLast", "03_FirstBeforeLast\03_FirstBeforeLast.csproj", "{D3C487F6-56CB-4409-A0AD-78B15D3D359F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +60,14 @@ Global
 		{157DBCFB-4E6B-4634-8D14-EA3E7C2A0D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{157DBCFB-4E6B-4634-8D14-EA3E7C2A0D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{157DBCFB-4E6B-4634-8D14-EA3E7C2A0D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D99BD44-7797-4C2F-B344-FC185292D562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D99BD44-7797-4C2F-B344-FC185292D562}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D99BD44-7797-4C2F-B344-FC185292D562}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D99BD44-7797-4C2F-B344-FC185292D562}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3C487F6-56CB-4409-A0AD-78B15D3D359F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C487F6-56CB-4409-A0AD-78B15D3D359F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C487F6-56CB-4409-A0AD-78B15D3D359F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C487F6-56CB-4409-A0AD-78B15D3D359F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +79,8 @@ Global
 		{DD394674-3A05-4FBF-94CA-14AA35A381A8} = {2297010F-942B-4835-8E97-47E28E666FFE}
 		{F76E2477-7945-4506-BD04-E4966E48CE70} = {2297010F-942B-4835-8E97-47E28E666FFE}
 		{157DBCFB-4E6B-4634-8D14-EA3E7C2A0D83} = {FC3E63E5-D2BB-46D9-84ED-4D3313D9A82F}
+		{0D99BD44-7797-4C2F-B344-FC185292D562} = {FC3E63E5-D2BB-46D9-84ED-4D3313D9A82F}
+		{D3C487F6-56CB-4409-A0AD-78B15D3D359F} = {FC3E63E5-D2BB-46D9-84ED-4D3313D9A82F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5D1AE4F-AEE3-4A5D-BA23-3A48EB7AC63E}
