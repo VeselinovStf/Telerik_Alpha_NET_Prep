@@ -4,24 +4,28 @@
 var actualPost1 = [
     Author = "Pesho",
     Header = "My First Post",
-    Content = "Some text here to display new Pesho's Constent ",   
+    Content = "Some text here to display new Pesho's Constent ",
 ];
 
 var allPosts = [actualPost1];
 
-for(var i = 0; i < allPosts.length; i+= 1){
+for (var i = 0; i < allPosts.length; i += 1) {
     initializePost(allPosts[i]);
 }
 
 
 
-function initializePost(post){
+function initializePost(post) {
     var htmlDoc = document.getElementsByTagName('body');
-    var text = "<h1>Post Author: " + post[0] + "</h1>" 
-    + "<h4>" + post[1] + "</h4>" 
-    + "<p>" + post[2] + "</p>" ;
-   
+    var text = "<h1>Post Author: " + post[0] + "</h1>"
+        + "<h4>" + post[1] + "</h4>"
+        + "<p>" + post[2] + "</p>";
+
     htmlDoc[0].innerHTML = text;
-    
-    
+
+
+}
+
+for (var element = element; i < array; element += 1) {
+
 }
