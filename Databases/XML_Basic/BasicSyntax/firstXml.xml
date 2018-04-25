@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+    <to>John</to>
+    <from>Stephen</from>
+    <heading>Welcome XML</heading>
+    <body>Welcome to my firs xml</body>
+</node>
+

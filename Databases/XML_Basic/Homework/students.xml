@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="students.xsl"?>
+<students >
+    <student>
+        <name>Pesho</name>
+        <sex>Male</sex>
+        <birthdate>22.06.1999</birthdate>
+        <phone>989521456</phone>
+        <email>pesho@blq.blq</email>
+        <course>3</course>
+        <specialty>Coding</specialty>
+        <facultynumber>1245</facultynumber>
+        <takenexams>
+            <exam>
+                <name>Math</name>
+                <tutor>J.J.J</tutor>
+                <score>2.0</score>
+            </exam>
+            <exam>
+                <name>Literature</name>
+                <tutor>Martur One</tutor>
+                <score>3.0</score>
+            </exam>
+        </takenexams>
+    </student>
+    <student>
+        <name>Gosho</name>
+        <sex>Male</sex>
+        <birthdate>30.01.2001</birthdate>
+        <phone>541646556</phone>
+        <email>gosho@blq.blq</email>
+        <course>5</course>
+        <specialty>Nothing</specialty>
+        <facultynumber>2548</facultynumber>
+        <takenexams>
+            <exam>
+                <name>Math</name>
+                <tutor>J.J.J</tutor>
+                <score>6.0</score>
+            </exam>
+            <exam>
+                <name>Literature</name>
+                <tutor>Martur One</tutor>
+                <score>6.0</score>
+            </exam>
+        </takenexams>
+    </student>
+</students>
