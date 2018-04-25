@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dir-enumeration>
+  <directories>
+    <dir>Acunetix</dir>
+    <dir>Application Verifier</dir>
+    <dir>Common Files</dir>
+    <dir>Driver Booster</dir>
+    <dir>Entity Framework Tools</dir>
+    <dir>Google</dir>
+    <dir>GRETECH</dir>
+    <dir>Guitar Pro 5</dir>
+    <dir>IIS</dir>
+    <dir>IIS Express</dir>
+    <dir>InstallShield Installation Information</dir>
+    <dir>Intel</dir>
+    <dir>Internet Explorer</dir>
+    <dir>IObit</dir>
+    <dir>Microsoft Analysis Services</dir>
+    <dir>Microsoft Help Viewer</dir>
+    <dir>Microsoft Office</dir>
+    <dir>Microsoft SDKs</dir>
+    <dir>Microsoft SQL Server</dir>
+    <dir>Microsoft Visual Studio</dir>
+    <dir>Microsoft Web Tools</dir>
+    <dir>Microsoft.NET</dir>
+    <dir>Mozilla Firefox</dir>
+    <dir>Mozilla Maintenance Service</dir>
+    <dir>MSBuild</dir>
+    <dir>Notepad++</dir>
+    <dir>NuGet</dir>
+    <dir>Realtek</dir>
+    <dir>Reference Assemblies</dir>
+    <dir>ShellDir</dir>
+    <dir>Temp</dir>
+    <dir>VMware</dir>
+    <dir>Windows Defender</dir>
+    <dir>Windows Kits</dir>
+    <dir>Windows Mail</dir>
+    <dir>Windows Media Player</dir>
+    <dir>Windows Multimedia Platform</dir>
+    <dir>Windows NT</dir>
+    <dir>Windows Phone Kits</dir>
+    <dir>Windows Photo Viewer</dir>
+    <dir>Windows Portable Devices</dir>
+    <dir>Windows Sidebar</dir>
+    <dir>WindowsPowerShell</dir>
+  </directories>
+  <files>
+    <file>desktop.ini</file>
+  </files>
+</dir-enumeration>

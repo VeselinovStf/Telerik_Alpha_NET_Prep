@@ -5,7 +5,7 @@ namespace DomParserDeleteElements
 {
     public class StartUp
     {
-        static void Main()
+        private static void Main()
         {
             XmlDocument doc;
             doc = new XmlDocument();
@@ -14,7 +14,7 @@ namespace DomParserDeleteElements
             var root = doc.DocumentElement;
 
             DeleteNode(root);
-           PrintXml(root);
+            PrintXml(root);
         }
 
         private static void PrintXml(XmlNode root)
@@ -24,7 +24,6 @@ namespace DomParserDeleteElements
                 if (element.Value != null && element.Name != null)
                 {
                     Console.WriteLine($"{element.ParentNode.Name.ToUpper()} : {element.Value}");
-
                 }
 
                 PrintXml(element);
@@ -40,7 +39,7 @@ namespace DomParserDeleteElements
                     var price = int.Parse(element.LastChild.Value);
 
                     if (price < 20)
-                    {          
+                    {
                         root.RemoveAll();
                     }
                 }

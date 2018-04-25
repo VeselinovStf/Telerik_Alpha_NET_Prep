@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 
 namespace TextToXmlWriter
@@ -12,17 +8,15 @@ namespace TextToXmlWriter
     {
         public static List<string> readedText = new List<string>();
 
-        public  static void Main()
+        public static void Main()
         {
             using (StreamReader reader = new StreamReader("../../personInfo.txt"))
             {
-
                 while (reader.Peek() >= 0)
                 {
                     var line = reader.ReadLine();
                     readedText.Add(line);
                 }
-
             }
 
             string filename = "personData.xml";
@@ -42,13 +36,10 @@ namespace TextToXmlWriter
 
                 writer.WriteEndElement();
             }
-            
-
         }
 
         private static void GetTextFromFile()
         {
-           
         }
     }
 }

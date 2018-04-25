@@ -3,9 +3,9 @@ using System.Xml;
 
 namespace XMLReaderDemo
 {
-   public  class StartUp
+    public class StartUp
     {
-        public  static void Main()
+        public static void Main()
         {
             XmlReader reader = XmlReader.Create("../../cataloque.xml");
 
@@ -17,7 +17,6 @@ namespace XMLReaderDemo
                     Console.WriteLine(reader.Value);
                     reader.Read();
                 }
-                
             }
         }
     }

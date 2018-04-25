@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
+﻿using System.Xml;
 
 namespace XReaderXWriterAction
 {
@@ -15,10 +11,9 @@ namespace XReaderXWriterAction
                 using (XmlWriter writer = XmlWriter.Create("../../album.xml"))
                 {
                     writer.WriteStartElement("albums");
-                    
+
                     while (reader.Read())
                     {
-                       
                         if (reader.Name == "name")
                         {
                             writer.WriteStartElement("album");
@@ -38,11 +33,7 @@ namespace XReaderXWriterAction
 
                     writer.WriteEndElement();
                 }
-
             }
-
-
-
         }
     }
 }

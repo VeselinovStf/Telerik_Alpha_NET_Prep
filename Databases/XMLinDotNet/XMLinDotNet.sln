@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextToXmlWriter", "TextToXm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XReaderXWriterAction", "XReaderXWriterAction\XReaderXWriterAction.csproj", "{17DAF659-0B55-46B9-9232-98AA361507C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraverseDirXWriter", "TraverseDirXWriter\TraverseDirXWriter.csproj", "{93731322-B110-453E-9960-AA3B8BB41C96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Published5YearsAgo", "Published5YearsAgo\Published5YearsAgo.csproj", "{F5366824-BFA5-49A0-9EBD-3DACD35689C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{17DAF659-0B55-46B9-9232-98AA361507C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17DAF659-0B55-46B9-9232-98AA361507C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17DAF659-0B55-46B9-9232-98AA361507C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93731322-B110-453E-9960-AA3B8BB41C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93731322-B110-453E-9960-AA3B8BB41C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93731322-B110-453E-9960-AA3B8BB41C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93731322-B110-453E-9960-AA3B8BB41C96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5366824-BFA5-49A0-9EBD-3DACD35689C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5366824-BFA5-49A0-9EBD-3DACD35689C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5366824-BFA5-49A0-9EBD-3DACD35689C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5366824-BFA5-49A0-9EBD-3DACD35689C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Xml;
-using System.Xml.Linq;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace XDocumendLinqQuery
 {
@@ -11,14 +10,13 @@ namespace XDocumendLinqQuery
         {
             XDocument doc = XDocument.Load("../../cataloque.xml");
 
-            var songs = from song in doc.Descendants("title")              
+            var songs = from song in doc.Descendants("title")
                         select song;
 
             foreach (var title in songs)
             {
                 Console.WriteLine(title.Value);
             }
-           
         }
     }
 }
