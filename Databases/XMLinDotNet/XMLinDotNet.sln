@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithSML", "WorkingWithSML\WorkingWithSML.csproj", "{8B96F06E-19DD-4322-BEEC-87ADDF55190F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomParser", "DomParser\DomParser.csproj", "{795C89CD-4CBF-4112-8E61-466E138BE18B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPath", "XPath\XPath.csproj", "{20A0A3B6-7452-4F1F-96C7-865302F41D9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomParserDeleteElements", "DomParserDeleteElements\DomParserDeleteElements.csproj", "{701A86DA-4745-4B3B-A829-6DFC0267867B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLReaderDemo", "XMLReaderDemo\XMLReaderDemo.csproj", "{9B3A275A-BA1E-47D5-86B1-DED7EF615EEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XDocumendLinqQuery", "XDocumendLinqQuery\XDocumendLinqQuery.csproj", "{1E10DF4F-8AEF-4B83-80D6-F86F96ADDD3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8B96F06E-19DD-4322-BEEC-87ADDF55190F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B96F06E-19DD-4322-BEEC-87ADDF55190F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B96F06E-19DD-4322-BEEC-87ADDF55190F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B96F06E-19DD-4322-BEEC-87ADDF55190F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{795C89CD-4CBF-4112-8E61-466E138BE18B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{795C89CD-4CBF-4112-8E61-466E138BE18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{795C89CD-4CBF-4112-8E61-466E138BE18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{795C89CD-4CBF-4112-8E61-466E138BE18B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20A0A3B6-7452-4F1F-96C7-865302F41D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20A0A3B6-7452-4F1F-96C7-865302F41D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20A0A3B6-7452-4F1F-96C7-865302F41D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20A0A3B6-7452-4F1F-96C7-865302F41D9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{701A86DA-4745-4B3B-A829-6DFC0267867B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{701A86DA-4745-4B3B-A829-6DFC0267867B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{701A86DA-4745-4B3B-A829-6DFC0267867B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{701A86DA-4745-4B3B-A829-6DFC0267867B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B3A275A-BA1E-47D5-86B1-DED7EF615EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3A275A-BA1E-47D5-86B1-DED7EF615EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3A275A-BA1E-47D5-86B1-DED7EF615EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3A275A-BA1E-47D5-86B1-DED7EF615EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E10DF4F-8AEF-4B83-80D6-F86F96ADDD3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E10DF4F-8AEF-4B83-80D6-F86F96ADDD3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E10DF4F-8AEF-4B83-80D6-F86F96ADDD3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E10DF4F-8AEF-4B83-80D6-F86F96ADDD3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

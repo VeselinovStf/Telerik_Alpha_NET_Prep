@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Xml;
 
-namespace WorkingWithSML
+namespace DomParser
 {
-    internal class StartUp
+    public class StartUp
     {
+
         private static Dictionary<string, int> bandsAlbumCount = new Dictionary<string, int>();
 
         private static void Main()
