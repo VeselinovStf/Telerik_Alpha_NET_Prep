@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1E10DF4F-8AEF-4B83-80D6-F86F96ADDD3D}</ProjectGuid>
+    <ProjectGuid>{17DAF659-0B55-46B9-9232-98AA361507C1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>XDocumendLinqQuery</RootNamespace>
-    <AssemblyName>XDocumendLinqQuery</AssemblyName>
+    <RootNamespace>XReaderXWriterAction</RootNamespace>
+    <AssemblyName>XReaderXWriterAction</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,6 +49,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="album.xml" />
     <Content Include="cataloque.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

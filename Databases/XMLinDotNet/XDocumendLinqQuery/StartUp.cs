@@ -1,15 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Xml;
+using System.Xml.Linq;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace XDocumendLinqQuery
 {
-    class StartUp
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main()
         {
+            XDocument doc = XDocument.Load("../../cataloque.xml");
+
+            var songs = from song in doc.Descendants("title")              
+                        select song;
+
+            foreach (var title in songs)
+            {
+                Console.WriteLine(title.Value);
+            }
+           
         }
     }
 }

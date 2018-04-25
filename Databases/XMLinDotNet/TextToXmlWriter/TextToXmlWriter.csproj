@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1E10DF4F-8AEF-4B83-80D6-F86F96ADDD3D}</ProjectGuid>
+    <ProjectGuid>{706BAC6F-B86D-4F18-8484-7BDE52D6AEFF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>XDocumendLinqQuery</RootNamespace>
-    <AssemblyName>XDocumendLinqQuery</AssemblyName>
+    <RootNamespace>TextToXmlWriter</RootNamespace>
+    <AssemblyName>TextToXmlWriter</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,7 +49,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="cataloque.xml" />
+    <Content Include="personInfo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

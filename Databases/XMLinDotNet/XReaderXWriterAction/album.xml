@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<albums>
+  <album>
+    <album-name>Right The Lightning</album-name>
+    <author-name>Metallica</author-name>
+  </album>
+  <album>
+    <album-name>The Black album</album-name>
+    <author-name>Metallica</author-name>
+  </album>
+  <album>
+    <album-name>Vulgar display of power</album-name>
+    <author-name>Pantera</author-name>
+  </album>
+</albums>
