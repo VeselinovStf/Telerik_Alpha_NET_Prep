@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics", "Basics\Basics.csproj", "{685FE072-CB2A-48B6-9CAD-D4F9AA5555AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONdotNEt", "JSONdotNEt\JSONdotNEt.csproj", "{6A7EB2C9-7404-4AC2-B988-00DEF52FA2E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Homework", "Homework", "{250850CF-5CF4-427D-8C1B-37BE3A89C248}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikRSS", "TelerikRSS\TelerikRSS.csproj", "{6F4CB6B2-45AD-4C5B-9E3C-6BD30302EA3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{685FE072-CB2A-48B6-9CAD-D4F9AA5555AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{685FE072-CB2A-48B6-9CAD-D4F9AA5555AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{685FE072-CB2A-48B6-9CAD-D4F9AA5555AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{685FE072-CB2A-48B6-9CAD-D4F9AA5555AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A7EB2C9-7404-4AC2-B988-00DEF52FA2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A7EB2C9-7404-4AC2-B988-00DEF52FA2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A7EB2C9-7404-4AC2-B988-00DEF52FA2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A7EB2C9-7404-4AC2-B988-00DEF52FA2E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F4CB6B2-45AD-4C5B-9E3C-6BD30302EA3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F4CB6B2-45AD-4C5B-9E3C-6BD30302EA3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F4CB6B2-45AD-4C5B-9E3C-6BD30302EA3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F4CB6B2-45AD-4C5B-9E3C-6BD30302EA3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6F4CB6B2-45AD-4C5B-9E3C-6BD30302EA3A} = {250850CF-5CF4-427D-8C1B-37BE3A89C248}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAC87799-E299-4CAA-BEDE-263E9E7ED40A}
+	EndGlobalSection
+EndGlobal
