@@ -73,6 +73,10 @@
 	- create Repositories folder
 		- add interfaces
 		- create repository pattern
-23. Install NinJect - to .Web
+23. Install NinJect - to .web
+	- add NinjectWebCommon.cs
+24. Install Ninject.Extension.Convention
+	- add default bind
+25. MsqDbContext -> add void ApplyAuditInfoRules
 
 Note: Don't forget to uncoment password requirements - App_Start -> IdentityConfig.cs
