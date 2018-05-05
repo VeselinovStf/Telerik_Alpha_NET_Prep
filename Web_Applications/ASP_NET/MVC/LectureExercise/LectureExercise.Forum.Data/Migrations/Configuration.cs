@@ -5,7 +5,7 @@ namespace LectureExercise.Forum.Data.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<LectureExercise.Forum.Data.MsSqlDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<LectureExercise.Forum.Data.MsSqlDbContext>
     {
         public Configuration()
         {

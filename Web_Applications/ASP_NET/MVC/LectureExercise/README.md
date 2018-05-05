@@ -48,6 +48,21 @@
 16. Migrting to latest version
 	- in Global.asax
 		- add Database SetInitializer (new MigrationDatabaseToLatestVersion<MY SQL DATABASE CONTEXT, MIGRATION CONFIG>)
-
+17. Project.Data.Model
+	- Add Contracts
+		- IDeletable
+			- IsDelated
+			- DateTime? DaletedOn
+		- IAuditable
+			- DateTime? CreatedOn
+			- DateTime? Modified On
+	- Add Abstracts
+		- base class -> abstract DataModel who implements the interfacess
+		- add DataTime arguments + Index
+		- add property Guid with [Key] id 
+		- add ctor to initialize struct Guide.NewGuid();
+	- Add Class
+		- Post
+		
 
 Note: Don't forget to uncoment password requirements - App_Start -> IdentityConfig.cs
