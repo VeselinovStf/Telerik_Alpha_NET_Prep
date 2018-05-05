@@ -1,5 +1,6 @@
 ﻿using LectureExercise.Forum.Data.Model;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 
 namespace LectureExercise.Forum.Data
 {
@@ -10,6 +11,8 @@ namespace LectureExercise.Forum.Data
             : base("LocalConnection", throwIfV1Schema: false)
         {
         }
+
+        public IDbSet<Post> Posts { get; set; }
 
         public static MsSqlDbContext Create()
         {

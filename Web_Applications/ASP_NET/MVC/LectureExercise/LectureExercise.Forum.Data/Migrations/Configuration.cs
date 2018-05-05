@@ -1,5 +1,8 @@
 namespace LectureExercise.Forum.Data.Migrations
 {
+    using LectureExercise.Forum.Data.Model;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -15,18 +18,36 @@ namespace LectureExercise.Forum.Data.Migrations
 
         protected override void Seed(LectureExercise.Forum.Data.MsSqlDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            this.SeedAdmin(context);
+        }
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+        private void SeedAdmin(MsSqlDbContext context)
+        {
+            const string AdministratorUserName = "test@test.com";
+            const string AdministratorPassword = "123456";
+
+            if (!context.Roles.Any())
+            {
+                var roleStore = new RoleStore<IdentityRole>(context);
+                var roleManager = new RoleManager<IdentityRole>(roleStore);
+
+                var role = new IdentityRole("Admin");
+                roleManager.Create(role);
+
+                var userStore = new UserStore<User>(context);
+                var userManager = new UserManager<User>(userStore);
+
+                var user = new User
+                {
+                    UserName = AdministratorUserName,
+                    Email = AdministratorUserName,
+                    EmailConfirmed = true
+                };
+
+                userManager.Create(user, AdministratorPassword);
+
+                userManager.AddToRole(user.Id, "Admin");
+            }
         }
     }
 }

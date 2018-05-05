@@ -38,7 +38,7 @@
 	10.6. Manage NuGet package for solution
 		- add Microsoft.AspNet.Identity.EntityFramework
 		- add all usings
-11. Change connection string "DefaulConnection" -> change the name in Web.config
+11. Change connection string "DefaulConnection" -> change the name in Web.config, change and DataSouce
 12. Fix all referance errors
 13. Enable-Migrations -> Package Manager Console -> Enable-Migrations to project.forum.Data
 14. Add Default Admin to Seed
@@ -62,7 +62,17 @@
 		- add property Guid with [Key] id 
 		- add ctor to initialize struct Guide.NewGuid();
 	- Add Class
-		- Post
-		
+		- Post (Forum)
+	- Add to context
+		- in DbContext add prop Posts, type IDSet<Post>
+18. Add admin seed to Migration Configuration
+19. Add-Migration to Data
+20. Update-Database
+21. Open SQL Managment Studio and see if the database exist
+22. Build Generic Repository
+	- create Repositories folder
+		- add interfaces
+		- create repository pattern
+23. Install NinJect - to .Web
 
 Note: Don't forget to uncoment password requirements - App_Start -> IdentityConfig.cs
