@@ -1,0 +1,661 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "UTF-8"
+  },
+  "feed": {
+    "@xmlns:yt": "http://www.youtube.com/xml/schemas/2015",
+    "@xmlns:media": "http://search.yahoo.com/mrss/",
+    "@xmlns": "http://www.w3.org/2005/Atom",
+    "link": [
+      {
+        "@rel": "self",
+        "@href": "http://www.youtube.com/feeds/videos.xml?channel_id=UCLC-vbm7OWvpbqzXaoAMGGw"
+      },
+      {
+        "@rel": "alternate",
+        "@href": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+      }
+    ],
+    "id": "yt:channel:UCLC-vbm7OWvpbqzXaoAMGGw",
+    "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+    "title": "Telerik Academy",
+    "author": {
+      "name": "Telerik Academy",
+      "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+    },
+    "published": "2011-06-24T18:53:13+03:00",
+    "entry": [
+      {
+        "id": "yt:video:XW8GcK7EDQo",
+        "yt:videoId": "XW8GcK7EDQo",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "Webinar: Mock Exams | Telerik Academy Alpha JAVA+Android",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=XW8GcK7EDQo"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-04-25T20:37:51+03:00",
+        "updated": "2018-04-25T20:46:44+03:00",
+        "media:group": {
+          "media:title": "Webinar: Mock Exams | Telerik Academy Alpha JAVA+Android",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/XW8GcK7EDQo?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i1.ytimg.com/vi/XW8GcK7EDQo/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Prepare for the entrance exam for Telerik Academy Alpha JAVA+Android. Save 25 April at 19:30 and join our webinar where our trainers will explain mock exam solutions and answer your questions. Before the webinar: \n• Review the exam solutions: http://bit.ly/2mFN3gZ \n• Send all your questions in sli.do . To join the session, enter the following event code: 5915. \nYou can list your questions before the event and upvote the best questions. You can also ask questions during the event. We recommend that during the event you use sli.do on a separate device (phone or second laptop/monitor).",
+          "media:community": {
+            "media:starRating": {
+              "@count": "0",
+              "@average": "0.00",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "156"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:W5G_9AKoBzA",
+        "yt:videoId": "W5G_9AKoBzA",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "MySQL with Hibernate",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=W5G_9AKoBzA"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-03-30T09:16:46+03:00",
+        "updated": "2018-04-18T12:29:15+03:00",
+        "media:group": {
+          "media:title": "MySQL with Hibernate",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/W5G_9AKoBzA?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i4.ytimg.com/vi/W5G_9AKoBzA/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Лекция: MySQL with Hibernate\nКурс: Бази от данни с Java\nЛектор: Дончо Минков\nДата: 29 март 2018 г.\n\nУебсайт: http://telerikacademy.com\nСледете всичко ново за Телерик Академия и във Facebook: http://www.facebook.com/TelerikAcademy.",
+          "media:community": {
+            "media:starRating": {
+              "@count": "0",
+              "@average": "0.00",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "176"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:API9amw1hcc",
+        "yt:videoId": "API9amw1hcc",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "Изпълняване на SQL през Java с JDBC - част 1",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=API9amw1hcc"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-03-30T09:03:35+03:00",
+        "updated": "2018-03-30T12:13:01+03:00",
+        "media:group": {
+          "media:title": "Изпълняване на SQL през Java с JDBC - част 1",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/API9amw1hcc?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i2.ytimg.com/vi/API9amw1hcc/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Лекция: Изпълняване на SQL през Java с JDBC - част 1\nКурс: Бази от данни с Java\nЛектор: Дончо Минков\nДата: 28 март 2018 г.\n\nУебсайт: http://telerikacademy.com\nСледете всичко ново за Телерик Академия и във Facebook: http://www.facebook.com/TelerikAcademy.",
+          "media:community": {
+            "media:starRating": {
+              "@count": "0",
+              "@average": "0.00",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "145"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:cxw3pxXBYYo",
+        "yt:videoId": "cxw3pxXBYYo",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "Изпълняване на SQL през Java с JDBC - част 2",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=cxw3pxXBYYo"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-03-30T08:55:37+03:00",
+        "updated": "2018-03-30T10:14:12+03:00",
+        "media:group": {
+          "media:title": "Изпълняване на SQL през Java с JDBC - част 2",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/cxw3pxXBYYo?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i4.ytimg.com/vi/cxw3pxXBYYo/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Лекция: Изпълняване на SQL през Java с JDBC - част 2\nКурс: Бази от данни с Java\nЛектор: Дончо Минков\nДата: 28 март 2018 г.\n\nУебсайт: http://telerikacademy.com\nСледете всичко ново за Телерик Академия и във Facebook: http://www.facebook.com/TelerikAcademy.",
+          "media:community": {
+            "media:starRating": {
+              "@count": "0",
+              "@average": "0.00",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "99"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:41AeQydjV-g",
+        "yt:videoId": "41AeQydjV-g",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "MariaDB and SQL - част 2",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=41AeQydjV-g"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-03-27T18:45:50+03:00",
+        "updated": "2018-04-01T20:11:47+03:00",
+        "media:group": {
+          "media:title": "MariaDB and SQL - част 2",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/41AeQydjV-g?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i1.ytimg.com/vi/41AeQydjV-g/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Лекция: MariaDB and SQL - част 2\nКурс: Бази от данни и SQL\nЛектор: Дончо Минков\nДата: 27 март 2018 г.\n\nУебсайт: http://telerikacademy.com\nСледете всичко ново за Телерик Академия и във Facebook: http://www.facebook.com/TelerikAcademy.",
+          "media:community": {
+            "media:starRating": {
+              "@count": "2",
+              "@average": "3.00",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "143"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:XXXO01hT3O8",
+        "yt:videoId": "XXXO01hT3O8",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "MariaDB and SQL - част 1",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=XXXO01hT3O8"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-03-27T18:45:50+03:00",
+        "updated": "2018-03-29T14:54:00+03:00",
+        "media:group": {
+          "media:title": "MariaDB and SQL - част 1",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/XXXO01hT3O8?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i1.ytimg.com/vi/XXXO01hT3O8/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Лекция: MariaDB and SQL - част 1\nКурс: Бази от данни и SQL\nЛектор: Дончо Минков\nДата: 27 март 2018 г.\n\nУебсайт: http://telerikacademy.com\nСледете всичко ново за Телерик Академия и във Facebook: http://www.facebook.com/TelerikAcademy.",
+          "media:community": {
+            "media:starRating": {
+              "@count": "1",
+              "@average": "5.00",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "256"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:cJ0epjUZFQM",
+        "yt:videoId": "cJ0epjUZFQM",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "Databases Overview",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=cJ0epjUZFQM"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-03-27T18:45:50+03:00",
+        "updated": "2018-04-05T14:30:35+03:00",
+        "media:group": {
+          "media:title": "Databases Overview",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/cJ0epjUZFQM?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i4.ytimg.com/vi/cJ0epjUZFQM/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Лекция: Databases Overview\nКурс: Бази от данни и SQL\nЛектор: Дончо Минков\nДата: 27 март 2018 г.\n\nУебсайт: http://telerikacademy.com\nСледете всичко ново за Телерик Академия и във Facebook: http://www.facebook.com/TelerikAcademy.",
+          "media:community": {
+            "media:starRating": {
+              "@count": "3",
+              "@average": "5.00",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "196"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:oxbt4iOIwC0",
+        "yt:videoId": "oxbt4iOIwC0",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "Професия Java програмист - кариерни възможности",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=oxbt4iOIwC0"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-02-23T10:29:59+02:00",
+        "updated": "2018-03-27T22:15:23+03:00",
+        "media:group": {
+          "media:title": "Професия Java програмист - кариерни възможности",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/oxbt4iOIwC0?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i4.ytimg.com/vi/oxbt4iOIwC0/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "В рамките на кариерното ни събитие \"How to Kickstart a Career with Java\" Атанас Игнатов, мениджър на софтуерен екип в Experian, и Христо Ганев, технически директор на Proxiad, разказват за кариерните възможности с Java.\n\nУебсайт: http://telerikacademy.com\nСледете всичко ново за Телерик Академия и във Facebook: http://www.facebook.com/TelerikAcademy.",
+          "media:community": {
+            "media:starRating": {
+              "@count": "7",
+              "@average": "3.29",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "514"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:RSVLN2KVfKE",
+        "yt:videoId": "RSVLN2KVfKE",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "Telerik Academy Alpha JAVA - представяне",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=RSVLN2KVfKE"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-02-23T10:17:46+02:00",
+        "updated": "2018-04-07T22:32:19+03:00",
+        "media:group": {
+          "media:title": "Telerik Academy Alpha JAVA - представяне",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/RSVLN2KVfKE?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i3.ytimg.com/vi/RSVLN2KVfKE/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Научете повече за програмата за подготовка на софтуерни специалисти Telerik Academy Alpha JAVA от Михаил Вълков, генерален мениджър, и Дончо Минков, старши технологичен трейнър в Професионалната Телерик Академия. \n\nУебсайт: http://telerikacademy.com\nСледете всичко ново за Телерик Академия и във Facebook: http://www.facebook.com/TelerikAcademy.",
+          "media:community": {
+            "media:starRating": {
+              "@count": "6",
+              "@average": "5.00",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "480"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:twHzYQXdQ9o",
+        "yt:videoId": "twHzYQXdQ9o",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "JS - Creating site for Belle, the Beauty Part 3",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=twHzYQXdQ9o"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-02-20T12:48:15+02:00",
+        "updated": "2018-04-02T15:37:27+03:00",
+        "media:group": {
+          "media:title": "JS - Creating site for Belle, the Beauty Part 3",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/twHzYQXdQ9o?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i1.ytimg.com/vi/twHzYQXdQ9o/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Лекция: JS - Creating site for Belle, the Beauty Part 3\nКурс: HTML, CSS & JS\nЛектор: Дончо Минков\nДата: 9 февруари 2018 г.\n\nУебсайт: http://telerikacademy.com\nСледете всичко ново за Телерик Академия и във Facebook: http://www.facebook.com/TelerikAcademy.",
+          "media:community": {
+            "media:starRating": {
+              "@count": "6",
+              "@average": "5.00",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "363"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:aJ6Er2NVRJE",
+        "yt:videoId": "aJ6Er2NVRJE",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "Webinar: Mock Exams | Telerik Academy Alpha JAVA",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=aJ6Er2NVRJE"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-02-19T21:05:33+02:00",
+        "updated": "2018-02-27T22:27:33+02:00",
+        "media:group": {
+          "media:title": "Webinar: Mock Exams | Telerik Academy Alpha JAVA",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/aJ6Er2NVRJE?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i2.ytimg.com/vi/aJ6Er2NVRJE/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Prepare for the entrance exam for Telerik Academy Alpha JAVA. Save 19 February at 19:30 and join our webinar where our trainers will explain mock exam solutions and answer your questions.\n\n\nBefore the webinar:\n• review the exam solutions: http://bit.ly/2mFN3gZ\n• Send all your questions in sli.do. To join the session, enter the following event code: M668. You can list your questions before the event and upvote the best questions. You can also ask questions during the event. We recommend that during the event you use sli.do on a separate device (phone or second laptop/monitor).",
+          "media:community": {
+            "media:starRating": {
+              "@count": "0",
+              "@average": "0.00",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "971"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:WSoO-XgOK3M",
+        "yt:videoId": "WSoO-XgOK3M",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "„Успешен кариерен старт в ИТ сектора“ - възпитаници на Професионалната Телерик Академия",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=WSoO-XgOK3M"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-02-19T12:51:58+02:00",
+        "updated": "2018-04-15T16:00:54+03:00",
+        "media:group": {
+          "media:title": "„Успешен кариерен старт в ИТ сектора“ - възпитаници на Професионалната Телерик Академия",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/WSoO-XgOK3M?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i4.ytimg.com/vi/WSoO-XgOK3M/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Събитие „Как да стартирате кариера с Java“.\n\nПанелна дискусия с участието на Калин Костов, Мартин Доневски и Никола Станойчев, курсисти, завършили успешно Професионалните програми на Телерик Академия. \n\nУебсайт: http://telerikacademy.com\nСледете всичко ново за Телерик Академия и във Facebook: http://www.facebook.com/TelerikAcademy.",
+          "media:community": {
+            "media:starRating": {
+              "@count": "11",
+              "@average": "5.00",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "526"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:9pCT0R9T7eA",
+        "yt:videoId": "9pCT0R9T7eA",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "HTML & CSS - Creating site for Belle, the Beauty Part 2",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=9pCT0R9T7eA"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-02-16T11:45:34+02:00",
+        "updated": "2018-03-20T22:58:59+02:00",
+        "media:group": {
+          "media:title": "HTML & CSS - Creating site for Belle, the Beauty Part 2",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/9pCT0R9T7eA?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i2.ytimg.com/vi/9pCT0R9T7eA/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Лекция: HTML & CSS - Creating site for Belle, the Beauty Part 2\nКурс: HTML, CSS & JS\nЛектор: Едуард Евлогиев\nДата: 8 февруари 2018 г.\n\nУебсайт: http://telerikacademy.com\nСледете всичко ново за Телерик Академия и във Facebook: http://www.facebook.com/TelerikAcademy.",
+          "media:community": {
+            "media:starRating": {
+              "@count": "12",
+              "@average": "4.67",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "530"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:8JW1SHvmhXs",
+        "yt:videoId": "8JW1SHvmhXs",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "Задача Horse Path",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=8JW1SHvmhXs"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-02-15T08:35:40+02:00",
+        "updated": "2018-04-25T11:16:36+03:00",
+        "media:group": {
+          "media:title": "Задача Horse Path",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/8JW1SHvmhXs?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i1.ytimg.com/vi/8JW1SHvmhXs/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Лекция: Задача Horse Path\nЛектор: Дончо Минков\n\nУебсайт: http://telerikacademy.com\nСледете всичко ново за Телерик Академия и във Facebook: http://www.facebook.com/TelerikAcademy.",
+          "media:community": {
+            "media:starRating": {
+              "@count": "3",
+              "@average": "5.00",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "393"
+            }
+          }
+        }
+      },
+      {
+        "id": "yt:video:lY-9jBlU6zY",
+        "yt:videoId": "lY-9jBlU6zY",
+        "yt:channelId": "UCLC-vbm7OWvpbqzXaoAMGGw",
+        "title": "Задача Speeds",
+        "link": {
+          "@rel": "alternate",
+          "@href": "https://www.youtube.com/watch?v=lY-9jBlU6zY"
+        },
+        "author": {
+          "name": "Telerik Academy",
+          "uri": "https://www.youtube.com/channel/UCLC-vbm7OWvpbqzXaoAMGGw"
+        },
+        "published": "2018-02-15T08:35:22+02:00",
+        "updated": "2018-02-24T13:10:25+02:00",
+        "media:group": {
+          "media:title": "Задача Speeds",
+          "media:content": {
+            "@url": "https://www.youtube.com/v/lY-9jBlU6zY?version=3",
+            "@type": "application/x-shockwave-flash",
+            "@width": "640",
+            "@height": "390"
+          },
+          "media:thumbnail": {
+            "@url": "https://i1.ytimg.com/vi/lY-9jBlU6zY/hqdefault.jpg",
+            "@width": "480",
+            "@height": "360"
+          },
+          "media:description": "Лекция: Задача Speeds\nЛектор: Дончо Минков\n\nУебсайт: http://telerikacademy.com\nСледете всичко ново за Телерик Академия и във Facebook: http://www.facebook.com/TelerikAcademy.",
+          "media:community": {
+            "media:starRating": {
+              "@count": "1",
+              "@average": "5.00",
+              "@min": "1",
+              "@max": "5"
+            },
+            "media:statistics": {
+              "@views": "367"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
