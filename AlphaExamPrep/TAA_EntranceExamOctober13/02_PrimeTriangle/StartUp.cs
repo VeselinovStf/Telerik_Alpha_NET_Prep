@@ -40,6 +40,7 @@ namespace _02_PrimeTriangle
                     return false;
                 }
 
+
             }
             return true;
 
