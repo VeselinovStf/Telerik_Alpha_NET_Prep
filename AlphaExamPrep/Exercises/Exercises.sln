@@ -28,6 +28,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Legs", "Legs\Legs.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalFromSpace", "SignalFromSpace\SignalFromSpace.csproj", "{8CBEE773-A5F0-493E-AF5F-523941F375F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numbers", "Numbers\Numbers.csproj", "{01CF4FE9-4168-432F-AA64-E3B786676B5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crossword", "Crossword\Crossword.csproj", "{6D0FABBF-282A-44FE-9EDC-DDFD80A8CED4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +78,14 @@ Global
 		{8CBEE773-A5F0-493E-AF5F-523941F375F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CBEE773-A5F0-493E-AF5F-523941F375F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CBEE773-A5F0-493E-AF5F-523941F375F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01CF4FE9-4168-432F-AA64-E3B786676B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01CF4FE9-4168-432F-AA64-E3B786676B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01CF4FE9-4168-432F-AA64-E3B786676B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01CF4FE9-4168-432F-AA64-E3B786676B5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D0FABBF-282A-44FE-9EDC-DDFD80A8CED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D0FABBF-282A-44FE-9EDC-DDFD80A8CED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D0FABBF-282A-44FE-9EDC-DDFD80A8CED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D0FABBF-282A-44FE-9EDC-DDFD80A8CED4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_PrimeTriangle", "02_Prim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiggestPrimeNumber", "BiggestPrimeNumber\BiggestPrimeNumber.csproj", "{A52FBAD4-60F8-4BDF-ABA7-63E812AA4D4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Hops", "03_Hops\03_Hops.csproj", "{D7F7A4D7-19E6-425F-8E8F-642BB044C314}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A52FBAD4-60F8-4BDF-ABA7-63E812AA4D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A52FBAD4-60F8-4BDF-ABA7-63E812AA4D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A52FBAD4-60F8-4BDF-ABA7-63E812AA4D4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F7A4D7-19E6-425F-8E8F-642BB044C314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F7A4D7-19E6-425F-8E8F-642BB044C314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F7A4D7-19E6-425F-8E8F-642BB044C314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F7A4D7-19E6-425F-8E8F-642BB044C314}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

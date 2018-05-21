@@ -24,7 +24,7 @@ namespace SignalFromSpace
 
                 if (i == message.Length - 1)
                 {
-
+                    result.Append(testLetter);
                 }
             }
 

@@ -47,5 +47,34 @@ Write a program which prints ten numbers after a given N.
  - Skoki is also a magician. He once made an incantation which sent him to another universe. There chickens have 7 legs, bears have 2 and humans have 5.
  - Print the number of possible combinations on a single line
 
- ## Signal from Space (SignalFromSpace)
+## Signal from Space (SignalFromSpace)
 	- One day a signal from space was registered. Scientists managed to record the signal as a sequence of N symbols. It turned out that due to a technical difficulty some symbols have been repeated. Help the scientists by writing a program which removes consecutive repetitions of symbols, decoding the message.
+
+## Numbers (Numbers)
+	- Coki loves numbers. He also loves operations with them.
+
+Since the regular arithmetic operations are too mainstream for him, he decided he wants a brand new calculator.
+
+The calculator supports the following operations:
+
+set NUMBER
+Sets the current value to number
+front-add DIGIT
+Adds the digit DIGIT to the front (at the leftmost)
+front-remove
+Removes the first (the leftmost) digit
+does nothing if there are no digits
+back-add DIGIT
+Adds the digit DIGIT to the back (at the rightmost)
+back-remove
+Removes the last (the rightmost) digit
+does nothing if there are no digits
+reverse
+Reverses the digits of the current number
+print
+Prints the current number
+prints an empty line if there are no digits
+end
+Stops the program
+Sadly, Coki is not smart enough to implement the calculator. Pleeeeeease, help him, he is annoying!!
+
