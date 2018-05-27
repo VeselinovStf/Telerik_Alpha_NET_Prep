@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -6,6 +7,8 @@ namespace Crossword
 {
     public class StartUp
     {
+        public static List<string> words = new List<string>();
+
         public static void Main()
         {
             int[] initialSize = SplitInputToIntArray();
@@ -16,18 +19,50 @@ namespace Crossword
 
             //Find the smaller lexicograph word that is >= 2 letters
 
-            string finalWord = string.Empty;
 
             //Horizontal word
-            string horizontalBestWord = FindHorizontalBestWord(matrix);
-
-
+           FindHorizontaltWords(matrix);
             // Vertical Word
+            FindVerticalWords(matrix);
+
+            string finalWord = words.OrderBy(x => x).ThenBy(x => x.Length).First();
+            Console.WriteLine(finalWord);
+
         }
 
-        private static string FindHorizontalBestWord(char[,] matrix)
+        private static void FindVerticalWords(char[,] matrix)
         {
-            StringBuilder result = new StringBuilder();
+            for (int col = 0; col < matrix.GetLength(1); col++)
+            {
+                StringBuilder currentRowWord = new StringBuilder();
+
+
+                for (int row = 0; row < matrix.GetLength(0); row++)
+                {
+                    if (matrix[row, col] != '#')
+                    {
+                        currentRowWord.Append(matrix[row, col]);
+                    }
+                    else
+                    {
+                        if (currentRowWord.Length > 1)
+                        {
+                            words.Add(currentRowWord.ToString());
+                        }
+                        currentRowWord = new StringBuilder();
+                    }
+                }
+
+                if (currentRowWord.Length > 1)
+                {
+                    words.Add(currentRowWord.ToString());
+                }
+            }
+        }
+
+        private static void FindHorizontaltWords(char[,] matrix)
+        {
+            
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
@@ -35,11 +70,27 @@ namespace Crossword
 
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-                    //TODO
+                    if (matrix[row,col] != '#')
+                    {
+                        currentRowWord.Append(matrix[row, col]);
+                    }
+                    else
+                    {
+                        if (currentRowWord.Length > 1)
+                        {
+                            words.Add(currentRowWord.ToString());
+                        }
+                        currentRowWord = new StringBuilder(); ;
+                    }
+                }
+
+                if (currentRowWord.Length > 1)
+                {
+                    words.Add(currentRowWord.ToString());
                 }
             }
 
-            return result.ToString();
+           
         }
 
         private static void FillMatrixFromInput(char[,] matrix, int initialSize)

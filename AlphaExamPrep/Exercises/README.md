@@ -78,3 +78,15 @@ end
 Stops the program
 Sadly, Coki is not smart enough to implement the calculator. Pleeeeeease, help him, he is annoying!!
 
+## Max Sum of Subsequence (MaxSumOfSubsequence)
+	- Write a program that finds the maximal sum of consecutive elements in a given array of N numbers.
+
+## Not Divisable Number (NotDivisableNumber)
+	- Write a program that reads from the console a positive integer N and prints all the numbers from 1 to N not divisible by 3 or 7, on a single line, separated by a space.
+
+## Above the Main Diagonal (AboveTheMainDiagonal)
+	- You are given a square matrix of numbers, formed by powers of 2
+	- You task is to find the sum above the main diagonal.
+
+## Three Groups (ThreeGroups)
+	- You task is to group the numbers by remainder of 3.
