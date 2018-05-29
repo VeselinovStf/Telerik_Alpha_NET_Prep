@@ -4,9 +4,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{39033EE9-6E4E-459A-BFB4-DB6FBB593095}</ProjectGuid>
+    <ProjectGuid>{4AE14BE1-B15F-4C04-87DF-C07D4AC28E05}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_02_CrookedStairs</RootNamespace>
+    <RootNamespace>NFactorial</RootNamespace>
     <AssemblyName>01_Yesterday</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -4,9 +4,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{39033EE9-6E4E-459A-BFB4-DB6FBB593095}</ProjectGuid>
+    <ProjectGuid>{869807B5-2AB2-4415-BFD4-C55F540437B4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_02_CrookedStairs</RootNamespace>
+    <RootNamespace>MaxSumOfSubsequence</RootNamespace>
     <AssemblyName>01_Yesterday</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -34,7 +34,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />

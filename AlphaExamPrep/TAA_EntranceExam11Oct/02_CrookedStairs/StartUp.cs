@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace _02_CrookedStairs
 {
@@ -6,12 +7,17 @@ namespace _02_CrookedStairs
     {
         public static void Main()
         {
-            int firstNum = int.Parse(Console.ReadLine());
-            int secondNum = int.Parse(Console.ReadLine());
-            int thurdNum = int.Parse(Console.ReadLine());
+            BigInteger firstNum = BigInteger.Parse(Console.ReadLine());
+            BigInteger secondNum = BigInteger.Parse(Console.ReadLine());
+            BigInteger thurdNum = BigInteger.Parse(Console.ReadLine());
 
+<<<<<<< HEAD
             int rowsCount = int.Parse(Console.ReadLine());
 
+=======
+            BigInteger rowsCount = BigInteger.Parse(Console.ReadLine());
+                        
+>>>>>>> 64fbe466e16e0b7f8bf1be026aca7dfe5910ed20
             for (int row = 0; row < rowsCount; row++)
             {
                 if (row == 0)
@@ -27,13 +33,17 @@ namespace _02_CrookedStairs
                     for (int i = 0; i <= row; i++)
                     {
                         Console.Write(firstNum + secondNum + thurdNum + " ");
-                        var temp = firstNum;
+                        BigInteger temp = firstNum;
                         firstNum = secondNum;
                         secondNum = thurdNum;
                         thurdNum = temp + firstNum + secondNum;
                     }
+<<<<<<< HEAD
                 }
 
+=======
+                }           
+>>>>>>> 64fbe466e16e0b7f8bf1be026aca7dfe5910ed20
                 Console.WriteLine();
             }
         }
