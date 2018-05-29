@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0FDB73DB-D81B-4AD6-B979-BF06CA3C06AF}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LectureExercise.Forum.Data</RootNamespace>
-    <AssemblyName>LectureExercise.Forum.Data</AssemblyName>
+    <ProjectGuid>{D1006424-ED46-49A6-9F83-98A2C065ED45}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EFCodeFirst.CLI.Engine</RootNamespace>
+    <AssemblyName>EFCodeFirst.CLI.Engine</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,16 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -53,36 +49,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201805051508089_Initial Admin User Added.cs" />
-    <Compile Include="Migrations\201805051508089_Initial Admin User Added.Designer.cs">
-      <DependentUpon>201805051508089_Initial Admin User Added.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201805070251093_Initial Two.cs" />
-    <Compile Include="Migrations\201805070251093_Initial Two.Designer.cs">
-      <DependentUpon>201805070251093_Initial Two.cs</DependentUpon>
+    <Compile Include="Data\LibraryDbContex.cs" />
+    <Compile Include="Migrations\201805081305504_Initial.cs" />
+    <Compile Include="Migrations\201805081305504_Initial.Designer.cs">
+      <DependentUpon>201805081305504_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="MsSqlDbContext.cs" />
+    <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\EfRepository.cs" />
-    <Compile Include="Repositories\IEfRepository.cs" />
+    <Compile Include="StoreProject.Data\StoreDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LectureExercise.Forum.Data.Model\LectureExercise.Forum.Data.Model.csproj">
-      <Project>{6F487141-DA54-4E67-9C99-B9A851F9527A}</Project>
-      <Name>LectureExercise.Forum.Data.Model</Name>
+    <ProjectReference Include="..\..\DemoLecture\Store.Models\Store.Models.csproj">
+      <Project>{BB07605A-DDC7-4469-8420-0A814A64AF91}</Project>
+      <Name>Store.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFCodeFirst.Models\EFCodeFirst.Models.csproj">
+      <Project>{6C25E586-24CA-4B79-A25A-29D0283C1540}</Project>
+      <Name>EFCodeFirst.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201805051508089_Initial Admin User Added.resx">
-      <DependentUpon>201805051508089_Initial Admin User Added.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805070251093_Initial Two.resx">
-      <DependentUpon>201805070251093_Initial Two.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201805081305504_Initial.resx">
+      <DependentUpon>201805081305504_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

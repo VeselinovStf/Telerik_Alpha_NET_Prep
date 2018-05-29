@@ -1,11 +1,15 @@
-﻿using System;
+﻿using LectureExercise.Forum.Data.Model.Abstract;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace LectureExercise.Forum.Data.Model
 {
-    public class Post
+    public class Post: DataModel
     {
-        [Key]
-        public Guid Id { get; set; }
+        
+        public string Title { get; set; }
+        public string Content { get; set; }
+        public virtual User Author { get; set; }
+
     }
 }

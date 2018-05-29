@@ -12,9 +12,6 @@ namespace _02_CrookedStairs
 
             int rowsCount = int.Parse(Console.ReadLine());
 
-           
-            
-                   
             for (int row = 0; row < rowsCount; row++)
             {
                 if (row == 0)
@@ -34,17 +31,11 @@ namespace _02_CrookedStairs
                         firstNum = secondNum;
                         secondNum = thurdNum;
                         thurdNum = temp + firstNum + secondNum;
-
                     }
                 }
-               
-              
+
                 Console.WriteLine();
             }
         }
-
-      
-
-       
     }
 }

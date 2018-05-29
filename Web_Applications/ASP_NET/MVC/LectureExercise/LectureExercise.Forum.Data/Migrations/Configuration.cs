@@ -10,6 +10,9 @@ namespace LectureExercise.Forum.Data.Migrations
 
     public sealed class Configuration : DbMigrationsConfiguration<LectureExercise.Forum.Data.MsSqlDbContext>
     {
+        const string AdministratorUserName = "test@test.com";
+        const string AdministratorPassword = "123456";
+
         public Configuration()
         {
             this.AutomaticMigrationsEnabled = false;
@@ -19,12 +22,12 @@ namespace LectureExercise.Forum.Data.Migrations
         protected override void Seed(LectureExercise.Forum.Data.MsSqlDbContext context)
         {
             this.SeedAdmin(context);
+            this.SeedSampleData(context);
         }
 
         private void SeedAdmin(MsSqlDbContext context)
         {
-            const string AdministratorUserName = "test@test.com";
-            const string AdministratorPassword = "123456";
+            
 
             if (!context.Roles.Any())
             {
@@ -47,6 +50,24 @@ namespace LectureExercise.Forum.Data.Migrations
                 userManager.Create(user, AdministratorPassword);
 
                 userManager.AddToRole(user.Id, "Admin");
+            }
+        }
+
+        private void SeedSampleData(MsSqlDbContext content)
+        {
+            if (!content.Posts.Any())
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    var post = new Post()
+                    {
+                        Title = "Post" + i,
+                        Content = "Let's put some content here ",
+                        Author = content.Users.First(x => x.Email == AdministratorUserName),
+                        CreatedOn = DateTime.Now
+
+                    };
+                }
             }
         }
     }
