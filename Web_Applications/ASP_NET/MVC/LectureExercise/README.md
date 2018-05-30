@@ -69,7 +69,7 @@
 19. Add-Migration to Data
 20. Update-Database
 21. Open SQL Managment Studio and see if the database exist
-22. Build Generic Repository
+22. Build Generic Repository - in this case Context Wraper
 	- create Repositories folder
 		- add interfaces
 		- create repository pattern
@@ -78,5 +78,13 @@
 24. Install Ninject.Extension.Convention
 	- add default bind
 25. MsqDbContext -> add void ApplyAuditInfoRules
+26. Add to Post props
+27. extend User - IAuditable, IDeletable and with collection of posts
+28. Seed sample data 
+---------------------------------------
+29. Create folder Servicess to solution
+30. Add Class Library ( PostServicess(IEfRepository posts) ) ! IQueriable - IList
+31. Add Interface
+32. Add to HomeController 
 
 Note: Don't forget to uncoment password requirements - App_Start -> IdentityConfig.cs

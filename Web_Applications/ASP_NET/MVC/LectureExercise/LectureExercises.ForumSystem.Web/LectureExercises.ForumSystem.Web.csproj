@@ -295,6 +295,10 @@
       <Project>{0FDB73DB-D81B-4AD6-B979-BF06CA3C06AF}</Project>
       <Name>LectureExercise.Forum.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LectureExercise.Forum.Servicess\LectureExercise.Forum.Servicess.csproj">
+      <Project>{3A9EE19D-0629-451D-A3E1-4CC1991DA781}</Project>
+      <Name>LectureExercise.Forum.Servicess</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,8 +11,13 @@ namespace _02_CrookedStairs
             BigInteger secondNum = BigInteger.Parse(Console.ReadLine());
             BigInteger thurdNum = BigInteger.Parse(Console.ReadLine());
 
+<<<<<<< HEAD
+            int rowsCount = int.Parse(Console.ReadLine());
+
+=======
             BigInteger rowsCount = BigInteger.Parse(Console.ReadLine());
                         
+>>>>>>> 64fbe466e16e0b7f8bf1be026aca7dfe5910ed20
             for (int row = 0; row < rowsCount; row++)
             {
                 if (row == 0)
@@ -32,15 +37,15 @@ namespace _02_CrookedStairs
                         firstNum = secondNum;
                         secondNum = thurdNum;
                         thurdNum = temp + firstNum + secondNum;
-
                     }
+<<<<<<< HEAD
+                }
+
+=======
                 }           
+>>>>>>> 64fbe466e16e0b7f8bf1be026aca7dfe5910ed20
                 Console.WriteLine();
             }
         }
-
-      
-
-       
     }
 }

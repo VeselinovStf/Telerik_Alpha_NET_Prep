@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LectureExercise.Forum.Servicess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,13 @@ namespace LectureExercises.ForumSystem.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IPostsService postService;
+
+        public HomeController(IPostsService postService)
+        {
+            this.postService = postService;
+        }
+
         public ActionResult Index()
         {
             return View();
