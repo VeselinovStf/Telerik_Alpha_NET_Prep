@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace List
 {
+    /// <summary>
+    /// Static implementation with basic funcs.
+    /// </summary>  
     public class List<T>
     {
         private T[] buffer;
@@ -32,10 +35,7 @@ namespace List
         private void Resize(int v)
         {
             T[] newList = new T[v];
-            //for (int i = 0; i < this.buffer.Length; i++)
-            //{
-            //    newList[i] = this.buffer[i];
-            //}
+           
             Array.Copy(this.buffer, newList, this.buffer.Length);
             this.buffer = newList;
         }

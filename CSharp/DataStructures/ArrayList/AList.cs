@@ -1,0 +1,112 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ArrayList
+{
+    public class AList<T>
+    {
+        private T[] arr;
+
+        private int count;
+
+        public int Count { get; }
+
+        private const int INITIAL_CAPACITY = 4;
+
+        public AList()
+        {
+            this.arr = new T[INITIAL_CAPACITY];
+            this.count = 0;
+        }
+
+        public void Add(T item)
+        {
+            Insert(count, item);
+        }
+
+        public void Insert(int index, T item)
+        {
+            if (index > this.count || index < 0)
+            {
+                throw new ArgumentOutOfRangeException("Index was out of boundry");
+            }
+
+            
+            if (this.count + 1 > this.arr.Length)
+            {              
+                T[] resizeArr = new T[this.count * 2];
+                Array.Copy(arr, resizeArr, arr.Length);
+                arr = resizeArr;
+            }
+
+            this.arr[index] = item;
+            this.count++;
+        }
+
+        public void Clear()
+        {
+            this.arr = new T[INITIAL_CAPACITY];
+            this.count = 0;
+        }
+
+        public int IndexOf(T item)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i].Equals(item))
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        public bool Contains(T item)
+        {
+            int indexOf = IndexOf(item);
+            bool itContains = (indexOf != -1);
+            return itContains;
+        }
+
+        public T this[int index]
+        {
+            get
+            {
+                if (index >= count || index < 0)
+                {
+                    throw new ArgumentOutOfRangeException(
+                          "Invalid index: " + index);
+                }
+                return arr[index];
+            }
+            set
+            {
+                if (index >= count || index < 0)
+                {
+                    throw new ArgumentOutOfRangeException(
+                          "Invalid index: " + index);
+                }
+                this.arr[index] = value;
+            }
+        }
+
+        public T RemoveAt(int index)
+        {
+            if (index >= count || index < 0)
+            {
+                throw new ArgumentOutOfRangeException("Invalid index: " + index);
+            }
+
+            T item = this.arr[index];
+            Array.Copy(arr, index+1, arr, index, count - index + 1);
+            arr[count - 1] = default(T);
+            count--;
+
+            return item;
+        }
+    }
+}
