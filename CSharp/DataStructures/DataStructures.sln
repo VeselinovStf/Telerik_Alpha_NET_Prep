@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseALinkedList", "Rever
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompareTwoLinkedLists", "CompareTwoLinkedLists\CompareTwoLinkedLists.csproj", "{B613C542-3BD4-4D70-90A1-D6AF6831C2E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeTwoLinkedLists", "MergeTwoLinkedLists\MergeTwoLinkedLists.csproj", "{60DE4228-65C1-4006-98B6-C3D4FF080AEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{B613C542-3BD4-4D70-90A1-D6AF6831C2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B613C542-3BD4-4D70-90A1-D6AF6831C2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B613C542-3BD4-4D70-90A1-D6AF6831C2E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60DE4228-65C1-4006-98B6-C3D4FF080AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DE4228-65C1-4006-98B6-C3D4FF080AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DE4228-65C1-4006-98B6-C3D4FF080AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DE4228-65C1-4006-98B6-C3D4FF080AEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -140,6 +146,7 @@ Global
 		{EB0A478A-5EA4-4999-92CB-021375D665A5} = {AE795447-8CC5-40BB-8B12-C9B25F0937FB}
 		{E109633E-559F-4D88-AF7D-18B583C0B6F9} = {AE795447-8CC5-40BB-8B12-C9B25F0937FB}
 		{B613C542-3BD4-4D70-90A1-D6AF6831C2E4} = {AE795447-8CC5-40BB-8B12-C9B25F0937FB}
+		{60DE4228-65C1-4006-98B6-C3D4FF080AEA} = {AE795447-8CC5-40BB-8B12-C9B25F0937FB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EEADDB93-B458-494E-BA70-03CC263A5B5C}
