@@ -1,0 +1,102 @@
+﻿using System;
+
+namespace PrintInReversLinkedList
+{
+    /// <summary>
+    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise 
+    /// </summary>
+    public class StartUp
+    {
+        class SinglyLinkedListNode
+        {
+            public int data;
+            public SinglyLinkedListNode next;
+
+            public SinglyLinkedListNode(int nodeData)
+            {
+                this.data = nodeData;
+                this.next = null;
+            }
+        }
+
+        class SinglyLinkedList
+        {
+            public SinglyLinkedListNode head;
+            public SinglyLinkedListNode tail;
+
+            public SinglyLinkedList()
+            {
+                this.head = null;
+                this.tail = null;
+            }
+
+            public void InsertNode(int nodeData)
+            {
+                SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData);
+
+                if (this.head == null)
+                {
+                    this.head = node;
+                }
+                else
+                {
+                    this.tail.next = node;
+                }
+
+                this.tail = node;
+            }
+        }
+
+        static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep)
+        {
+            while (node != null)
+            {
+                Console.Write(node.data);
+
+                node = node.next;
+
+                if (node != null)
+                {
+                    Console.Write(sep);
+                }
+            }
+        }
+
+        static void reversePrint(SinglyLinkedListNode head)
+        {
+           
+            if (head != null)
+            {
+                reversePrint(head.next);
+                Console.WriteLine(head.data);
+            }
+
+            
+        }
+
+        public static void Main()
+        {
+            int tests = Convert.ToInt32(Console.ReadLine());
+
+            for (int testsItr = 0; testsItr < tests; testsItr++)
+            {
+                SinglyLinkedList llist = new SinglyLinkedList();
+
+                int llistCount = Convert.ToInt32(Console.ReadLine());
+
+                for (int i = 0; i < llistCount; i++)
+                {
+                    int llistItem = Convert.ToInt32(Console.ReadLine());
+                    llist.InsertNode(llistItem);
+                }
+
+                reversePrint(llist.head);
+
+               
+               // PrintSinglyLinkedList(llist.head, " ");
+                
+                
+            }
+        }
+    }
+}

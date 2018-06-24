@@ -12,7 +12,7 @@ namespace ArrayList
 
         private int count;
 
-        public int Count { get; }
+        public int Count { get { return this.count; } }
 
         private const int INITIAL_CAPACITY = 4;
 
@@ -102,11 +102,38 @@ namespace ArrayList
             }
 
             T item = this.arr[index];
-            Array.Copy(arr, index+1, arr, index, count - index + 1);
-            arr[count - 1] = default(T);
-            count--;
 
+            ResizeWhenRemove(index);
+            
             return item;
+        }
+
+        private void ResizeWhenRemove(int index)
+        {
+            T[] temp = new T[count - 1];
+            for (int i = 0; i < index; i++)
+            {
+                temp[i] = arr[i];
+            }
+            for (int i = index + 1; i < arr.Length; i++)
+            {
+                temp[i - 1] = arr[i];
+            }
+            arr = temp;
+            count--;
+        }
+
+        public int RemoveElement(T element)
+        {
+            int index = IndexOf(element);
+            if (index == -1)
+            {
+                return index;
+            }
+
+            ResizeWhenRemove(index);
+
+            return index;
         }
     }
 }
