@@ -8,7 +8,7 @@ namespace ReverseDoublyLinkedList
     /// </summary>
     public class StartUp
     {
-        class DoublyLinkedListNode
+        private class DoublyLinkedListNode
         {
             public int data;
             public DoublyLinkedListNode next;
@@ -22,7 +22,7 @@ namespace ReverseDoublyLinkedList
             }
         }
 
-        class DoublyLinkedList
+        private class DoublyLinkedList
         {
             public DoublyLinkedListNode head;
             public DoublyLinkedListNode tail;
@@ -51,7 +51,7 @@ namespace ReverseDoublyLinkedList
             }
         }
 
-        static void PrintDoublyLinkedList(DoublyLinkedListNode node, string sep, TextWriter textWriter)
+        private static void PrintDoublyLinkedList(DoublyLinkedListNode node, string sep, TextWriter textWriter)
         {
             while (node != null)
             {
@@ -66,7 +66,7 @@ namespace ReverseDoublyLinkedList
             }
         }
 
-        static DoublyLinkedListNode reverse(DoublyLinkedListNode head)
+        private static DoublyLinkedListNode reverse(DoublyLinkedListNode head)
         {
             var current = head;
             var newHead = head;

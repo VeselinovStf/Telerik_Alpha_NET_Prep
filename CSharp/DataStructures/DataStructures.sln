@@ -31,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicList", "DynamicList\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseOfSingleLinkedList", "UseOfSingleLinkedList\UseOfSingleLinkedList.csproj", "{575986AD-EBCA-4FE3-A48B-612EBCEE8FED}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercises", "Exercises", "{AE795447-8CC5-40BB-8B12-C9B25F0937FB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LinkedListExercises", "LinkedListExercises", "{AE795447-8CC5-40BB-8B12-C9B25F0937FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertNodeAtTailLinkedList", "InsertNodeAtTailLinkedList\InsertNodeAtTailLinkedList.csproj", "{716E9D37-2D92-4514-A439-3E992469921A}"
 EndProject
@@ -58,6 +58,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertingNodeIntoSortedDoublyLinkedList", "InsertingNodeIntoSortedDoublyLinkedList\InsertingNodeIntoSortedDoublyLinkedList.csproj", "{EA7FA26F-F113-49E8-B6C3-7E5EF0EA8B76}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseDoublyLinkedList", "ReverseDoublyLinkedList\ReverseDoublyLinkedList.csproj", "{5166CF19-6D79-4BE5-B5A5-54588B325370}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StackExercises", "StackExercises", "{F00F55BD-BD65-4183-AEE3-CF0278BF4B18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximumElement", "MaximumElement\MaximumElement.csproj", "{FE023550-5884-4F5C-91F4-00278BACFA51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalancedBrackets", "BalancedBrackets\BalancedBrackets.csproj", "{ABF7CE7E-C38D-4DCA-8981-9FE7DFF47E91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualStacks", "EqualStacks\EqualStacks.csproj", "{BB633796-31B3-4805-A418-3F6F51A8AF75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +161,18 @@ Global
 		{5166CF19-6D79-4BE5-B5A5-54588B325370}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5166CF19-6D79-4BE5-B5A5-54588B325370}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5166CF19-6D79-4BE5-B5A5-54588B325370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE023550-5884-4F5C-91F4-00278BACFA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE023550-5884-4F5C-91F4-00278BACFA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE023550-5884-4F5C-91F4-00278BACFA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE023550-5884-4F5C-91F4-00278BACFA51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF7CE7E-C38D-4DCA-8981-9FE7DFF47E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF7CE7E-C38D-4DCA-8981-9FE7DFF47E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF7CE7E-C38D-4DCA-8981-9FE7DFF47E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF7CE7E-C38D-4DCA-8981-9FE7DFF47E91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB633796-31B3-4805-A418-3F6F51A8AF75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB633796-31B3-4805-A418-3F6F51A8AF75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB633796-31B3-4805-A418-3F6F51A8AF75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB633796-31B3-4805-A418-3F6F51A8AF75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -182,6 +202,10 @@ Global
 		{6F0555E9-AA53-4EE7-A846-A16159E80CA0} = {AE795447-8CC5-40BB-8B12-C9B25F0937FB}
 		{EA7FA26F-F113-49E8-B6C3-7E5EF0EA8B76} = {AE795447-8CC5-40BB-8B12-C9B25F0937FB}
 		{5166CF19-6D79-4BE5-B5A5-54588B325370} = {AE795447-8CC5-40BB-8B12-C9B25F0937FB}
+		{F00F55BD-BD65-4183-AEE3-CF0278BF4B18} = {D3EF76D6-8027-4233-B273-4B365A854AC5}
+		{FE023550-5884-4F5C-91F4-00278BACFA51} = {F00F55BD-BD65-4183-AEE3-CF0278BF4B18}
+		{ABF7CE7E-C38D-4DCA-8981-9FE7DFF47E91} = {F00F55BD-BD65-4183-AEE3-CF0278BF4B18}
+		{BB633796-31B3-4805-A418-3F6F51A8AF75} = {F00F55BD-BD65-4183-AEE3-CF0278BF4B18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EEADDB93-B458-494E-BA70-03CC263A5B5C}
