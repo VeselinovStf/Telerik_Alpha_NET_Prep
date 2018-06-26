@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace List
 {
     /// <summary>
     /// Static implementation with basic funcs.
-    /// </summary>  
+    /// </summary>
     public class List<T>
     {
         private T[] buffer;
@@ -18,7 +14,7 @@ namespace List
         public List()
         {
             this.size = 0;
-           
+
             this.buffer = new T[INITIAL_SIZE];
         }
 
@@ -35,7 +31,7 @@ namespace List
         private void Resize(int v)
         {
             T[] newList = new T[v];
-           
+
             Array.Copy(this.buffer, newList, this.buffer.Length);
             this.buffer = newList;
         }

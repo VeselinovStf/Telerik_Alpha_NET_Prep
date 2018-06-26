@@ -1,17 +1,12 @@
 ﻿using ArrayList;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UseOfAList
 {
-    class StartUp
+    internal class StartUp
     {
-        static void Main()
+        private static void Main()
         {
-
             AList<string> shoppingList = new AList<string>();
 
             shoppingList.Add("Milk");
@@ -29,12 +24,10 @@ namespace UseOfAList
             for (int i = 0; i < shoppingList.Count; i++)
             {
                 Console.WriteLine(shoppingList[i]);
-
             }
 
             Console.WriteLine("Do we have to buy Bread? " +
                   shoppingList.Contains("Bread"));
-
         }
     }
 }

@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("UseOfAList")]
+[assembly: AssemblyTitle("CycleDetectionInLinkedList")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("UseOfAList")]
+[assembly: AssemblyProduct("CycleDetectionInLinkedList")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cc89a060-660a-471c-b12e-d666141a5d13")]
+[assembly: Guid("6f0555e9-aa53-4ee7-a846-a16159e80ca0")]
 
 // Version information for an assembly consists of the following four values:
 //

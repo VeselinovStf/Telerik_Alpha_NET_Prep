@@ -1,15 +1,14 @@
 ﻿using System;
 using System.IO;
 
-
 namespace InsertNodeAtTailLinkedList
 {
     /// <summary>
-    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise 
+    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise
     /// </summary>
     public class StartUp
     {
-        class SinglyLinkedListNode
+        private class SinglyLinkedListNode
         {
             public int data;
             public SinglyLinkedListNode next;
@@ -21,7 +20,7 @@ namespace InsertNodeAtTailLinkedList
             }
         }
 
-        class SinglyLinkedList
+        private class SinglyLinkedList
         {
             public SinglyLinkedListNode head;
 
@@ -29,10 +28,9 @@ namespace InsertNodeAtTailLinkedList
             {
                 this.head = null;
             }
-
         }
 
-        static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
+        private static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
         {
             while (node != null)
             {
@@ -47,7 +45,7 @@ namespace InsertNodeAtTailLinkedList
             }
         }
 
-        static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data)
+        private static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data)
         {
             var newNote = new SinglyLinkedListNode(data);
             if (head == null)
@@ -65,7 +63,6 @@ namespace InsertNodeAtTailLinkedList
                 current.next = newNote;
                 return head;
             }
-
         }
 
         public static void Main()
@@ -81,10 +78,7 @@ namespace InsertNodeAtTailLinkedList
                 int llistItem = Convert.ToInt32(Console.ReadLine());
                 SinglyLinkedListNode llist_head = insertNodeAtTail(llist.head, llistItem);
                 llist.head = llist_head;
-
             }
-
-
 
             PrintSinglyLinkedList(llist.head, "\n", textWriter);
             textWriter.WriteLine();

@@ -4,11 +4,11 @@ using System.IO;
 namespace MergeTwoLinkedLists
 {
     /// <summary>
-    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise 
+    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise
     /// </summary>
     public class StartUp
     {
-        class SinglyLinkedListNode
+        private class SinglyLinkedListNode
         {
             public int data;
             public SinglyLinkedListNode next;
@@ -20,7 +20,7 @@ namespace MergeTwoLinkedLists
             }
         }
 
-        class SinglyLinkedList
+        private class SinglyLinkedList
         {
             public SinglyLinkedListNode head;
             public SinglyLinkedListNode tail;
@@ -48,7 +48,7 @@ namespace MergeTwoLinkedLists
             }
         }
 
-        static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
+        private static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
         {
             while (node != null)
             {
@@ -64,7 +64,7 @@ namespace MergeTwoLinkedLists
         }
 
         //NOTE: THIS Solution neats fix -> give 1 test others fale
-        static SinglyLinkedListNode mergeLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2)
+        private static SinglyLinkedListNode mergeLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2)
         {
             SinglyLinkedListNode head = null;
             SinglyLinkedListNode current = null;
@@ -75,14 +75,12 @@ namespace MergeTwoLinkedLists
             if (h1Current == null)
             {
                 return h2Current;
-               
             }
             if (h2Current == null)
             {
-                return h1Current;                
+                return h1Current;
             }
 
-         
             while (h1Current != null && h2Current != null)
             {
                 if (head == null)
@@ -115,8 +113,6 @@ namespace MergeTwoLinkedLists
                         h1Current = h2Current.next;
                     }
                 }
-
-
             }
             if (h1Current != null)
             {

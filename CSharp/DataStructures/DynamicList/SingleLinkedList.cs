@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DynamicList
 {
@@ -83,7 +79,6 @@ namespace DynamicList
         {
             private T element;
             private Node<T> next;
-
 
             public Node(T element)
             {

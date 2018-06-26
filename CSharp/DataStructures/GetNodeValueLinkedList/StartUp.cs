@@ -1,6 +1,7 @@
 ﻿using System;
+using System.IO;
 
-namespace PrintInReversLinkedList
+namespace GetNodeValueLinkedList
 {
     /// <summary>
     /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise
@@ -47,32 +48,54 @@ namespace PrintInReversLinkedList
             }
         }
 
-        private static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep)
+        private static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
         {
             while (node != null)
             {
-                Console.Write(node.data);
+                textWriter.Write(node.data);
 
                 node = node.next;
 
                 if (node != null)
                 {
-                    Console.Write(sep);
+                    textWriter.Write(sep);
                 }
             }
         }
 
-        private static void reversePrint(SinglyLinkedListNode head)
+        private static int getNode(SinglyLinkedListNode head, int positionFromTail)
         {
-            if (head != null)
+            var totalSize = 0;
+
+            var current = head;
+            while (current != null)
             {
-                reversePrint(head.next);
-                Console.WriteLine(head.data);
+                totalSize++;
+                current = current.next;
+            }
+
+            var elementIndex = totalSize - positionFromTail - 1;
+            if (elementIndex == 0)
+            {
+                return head.data;
+            }
+            else
+            {
+                var count = 0;
+                var next = head;
+                while (count < elementIndex)
+                {
+                    count++;
+                    next = next.next;
+                }
+                return next.data;
             }
         }
 
         public static void Main()
         {
+            TextWriter textWriter = new StreamWriter("test.txt");
+
             int tests = Convert.ToInt32(Console.ReadLine());
 
             for (int testsItr = 0; testsItr < tests; testsItr++)
@@ -87,10 +110,15 @@ namespace PrintInReversLinkedList
                     llist.InsertNode(llistItem);
                 }
 
-                reversePrint(llist.head);
+                int position = Convert.ToInt32(Console.ReadLine());
 
-                // PrintSinglyLinkedList(llist.head, " ");
+                int result = getNode(llist.head, position);
+
+                textWriter.WriteLine(result);
             }
+
+            textWriter.Flush();
+            textWriter.Close();
         }
     }
 }

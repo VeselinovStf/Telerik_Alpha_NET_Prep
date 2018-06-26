@@ -4,11 +4,11 @@ using System.IO;
 namespace InsertNodeAtHeadLinkedList
 {
     /// <summary>
-    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise 
+    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise
     /// </summary>
     public class StartUp
     {
-        class SinglyLinkedListNode
+        private class SinglyLinkedListNode
         {
             public int data;
             public SinglyLinkedListNode next;
@@ -20,7 +20,7 @@ namespace InsertNodeAtHeadLinkedList
             }
         }
 
-        class SinglyLinkedList
+        private class SinglyLinkedList
         {
             public SinglyLinkedListNode head;
             public SinglyLinkedListNode tail;
@@ -30,10 +30,9 @@ namespace InsertNodeAtHeadLinkedList
                 this.head = null;
                 this.tail = null;
             }
-
         }
 
-        static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
+        private static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
         {
             while (node != null)
             {
@@ -48,7 +47,7 @@ namespace InsertNodeAtHeadLinkedList
             }
         }
 
-        static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data)
+        private static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data)
         {
             var newNote = new SinglyLinkedListNode(data);
             if (llist == null)
@@ -59,10 +58,9 @@ namespace InsertNodeAtHeadLinkedList
             else
             {
                 newNote.next = llist;
-           
+
                 return llist = newNote;
             }
-
         }
 
         public static void Main()
@@ -79,8 +77,6 @@ namespace InsertNodeAtHeadLinkedList
                 SinglyLinkedListNode llist_head = insertNodeAtHead(llist.head, llistItem);
                 llist.head = llist_head;
             }
-
-
 
             PrintSinglyLinkedList(llist.head, "\n", textWriter);
             textWriter.WriteLine();

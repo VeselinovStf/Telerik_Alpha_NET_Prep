@@ -1,11 +1,11 @@
 ﻿using System;
+
 namespace Lab_ArrayList
 {
     public class ArrayList<T>
     {
         private const int Initial_Capacity = 2;
         private T[] items;
-        
 
         public ArrayList()
         {
@@ -66,7 +66,7 @@ namespace Lab_ArrayList
             this.Shift(index);
             this.Count--;
 
-            if (this.Count <= this.items.Length /4)
+            if (this.Count <= this.items.Length / 4)
             {
                 this.Shrink();
             }

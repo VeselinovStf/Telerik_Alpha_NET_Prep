@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ArrayList
 {
@@ -34,9 +30,8 @@ namespace ArrayList
                 throw new ArgumentOutOfRangeException("Index was out of boundry");
             }
 
-            
             if (this.count + 1 > this.arr.Length)
-            {              
+            {
                 T[] resizeArr = new T[this.count * 2];
                 Array.Copy(arr, resizeArr, arr.Length);
                 arr = resizeArr;
@@ -104,7 +99,7 @@ namespace ArrayList
             T item = this.arr[index];
 
             ResizeWhenRemove(index);
-            
+
             return item;
         }
 

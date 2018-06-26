@@ -4,11 +4,11 @@ using System.IO;
 namespace InsertNodeAtSpecificPositionLinkedList
 {
     /// <summary>
-    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise 
+    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise
     /// </summary>
     public class StartUp
     {
-        class SinglyLinkedListNode
+        private class SinglyLinkedListNode
         {
             public int data;
             public SinglyLinkedListNode next;
@@ -20,7 +20,7 @@ namespace InsertNodeAtSpecificPositionLinkedList
             }
         }
 
-        class SinglyLinkedList
+        private class SinglyLinkedList
         {
             public SinglyLinkedListNode head;
             public SinglyLinkedListNode tail;
@@ -48,7 +48,7 @@ namespace InsertNodeAtSpecificPositionLinkedList
             }
         }
 
-        static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
+        private static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
         {
             while (node != null)
             {
@@ -63,7 +63,7 @@ namespace InsertNodeAtSpecificPositionLinkedList
             }
         }
 
-        static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position)
+        private static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position)
         {
             var newNode = new SinglyLinkedListNode(data);
             if (head == null)
@@ -78,7 +78,6 @@ namespace InsertNodeAtSpecificPositionLinkedList
 
                 int counter = 1;
 
-
                 while (counter != position)
                 {
                     counter++;
@@ -88,12 +87,9 @@ namespace InsertNodeAtSpecificPositionLinkedList
                 var storeNext = current.next;
                 current.next = newNode;
                 newNode.next = storeNext;
-                
 
                 return head;
-
             }
-
         }
 
         public static void Main()

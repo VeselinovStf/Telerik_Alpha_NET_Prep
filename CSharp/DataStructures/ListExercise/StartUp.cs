@@ -14,7 +14,6 @@ namespace ListExercise
             watch.Stop();
 
             Console.WriteLine(watch.Elapsed);
-
         }
 
         public static void Main()

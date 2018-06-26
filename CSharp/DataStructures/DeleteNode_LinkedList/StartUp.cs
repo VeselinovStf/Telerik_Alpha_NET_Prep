@@ -4,12 +4,12 @@ using System.IO;
 namespace DeleteNode_LinkedList
 {
     /// <summary>
-    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise 
+    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise
     /// </summary>
-    
+
     public class StartUp
     {
-        class SinglyLinkedListNode
+        private class SinglyLinkedListNode
         {
             public int data;
             public SinglyLinkedListNode next;
@@ -21,7 +21,7 @@ namespace DeleteNode_LinkedList
             }
         }
 
-        class SinglyLinkedList
+        private class SinglyLinkedList
         {
             public SinglyLinkedListNode head;
             public SinglyLinkedListNode tail;
@@ -49,7 +49,7 @@ namespace DeleteNode_LinkedList
             }
         }
 
-        static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
+        private static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
         {
             while (node != null)
             {
@@ -64,9 +64,8 @@ namespace DeleteNode_LinkedList
             }
         }
 
-        static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position)
+        private static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position)
         {
-
             var leftPointer = head;
             var nextPointer = head.next;
 
@@ -95,7 +94,7 @@ namespace DeleteNode_LinkedList
                 }
             }
 
-            return head ;
+            return head;
         }
 
         public static void Main()

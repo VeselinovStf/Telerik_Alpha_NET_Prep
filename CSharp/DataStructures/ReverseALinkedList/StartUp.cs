@@ -3,11 +3,11 @@
 namespace ReverseALinkedList
 {
     /// <summary>
-    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise 
+    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise
     /// </summary>
     public class StartUp
     {
-        class SinglyLinkedListNode
+        private class SinglyLinkedListNode
         {
             public int data;
             public SinglyLinkedListNode next;
@@ -19,7 +19,7 @@ namespace ReverseALinkedList
             }
         }
 
-        class SinglyLinkedList
+        private class SinglyLinkedList
         {
             public SinglyLinkedListNode head;
             public SinglyLinkedListNode tail;
@@ -47,7 +47,7 @@ namespace ReverseALinkedList
             }
         }
 
-        static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep)
+        private static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep)
         {
             while (node != null)
             {
@@ -62,7 +62,7 @@ namespace ReverseALinkedList
             }
         }
 
-        static SinglyLinkedListNode reverse(SinglyLinkedListNode head)
+        private static SinglyLinkedListNode reverse(SinglyLinkedListNode head)
         {
             var current = head;
             SinglyLinkedListNode prev = null;
@@ -78,7 +78,6 @@ namespace ReverseALinkedList
             head = prev;
 
             return head;
-
         }
 
         public static void Main()
@@ -99,10 +98,7 @@ namespace ReverseALinkedList
 
                 reversePrint(llist.head);
 
-
                 // PrintSinglyLinkedList(llist.head, " ");
-
-
             }
         }
     }

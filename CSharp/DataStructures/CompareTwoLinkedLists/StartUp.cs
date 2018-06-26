@@ -4,11 +4,11 @@ using System.IO;
 namespace CompareTwoLinkedLists
 {
     /// <summary>
-    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise 
+    /// All classes are in one file ( this is bad practice ), it's done for the ease of exercise
     /// </summary>
     public class StartUp
     {
-        class SinglyLinkedListNode
+        private class SinglyLinkedListNode
         {
             public int data;
             public SinglyLinkedListNode next;
@@ -20,7 +20,7 @@ namespace CompareTwoLinkedLists
             }
         }
 
-        class SinglyLinkedList
+        private class SinglyLinkedList
         {
             public SinglyLinkedListNode head;
             public SinglyLinkedListNode tail;
@@ -48,7 +48,7 @@ namespace CompareTwoLinkedLists
             }
         }
 
-        static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
+        private static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
         {
             while (node != null)
             {
@@ -63,7 +63,7 @@ namespace CompareTwoLinkedLists
             }
         }
 
-        static bool CompareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2)
+        private static bool CompareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2)
         {
             bool areSame = false;
 
@@ -80,7 +80,6 @@ namespace CompareTwoLinkedLists
                         {
                             return true;
                         }
-
                     }
 
                     return false;
@@ -99,10 +98,7 @@ namespace CompareTwoLinkedLists
                         areSame = true;
                     }
                 }
-
-
             }
-
         }
 
         public static void Main()
