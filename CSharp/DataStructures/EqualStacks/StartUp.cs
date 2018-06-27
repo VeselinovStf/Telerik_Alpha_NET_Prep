@@ -13,100 +13,34 @@ namespace EqualStacks
 
         private static int equalStacks(int[] h1, int[] h2, int[] h3)
         {
-            if (h1.Length == 0 || h2.Length == 0 || h3.Length == 0)
-            {
-                return 0;
-            }
+            var sum1 = h1.Sum();
+            var sum2 = h2.Sum();
+            var sum3 = h3.Sum();
 
-            if (h1.Sum() == h2.Sum() && h1.Sum() == h3.Sum())
-            {
-                return h1.Sum();
-            }
-
-            Stack<int> firstStack = new Stack<int>();
-            Stack<int> secondStack = new Stack<int>();
-            Stack<int> thirdStack = new Stack<int>();
-
-            FillStack(firstStack, h1);
-            FillStack(secondStack, h2);
-            FillStack(thirdStack, h3);
-
-            var firstSum = firstStack.Sum();
-            var secondSum = secondStack.Sum();
-            var thirdSum = thirdStack.Sum();
+            int top1 = 0, top2 = 0, top3 = 0;
             while (true)
             {
-                var firstValue = firstStack.Peek();
-                var secondValue = secondStack.Peek();
-                var thirdValue = thirdStack.Peek();
-
-                if (firstValue < secondValue && firstValue < thirdValue)
+                if (h1.Length == top1 || h2.Length == top2 || h3.Length == top3)
                 {
-                    //first value is lesser
-                    firstStack.Pop();
-
-                    firstSum = firstStack.Sum();
-                    secondSum = secondStack.Sum();
-                    thirdSum = thirdStack.Sum();
-
-                    if (firstSum == secondSum && firstSum == thirdSum)
-                    {
-                        return firstSum;
-                    }
-                    else
-                    {
-                        secondStack.Pop();
-                        thirdStack.Pop();
-                    }
+                    return 0;
                 }
-                else if (secondValue < thirdValue && secondValue < firstValue)
+
+                if (sum1 == sum2 && sum2 == sum3)
                 {
-                    //second is lesser
-                    secondStack.Pop();
-
-                    firstSum = firstStack.Sum();
-                    secondSum = secondStack.Sum();
-                    thirdSum = thirdStack.Sum();
-
-                    if (firstSum == secondSum && firstSum == thirdSum)
-                    {
-                        return firstSum;
-                    }
-                    else
-                    {
-                        firstStack.Pop();
-                        thirdStack.Pop();
-                    }
+                    return sum1;
                 }
-                else if (thirdValue < secondValue && thirdValue < firstValue)
+
+                if (sum1 >= sum2 && sum1 >= sum3)
                 {
-                    //third value is lesser
-                    thirdStack.Pop();
-
-                    firstSum = firstStack.Sum();
-                    secondSum = secondStack.Sum();
-                    thirdSum = thirdStack.Sum();
-
-                    if (firstSum == secondSum && firstSum == thirdSum)
-                    {
-                        return firstSum;
-                    }
-                    else
-                    {
-                        secondStack.Pop();
-                        firstStack.Pop();
-                    }
+                    sum1 -= h1[top1++];
                 }
-                else
+                else if (sum2 >= sum3 && sum2 >= sum3)
                 {
-                    firstStack.Pop();
-                    secondStack.Pop();
-                    thirdStack.Pop();
-
-                    if (firstSum == secondSum && firstSum == thirdSum)
-                    {
-                        return firstSum;
-                    }
+                    sum2 -= h2[top2++];
+                }
+                else if (sum3 >= sum2 && sum3 >= sum1)
+                {
+                    sum3 -= h3[top3++];
                 }
             }
         }

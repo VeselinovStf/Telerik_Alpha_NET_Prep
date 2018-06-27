@@ -67,6 +67,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalancedBrackets", "Balance
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualStacks", "EqualStacks\EqualStacks.csproj", "{BB633796-31B3-4805-A418-3F6F51A8AF75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfTwoStacks", "GameOfTwoStacks\GameOfTwoStacks.csproj", "{8A66294A-F9D9-41CA-8847-4D5199302FC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -173,6 +175,10 @@ Global
 		{BB633796-31B3-4805-A418-3F6F51A8AF75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB633796-31B3-4805-A418-3F6F51A8AF75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB633796-31B3-4805-A418-3F6F51A8AF75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A66294A-F9D9-41CA-8847-4D5199302FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A66294A-F9D9-41CA-8847-4D5199302FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A66294A-F9D9-41CA-8847-4D5199302FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A66294A-F9D9-41CA-8847-4D5199302FC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -206,6 +212,7 @@ Global
 		{FE023550-5884-4F5C-91F4-00278BACFA51} = {F00F55BD-BD65-4183-AEE3-CF0278BF4B18}
 		{ABF7CE7E-C38D-4DCA-8981-9FE7DFF47E91} = {F00F55BD-BD65-4183-AEE3-CF0278BF4B18}
 		{BB633796-31B3-4805-A418-3F6F51A8AF75} = {F00F55BD-BD65-4183-AEE3-CF0278BF4B18}
+		{8A66294A-F9D9-41CA-8847-4D5199302FC2} = {F00F55BD-BD65-4183-AEE3-CF0278BF4B18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EEADDB93-B458-494E-BA70-03CC263A5B5C}
