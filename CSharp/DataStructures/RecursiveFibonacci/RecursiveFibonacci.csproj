@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FE023550-5884-4F5C-91F4-00278BACFA51}</ProjectGuid>
+    <ProjectGuid>{530FBEC4-2117-44E6-839A-6B0C4626FCAF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MaximumElement</RootNamespace>
-    <AssemblyName>MaximumElement</AssemblyName>
+    <RootNamespace>RecursiveFibonacci</RootNamespace>
+    <AssemblyName>RecursiveFibonacci</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,7 +34,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
