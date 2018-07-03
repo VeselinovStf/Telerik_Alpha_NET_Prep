@@ -14,8 +14,7 @@ namespace PlusMinus
 
             int[] arr = Array.ConvertAll(
                 Console.ReadLine()
-                .Split(' ')
-                    , arrTemp => Convert.ToInt32(arrTemp));
+                .Split(' '), arrTemp => Convert.ToInt32(arrTemp));
 
             plusMinus(arr);
         }
