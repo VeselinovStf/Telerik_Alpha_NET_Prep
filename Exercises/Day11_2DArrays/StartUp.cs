@@ -12,13 +12,13 @@ namespace Day11_2DArrays
             {
                 arr[i] = Array
                     .ConvertAll(Console.ReadLine()
-                    .Split(' '), 
+                    .Split(' '),
                     arrTemp => Convert.ToInt32(arrTemp));
             }
 
             int maxSum = int.MinValue;
-            
-            for (int row  = 0; row  < arr.GetLength(0)-2; row ++)
+
+            for (int row = 0; row < arr.GetLength(0) - 2; row++)
             {
                 int currentSum = 0;
 
@@ -35,12 +35,9 @@ namespace Day11_2DArrays
 
                     currentSum = 0;
                 }
-
-                
             }
 
             Console.WriteLine(maxSum);
-
         }
     }
 }

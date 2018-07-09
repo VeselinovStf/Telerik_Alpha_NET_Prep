@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InsertionSortPart2
 {
-   public  class StartUp
+    public class StartUp
     {
-        static void insertionSort2(int n, int[] arr)
+        private static void insertionSort2(int n, int[] arr)
         {
-            for (int i = 0; i < arr.Length-1; i++)
+            for (int i = 0; i < arr.Length - 1; i++)
             {
                 for (int j = i + 1; j > 0; j--)
                 {
@@ -24,7 +20,6 @@ namespace InsertionSortPart2
                     Console.WriteLine(string.Join(" ", arr));
                 }
             }
-
         }
 
         public static void Main()

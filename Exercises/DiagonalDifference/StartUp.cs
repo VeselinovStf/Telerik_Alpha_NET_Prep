@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DiagonalDifference
 {
@@ -28,17 +24,14 @@ namespace DiagonalDifference
 
             textWriter.Flush();
             textWriter.Close();
-
         }
 
-
-        static int diagonalDifference(int[][] arr)
+        private static int diagonalDifference(int[][] arr)
         {
             int leftDiagonalSum = GetLeftDiagonalSum(arr);
             int rightDiagonalSum = GetRightDiagonal(arr);
 
             return Math.Abs(leftDiagonalSum - rightDiagonalSum);
-
         }
 
         private static int GetRightDiagonal(int[][] matrix)
@@ -50,7 +43,7 @@ namespace DiagonalDifference
             {
                 if (colCount == matrix.Length - 1 - i)
                 {
-                    sum += matrix[i][ colCount];
+                    sum += matrix[i][colCount];
                     colCount--;
                 }
             }
@@ -66,10 +59,9 @@ namespace DiagonalDifference
             {
                 if (colCount == i)
                 {
-                    sum += matrix[i][ colCount];
+                    sum += matrix[i][colCount];
                     colCount++;
                 }
-                
             }
             return sum;
         }

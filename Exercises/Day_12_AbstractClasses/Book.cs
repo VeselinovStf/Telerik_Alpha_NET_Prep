@@ -13,7 +13,6 @@ namespace Day_13_AbstractClasses
             author = a;
         }
 
-       
         public abstract void display();
     }
 }

@@ -3,23 +3,22 @@ using System.IO;
 
 namespace CamelCase
 {
-   public class StartUp
+    public class StartUp
     {
         public static void FakeInput()
         {
             string input = @"saveChangesInTheEditor";
 
-
             Console.SetIn(new StringReader(input));
         }
 
-        static int camelcase(string s)
+        private static int camelcase(string s)
         {
             int wordsCount = 1;
 
-            for (int i = 0; i < s.Length-1; i++)
+            for (int i = 0; i < s.Length - 1; i++)
             {
-                if (char.IsUpper(s[i]) && char.IsLower(s[i+1]))
+                if (char.IsUpper(s[i]) && char.IsLower(s[i + 1]))
                 {
                     wordsCount++;
                 }
@@ -27,7 +26,6 @@ namespace CamelCase
 
             return wordsCount;
         }
-
 
         public static void Main()
         {

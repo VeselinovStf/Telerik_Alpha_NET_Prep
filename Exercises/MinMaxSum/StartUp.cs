@@ -1,26 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MinMaxSum
 {
     public class StartUp
     {
         //NOTE: THIS IS BUGGY
-        static void miniMaxSum(int[] arr)
+        private static void miniMaxSum(int[] arr)
         {
-           
             int minValue = arr.Min();
             int maxValue = arr.Max();
 
-            long max = GetValue(arr,minValue);
+            long max = GetValue(arr, minValue);
             long min = GetValue(arr, maxValue);
-           
 
             Console.WriteLine($"{min} {max}");
-
         }
 
         private static long GetValue(int[] arr, int v)
@@ -36,10 +30,10 @@ namespace MinMaxSum
             return result;
         }
 
-        public  static void Main()
+        public static void Main()
         {
             int[] arr = Array.ConvertAll(Console.ReadLine()
-                .Split(' '), 
+                .Split(' '),
                 arrTemp => Convert.ToInt32(arrTemp))
         ;
             miniMaxSum(arr);

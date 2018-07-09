@@ -1,35 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace Day_12_Inheritance
 {
-    class Student : Person
-    {     
-
+    internal class Student : Person
+    {
         private int[] testScores;
         private int[] scores;
 
-        /*	
+        /*
     *   Class Constructor
-    *   
-    *   Parameters: 
+    *
+    *   Parameters:
     *   firstName - A string denoting the Person's first name.
     *   lastName - A string denoting the Person's last name.
     *   id - An integer denoting the Person's ID number.
     *   scores - An array of integers denoting the Person's test scores.
     */
+
         public Student(string firstName, string lastName, int identification, int[] scores) : base(firstName, lastName, identification)
         {
             this.scores = scores;
         }
 
-        /*	
+        /*
        *   Method Name: Calculate
        *   Return: A character denoting the grade.
        */
+
         public string Calculate()
         {
             var avarage = scores.Average();
@@ -63,7 +60,5 @@ namespace Day_12_Inheritance
 
             return result;
         }
-
-      
     }
 }

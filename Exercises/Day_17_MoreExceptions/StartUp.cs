@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Day_17_MoreExceptions
 {
@@ -25,7 +21,6 @@ namespace Day_17_MoreExceptions
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
-
                 }
             }
         }

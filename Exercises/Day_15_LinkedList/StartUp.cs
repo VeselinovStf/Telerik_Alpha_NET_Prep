@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Day_15_LinkedList
 {
@@ -24,9 +20,8 @@ namespace Day_15_LinkedList
                     current.next = newNode;
                     break;
                 }
-                
-                    current = current.next;               
-               
+
+                current = current.next;
             }
 
             return head;

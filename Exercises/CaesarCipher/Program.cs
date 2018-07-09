@@ -4,9 +4,9 @@ using System.Text;
 
 namespace CaesarCipher
 {
-    class Program
+    internal class Program
     {
-        static string caesarCipher(string s, int k)
+        private static string caesarCipher(string s, int k)
         {
             StringBuilder result = new StringBuilder();
 
@@ -28,20 +28,17 @@ namespace CaesarCipher
                 }
             }
             return result.ToString();
-
-
         }
 
-      
         private static char GetNewLetter(char sign, int v, int k)
         {
-            var result = k + ((sign - v) +v) % 26;          
+            var result = k + ((sign - v) + v) % 26;
             char newChar = Convert.ToChar(result);
 
             return newChar;
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             TextWriter textWriter = new StreamWriter("result.txt");
 

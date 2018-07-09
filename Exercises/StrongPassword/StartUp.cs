@@ -10,7 +10,6 @@ namespace StrongPassword
             string input = @"4
 4700";
 
-
             Console.SetIn(new StringReader(input));
         }
 
@@ -22,31 +21,29 @@ namespace StrongPassword
             var special_characters = "!@#$%^&*()-+";
             var result = 0;
 
-          
-                bool gotNumber = FindElement(password, numbers);
-                bool gotLower = FindElement(password, lower_case);
-                bool gotUpper = FindElement(password, upper_case);
-                bool gotSpecial = FindElement(password, special_characters);
+            bool gotNumber = FindElement(password, numbers);
+            bool gotLower = FindElement(password, lower_case);
+            bool gotUpper = FindElement(password, upper_case);
+            bool gotSpecial = FindElement(password, special_characters);
 
-                if (!gotNumber)
-                {
-                   result++;
-                }
-                if (!gotLower)
-                {
-                    result++;
-                }
-                if (!gotUpper)
-                {
-                    result++;
-                }
-                if (!gotSpecial)
-                {
-                    result++;
-                }
-            
+            if (!gotNumber)
+            {
+                result++;
+            }
+            if (!gotLower)
+            {
+                result++;
+            }
+            if (!gotUpper)
+            {
+                result++;
+            }
+            if (!gotSpecial)
+            {
+                result++;
+            }
 
-            return Math.Max(result, 6-n);
+            return Math.Max(result, 6 - n);
         }
 
         private static bool FindElement(string password, string element)

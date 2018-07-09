@@ -6,9 +6,8 @@ namespace SuperReducedString
 {
     public class StartUp
     {
-       public static string super_reduced_string(string s)
+        public static string super_reduced_string(string s)
         {
-          
             var currentIndex = 0;
             var currentNextIndex = 1;
 
@@ -41,11 +40,9 @@ namespace SuperReducedString
                 {
                     return "Empty String";
                 }
-               
             }
 
-            return sb.ToString();           
-            
+            return sb.ToString();
         }
 
         public static void Main()
