@@ -15,7 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arrays", "Arrays", "{CD0D9B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2DArrayDS", "2DArrayDS\2DArrayDS.csproj", "{B0EAF44E-8BD6-4C7D-B0FF-BAB06EF2F1AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeftRotation", "LeftRotation\LeftRotation.csproj", "{BF2F80E2-C0CF-422A-858C-64E6F4F1203A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeftRotation", "LeftRotation\LeftRotation.csproj", "{BF2F80E2-C0CF-422A-858C-64E6F4F1203A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Strings", "Strings", "{360F1EC9-DE20-475C-BE0A-ACFD1C33AAC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlternatingCharacters", "AlternatingCharacters\AlternatingCharacters.csproj", "{F05A348E-3DCE-4F1E-B543-305EF389A489}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,10 @@ Global
 		{BF2F80E2-C0CF-422A-858C-64E6F4F1203A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF2F80E2-C0CF-422A-858C-64E6F4F1203A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF2F80E2-C0CF-422A-858C-64E6F4F1203A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F05A348E-3DCE-4F1E-B543-305EF389A489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F05A348E-3DCE-4F1E-B543-305EF389A489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F05A348E-3DCE-4F1E-B543-305EF389A489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F05A348E-3DCE-4F1E-B543-305EF389A489}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +61,7 @@ Global
 		{CDE2997A-8B3D-45E5-ACF4-C824398EE04B} = {6397C97D-9370-42C7-A27C-FE049F478931}
 		{B0EAF44E-8BD6-4C7D-B0FF-BAB06EF2F1AC} = {CD0D9BD6-DD18-43C9-AC7F-B1B65450BD34}
 		{BF2F80E2-C0CF-422A-858C-64E6F4F1203A} = {CD0D9BD6-DD18-43C9-AC7F-B1B65450BD34}
+		{F05A348E-3DCE-4F1E-B543-305EF389A489} = {360F1EC9-DE20-475C-BE0A-ACFD1C33AAC2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1F7DC24D-E0B8-4E87-A8E0-D7C2A1D928D0}
