@@ -5,24 +5,24 @@ USE [The_Hospital]
 GO
 
 CREATE TABLE Physician (
-  EmployeeID INT PRIMARY KEY NOT NULL,
+  EmployeeId INT PRIMARY KEY NOT NULL,
   Name TEXT NOT NULL,
   Position TEXT NOT NULL,
   SSN INT NOT NULL
 ); 
 
 CREATE TABLE Department (
-  DepartmentID INT PRIMARY KEY NOT NULL,
+  DepartmentId INT PRIMARY KEY NOT NULL,
   Name TEXT NOT NULL,
   Head INT NOT NULL
-    CONSTRAINT fk_Physician_EmployeeID REFERENCES Physician(EmployeeID)
+    CONSTRAINT fk_Department_EmployeeId REFERENCES Physician(EmployeeId)
 );
 
 CREATE TABLE Affiliated_With (
   Physician INT NOT NULL
-    CONSTRAINT fk_Physician_EmployeeID REFERENCES Physician(EmployeeID),
+    CONSTRAINT fk_Affiliated_With_EmployeeId REFERENCES Physician(EmployeeId),
   Department INT NOT NULL
-    CONSTRAINT fk_Department_DepartmentID REFERENCES Department(DepartmentID),
+    CONSTRAINT fk_Affiliated_With_DepartmentId REFERENCES Department(DepartmentId),
   PrimaryAffiliation BIT NOT NULL,
   PRIMARY KEY(Physician, Department)
 );
@@ -35,9 +35,9 @@ CREATE TABLE [Procedure] (
 
 CREATE TABLE Trained_In (
   Physician INT NOT NULL
-    CONSTRAINT fk_Physician_EmployeeID REFERENCES Physician(EmployeeID),
+    CONSTRAINT fk_Trained_In_EmployeeId REFERENCES Physician(EmployeeId),
   Treatment INT NOT NULL
-    CONSTRAINT fk_Procedure_Code REFERENCES [Procedure](Code),
+    CONSTRAINT fk_Trained_In_Code REFERENCES [Procedure](Code),
   CertificationDate DATETIME NOT NULL,
   CertificationExpires DATETIME NOT NULL,
   PRIMARY KEY(Physician, Treatment)
@@ -50,11 +50,11 @@ CREATE TABLE Patient (
   Phone TEXT NOT NULL,
   InsuranceID INT NOT NULL,
   PCP INT NOT NULL
-    CONSTRAINT fk_Physician_EmployeeID REFERENCES Physician(EmployeeID)
+    CONSTRAINT fk_Patient_EmployeeId REFERENCES Physician(EmployeeId)
 );
 
 CREATE TABLE Nurse (
-  EmployeeID INT PRIMARY KEY NOT NULL,
+  EmployeeId INT PRIMARY KEY NOT NULL,
   Name TEXT NOT NULL,
   Position TEXT NOT NULL,
   Registered BIT NOT NULL,
@@ -64,11 +64,11 @@ CREATE TABLE Nurse (
 CREATE TABLE Appointment (
   AppointmentID INT PRIMARY KEY NOT NULL,
   Patient INT NOT NULL
-    CONSTRAINT fk_Patient_SSN REFERENCES Patient(SSN),
+    CONSTRAINT fk_Appointment_SSN REFERENCES Patient(SSN),
   PrepNurse INT
-    CONSTRAINT fk_Nurse_EmployeeID REFERENCES Nurse(EmployeeID),
+    CONSTRAINT fk_Appointment_Nurse_EmployeeId REFERENCES Nurse(EmployeeId),
   Physician INT NOT NULL
-    CONSTRAINT fk_Physician_EmployeeID REFERENCES Physician(EmployeeID),
+    CONSTRAINT fk_Appointment__Physitian_EmployeeId REFERENCES Physician(EmployeeId),
   Start DATETIME NOT NULL,
   [End] DATETIME NOT NULL,
   ExaminationRoom TEXT NOT NULL
@@ -83,68 +83,68 @@ CREATE TABLE Medication (
 
 CREATE TABLE Prescribes (
   Physician INT NOT NULL
-    CONSTRAINT fk_Physician_EmployeeID REFERENCES Physician(EmployeeID),
+    CONSTRAINT fk_Prescribes_Phycisian__EmployeeId REFERENCES Physician(EmployeeId),
   Patient INT NOT NULL
-    CONSTRAINT fk_Patient_SSN REFERENCES Patient(SSN),
+    CONSTRAINT fk_Prescribes_Patiant_SSN REFERENCES Patient(SSN),
   Medication INT NOT NULL
-    CONSTRAINT fk_Medication_Code REFERENCES Medication(Code),
+    CONSTRAINT fk_Medication__Code REFERENCES Medication(Code),
   Date DATETIME NOT NULL,
   Appointment INT
-    CONSTRAINT fk_Appointment_AppointmentID REFERENCES Appointment(AppointmentID),
+    CONSTRAINT fk_Appointment__AppointmentID REFERENCES Appointment(AppointmentID),
   Dose TEXT NOT NULL,
   PRIMARY KEY(Physician, Patient, Medication, Date)
 );
 
-CREATE TABLE [Block](
-  [Floor] INT NOT NULL,
+CREATE TABLE BlockT(
+  FloorN INT NOT NULL,
   Code INT NOT NULL,
-  PRIMARY KEY([Floor], Code)
+  PRIMARY KEY(FloorN, Code)
 ); 
 
 CREATE TABLE Room (
   Number INT PRIMARY KEY NOT NULL,
   Type TEXT NOT NULL,
-  BlockFloor INT NOT NULL
-    CONSTRAINT fk_Block_Floor REFERENCES [Block]([Floor]),
-  BlockCode INT NOT NULL
-    CONSTRAINT fk_Block_Code REFERENCES [Block](Code),
+  BlockTFloorN INT NOT NULL
+    CONSTRAINT fk__BlockT_FloorN REFERENCES BlockT(FloorN),
+  BlockTCode INT NOT NULL
+    CONSTRAINT fk___BlockT_Code REFERENCES BlockT(Code),
   Unavailable BIT NOT NULL
 );
 
 CREATE TABLE On_Call (
   Nurse INT NOT NULL
-    CONSTRAINT fk_Nurse_EmployeeID REFERENCES Nurse(EmployeeID),
-  BlockFloor INT NOT NULL
-    CONSTRAINT fk_Block_Floor REFERENCES [Block]([Floor]),
-  BlockCode INT NOT NULL
-    CONSTRAINT fk_Block_Code REFERENCES [Block](Code),
+    CONSTRAINT fk___Nurse_EmployeeId REFERENCES Nurse(EmployeeId),
+  BlockTFloorN INT NOT NULL
+    CONSTRAINT fk_BlockT_FloorN REFERENCES [BlockT]([FloorN]),
+  BlockTCode INT NOT NULL
+    CONSTRAINT fk_BlockT_Code REFERENCES [BlockT](Code),
   Start DATETIME NOT NULL,
   [End] DATETIME NOT NULL,
-  PRIMARY KEY(Nurse, BlockFloor, BlockCode, Start, [End])
+  PRIMARY KEY(Nurse, BlockTFloorN, BlockTCode, Start, [End])
 );
 
 CREATE TABLE Stay (
   StayID INT PRIMARY KEY NOT NULL,
   Patient INT NOT NULL
-    CONSTRAINT fk_Patient_SSN REFERENCES Patient(SSN),
+    CONSTRAINT fk__Stay_SSN REFERENCES Patient(SSN),
   Room INT NOT NULL
-    CONSTRAINT fk_Room_Number REFERENCES Room(Number),
+    CONSTRAINT fk__Room__Number REFERENCES Room(Number),
   Start DATETIME NOT NULL,
   [End] DATETIME NOT NULL
 );
 
 CREATE TABLE Undergoes (
   Patient INT NOT NULL
-    CONSTRAINT fk_Patient_SSN REFERENCES Patient(SSN),
+    CONSTRAINT fk_Undergoes_SSN REFERENCES Patient(SSN),
   [Procedure] INT NOT NULL
-    CONSTRAINT fk_Procedure_Code REFERENCES [Procedure](Code),
+    CONSTRAINT fk_Undergoes_Code REFERENCES [Procedure](Code),
   Stay INT NOT NULL
-    CONSTRAINT fk_Stay_StayID REFERENCES Stay(StayID),
+    CONSTRAINT fk_Undergoes_StayID REFERENCES Stay(StayID),
   Date DATETIME NOT NULL,
   Physician INT NOT NULL
-    CONSTRAINT fk_Physician_EmployeeID REFERENCES Physician(EmployeeID),
+    CONSTRAINT fk_Undergoes_Emp__EmployeeId REFERENCES Physician(EmployeeId),
   AssistingNurse INT
-    CONSTRAINT fk_Nurse_EmployeeID REFERENCES Nurse(EmployeeID),
+    CONSTRAINT fk_Undergoes_Nurse_Emp_EmployeeId REFERENCES Nurse(EmployeeId),
   PRIMARY KEY(Patient, [Procedure], Stay, Date)
 );
 
@@ -211,18 +211,18 @@ INSERT INTO Prescribes VALUES(1,100000001,1,'2008-04-24 10:47',13216584,'5');
 INSERT INTO Prescribes VALUES(9,100000004,2,'2008-04-27 10:53',86213939,'10');
 INSERT INTO Prescribes VALUES(9,100000004,2,'2008-04-30 16:53',NULL,'5');
 
-INSERT INTO [Block] VALUES(1,1);
-INSERT INTO [Block] VALUES(1,2);
-INSERT INTO [Block] VALUES(1,3);
-INSERT INTO [Block] VALUES(2,1);
-INSERT INTO [Block] VALUES(2,2);
-INSERT INTO [Block] VALUES(2,3);
-INSERT INTO [Block] VALUES(3,1);
-INSERT INTO [Block] VALUES(3,2);
-INSERT INTO [Block] VALUES(3,3);
-INSERT INTO [Block] VALUES(4,1);
-INSERT INTO [Block] VALUES(4,2);
-INSERT INTO [Block] VALUES(4,3);
+INSERT INTO [BlockT] VALUES(1,1);
+INSERT INTO [BlockT] VALUES(1,2);
+INSERT INTO [BlockT] VALUES(1,3);
+INSERT INTO [BlockT] VALUES(2,1);
+INSERT INTO [BlockT] VALUES(2,2);
+INSERT INTO [BlockT] VALUES(2,3);
+INSERT INTO [BlockT] VALUES(3,1);
+INSERT INTO [BlockT] VALUES(3,2);
+INSERT INTO [BlockT] VALUES(3,3);
+INSERT INTO [BlockT] VALUES(4,1);
+INSERT INTO [BlockT] VALUES(4,2);
+INSERT INTO [BlockT] VALUES(4,3);
 
 INSERT INTO Room VALUES(101,'Single',1,1,0);
 INSERT INTO Room VALUES(102,'Single',1,1,0);
