@@ -11,12 +11,12 @@ namespace RazorPagesMovie.Pages.Movies
     public class DetailsModel : PageModel
     {
         private readonly IMovieService movieService;
-        //private readonly ILogger logger;
+        
 
-        public DetailsModel(IMovieService movieService)//, ILogger logger)
+        public DetailsModel(IMovieService movieService)
         {
             this.movieService = movieService;
-            //this.logger = logger;
+            
         }
 
         public MovieViewModel Movie { get; set; }
@@ -32,13 +32,13 @@ namespace RazorPagesMovie.Pages.Movies
             }
             catch (ObjectNullException ex)
             {
-               // this.logger.LogError(ex.Message);
+               
 
                 return NotFound();
             }
             catch (LessThenZeroValueException ex)
             {
-               //this.logger.LogError(ex.Message);
+               
 
                 return NotFound();
             }

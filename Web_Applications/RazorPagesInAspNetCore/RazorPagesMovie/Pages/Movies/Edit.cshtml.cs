@@ -5,11 +5,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorPagesMovie.Models;
 using RazorPagesMovie.MovieServices;
 using RazorPagesMovie.MovieServices.Abstract;
+using RazorPagesMovie.Pages.Movies.ViewModels;
 using ValidatorGuard.CustomExceptions;
 
 namespace RazorPagesMovie.Pages.Movies
 {
-    //TOODO: Fix AutoMapper error
+    
     public class EditModel : PageModel
     {
         private readonly IMovieService movieService;

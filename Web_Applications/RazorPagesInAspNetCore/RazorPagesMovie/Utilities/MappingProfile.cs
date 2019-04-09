@@ -15,7 +15,8 @@ namespace RazorPagesMovie.Utilities
         {
             CreateMap<List<MovieDto>, List<MovieViewModel>>();
             CreateMap<MovieDto, MovieViewModel>();
-            CreateMap<Movie, MovieViewModel>();
+            CreateMap<MovieDto, Movie>();
+              
         }
     }
 }
