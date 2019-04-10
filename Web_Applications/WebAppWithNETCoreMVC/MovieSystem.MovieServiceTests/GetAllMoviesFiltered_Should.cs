@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ContentSorting.Abstract;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 using MovieSystem.Data;
 using MovieSystem.Models;
 using System;
@@ -30,14 +32,16 @@ namespace MovieSystem.MovieServiceTests
             var thirdMovie = new Movie() { Id = 3, Title = movieName3 };
             var fourtMovie = new Movie() { Id = 4, Title = movieName4 };
 
+            var pageSortMock = new Mock<IPageSort>();
+
             using (var context = new MovieSystemDbContext(options))
             {
                 await context.Movies.AddRangeAsync(firstMovie, secondMovie, thirdMovie, fourtMovie);
                 await context.SaveChangesAsync();
 
-                var movieService = new MovieServices.MovieService(context);
+                var movieService = new MovieServices.MovieService(context, pageSortMock.Object);
 
-                var resultDto = await movieService.AllFiltered(null, null);
+                var resultDto = await movieService.All(null, null);
 
                 Assert.IsTrue(resultDto.Count == 4);
 
@@ -76,14 +80,16 @@ namespace MovieSystem.MovieServiceTests
             var thirdMovieComedy = new Movie() { Id = 3, Title = movieName3Comedy, Genre = genreComedy };
             var fourtMovieComedy = new Movie() { Id = 4, Title = movieName4Comedy, Genre = genreComedy };
 
+            var pageSortMock = new Mock<IPageSort>();
+
             using (var context = new MovieSystemDbContext(options))
             {
                 await context.Movies.AddRangeAsync(firstMovieAction, secondMovieAction, thirdMovieComedy, fourtMovieComedy);
                 await context.SaveChangesAsync();
 
-                var movieService = new MovieServices.MovieService(context);
+                var movieService = new MovieServices.MovieService(context, pageSortMock.Object);
 
-                var resultDto = await movieService.AllFiltered(null, genreAction);
+                var resultDto = await movieService.All(null, genreAction);
 
                 Assert.IsTrue(resultDto.Count == 2);
 
@@ -118,14 +124,16 @@ namespace MovieSystem.MovieServiceTests
             var thirdMovie = new Movie() { Id = 3, Title = movieName3 };
             var fourtMovie = new Movie() { Id = 4, Title = movieName4 };
 
+            var pageSortMock = new Mock<IPageSort>();
+
             using (var context = new MovieSystemDbContext(options))
             {
                 await context.Movies.AddRangeAsync(firstMovie, secondMovie, thirdMovie, fourtMovie);
                 await context.SaveChangesAsync();
 
-                var movieService = new MovieServices.MovieService(context);
+                var movieService = new MovieServices.MovieService(context, pageSortMock.Object);
 
-                var resultDto = await movieService.AllFiltered(searchString, null);
+                var resultDto = await movieService.All(searchString, null);
 
                 Assert.IsTrue(resultDto.Count == 1);
 
@@ -160,14 +168,16 @@ namespace MovieSystem.MovieServiceTests
             var thirdMovieComedy = new Movie() { Id = 3, Title = movieName3Comedy, Genre = genreComedy };
             var fourtMovieComedy = new Movie() { Id = 4, Title = movieName4Comedy, Genre = genreComedy };
 
+            var pageSortMock = new Mock<IPageSort>();
+
             using (var context = new MovieSystemDbContext(options))
             {
                 await context.Movies.AddRangeAsync(firstMovieAction, secondMovieAction, thirdMovieComedy, fourtMovieComedy);
                 await context.SaveChangesAsync();
 
-                var movieService = new MovieServices.MovieService(context);
+                var movieService = new MovieServices.MovieService(context, pageSortMock.Object);
 
-                var resultDto = await movieService.AllFiltered(searchString, genreComedy);
+                var resultDto = await movieService.All(searchString, genreComedy);
 
                 Assert.IsTrue(resultDto.Count == 1);
 

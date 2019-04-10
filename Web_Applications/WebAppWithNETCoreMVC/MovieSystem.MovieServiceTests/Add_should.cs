@@ -1,3 +1,4 @@
+using ContentSorting.Abstract;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -23,8 +24,8 @@ namespace MovieSystem.MovieServiceTests
             string Genre = "Action";
 
             var dbMock = new Mock<MovieSystemDbContext>();
-
-            var service = new MovieServices.MovieService(dbMock.Object);
+            var pageSortMock = new Mock<IPageSort>();
+            var service = new MovieServices.MovieService(dbMock.Object, pageSortMock.Object);
 
 
             await Assert.ThrowsExceptionAsync<StringIsNullOrWhiteSpaceException>(async () => await service.Add(title, releaseDate, price, Genre));
@@ -40,8 +41,9 @@ namespace MovieSystem.MovieServiceTests
             string Genre = "Action";
 
             var dbMock = new Mock<MovieSystemDbContext>();
+            var pageSortMock = new Mock<IPageSort>();
 
-            var service = new MovieServices.MovieService(dbMock.Object);
+            var service = new MovieServices.MovieService(dbMock.Object, pageSortMock.Object);
 
 
             await Assert.ThrowsExceptionAsync<DateTimeIsOldException>(async () => await service.Add(title, releaseDate, price, Genre));
@@ -57,8 +59,9 @@ namespace MovieSystem.MovieServiceTests
             string Genre = "Action";
 
             var dbMock = new Mock<MovieSystemDbContext>();
+            var pageSortMock = new Mock<IPageSort>();
 
-            var service = new MovieServices.MovieService(dbMock.Object);
+            var service = new MovieServices.MovieService(dbMock.Object, pageSortMock.Object);
 
 
             await Assert.ThrowsExceptionAsync<LessThenZeroValueException>(async () => await service.Add(title, releaseDate, price, Genre));
@@ -75,8 +78,9 @@ namespace MovieSystem.MovieServiceTests
             string Genre = "Action";
 
             var dbMock = new Mock<MovieSystemDbContext>();
+            var pageSortMock = new Mock<IPageSort>();
 
-            var service = new MovieServices.MovieService(dbMock.Object);
+            var service = new MovieServices.MovieService(dbMock.Object, pageSortMock.Object);
 
 
             await Assert.ThrowsExceptionAsync<LessThenZeroValueException>(async () => await service.Add(title, releaseDate, price, Genre));
@@ -93,8 +97,9 @@ namespace MovieSystem.MovieServiceTests
             string Genre = null;
 
             var dbMock = new Mock<MovieSystemDbContext>();
+            var pageSortMock = new Mock<IPageSort>();
 
-            var service = new MovieServices.MovieService(dbMock.Object);
+            var service = new MovieServices.MovieService(dbMock.Object, pageSortMock.Object);
 
 
             await Assert.ThrowsExceptionAsync<StringIsNullOrWhiteSpaceException>(async () => await service.Add(title, releaseDate, price, Genre));
@@ -113,9 +118,11 @@ namespace MovieSystem.MovieServiceTests
                 .UseInMemoryDatabase(databaseName: "AddToDatabase_WhenCorrectParametersArePassed")
                 .Options;
 
+            var pageSortMock = new Mock<IPageSort>();
+
             using (var context = new MovieSystemDbContext(options))
             {
-                var service = new MovieService(context);
+                var service = new MovieService(context,pageSortMock.Object);
 
                 await service.Add(title, releaseDate, price, Genre);
 

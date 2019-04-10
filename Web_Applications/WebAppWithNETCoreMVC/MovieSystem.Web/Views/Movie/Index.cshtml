@@ -14,20 +14,18 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.TitleSortParam })
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReleaseDate)
+                @Html.ActionLink("Release Date", "Index", new { sortOrder = ViewBag.ReleaseDateSortParam })
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Genre)
+                 @Html.ActionLink("Genre", "Index", new { sortOrder = ViewBag.GenreSortParam })
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParam })
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsDeleted)
-            </th>
+           
             <th></th>
         </tr>
     </thead>
@@ -46,9 +44,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsDeleted)
-            </td>
+          
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

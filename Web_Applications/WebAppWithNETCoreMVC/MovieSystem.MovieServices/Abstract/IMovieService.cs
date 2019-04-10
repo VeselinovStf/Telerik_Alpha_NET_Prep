@@ -9,7 +9,7 @@ namespace MovieSystem.MovieServices.Abstract
 {
     public interface IMovieService
     {
-        Task<IList<MovieDto>> AllFiltered(string searchString, string movieGenre);
+        Task<IList<MovieDto>> All(string sortOrder, string searchString);
 
         Task Add(string title, DateTime releaseDate, decimal price, string Genre);
         Task<MovieDto> FirstOrDefaultAsync(int? id);

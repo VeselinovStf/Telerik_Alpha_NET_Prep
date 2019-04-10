@@ -28,9 +28,14 @@ namespace MovieSystem.Web.Controllers
         }
 
         // GET: Movie
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string searchString)
         {
-            var serviceCall = await this.movieService.AllFiltered(null, null);
+            ViewBag.TitleSortParam = String.IsNullOrEmpty(sortOrder) ? "Title" : "";
+            ViewBag.ReleaseDateSortParam = String.IsNullOrEmpty(sortOrder) ? "ReleaseDate" : "";
+            ViewBag.GenreSortParam = String.IsNullOrEmpty(sortOrder) ? "Genre" : "";
+            ViewBag.PriceSortParam = String.IsNullOrEmpty(sortOrder) ? "Price" : "";
+
+            var serviceCall = await this.movieService.All(sortOrder, searchString);
 
             var model = Mapper.Map<IList<MovieViewModel>>(serviceCall);
 

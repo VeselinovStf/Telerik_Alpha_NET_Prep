@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using ContentSorting;
+using ContentSorting.Abstract;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -9,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using MovieSystem.Data;
 using MovieSystem.MovieServices;
 using MovieSystem.MovieServices.Abstract;
-using mapperUtils = MovieSystem.Web.Utilities;
+using mapperUtils = MovieSystem.Web.Utilities.AutoMapperUtility;
 
 namespace MovieSystem.Web
 {
@@ -41,6 +43,7 @@ namespace MovieSystem.Web
         private void ConfigureMovieSystemServicess(IServiceCollection services)
         {
             services.AddScoped<IMovieService, MovieService>();
+            services.AddScoped<IPageSort, PageSort>();
         }
 
         private void ConfigureAutoMapper(IServiceCollection services)

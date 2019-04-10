@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ContentSorting.Abstract;
+using Microsoft.EntityFrameworkCore;
 using MovieSystem.Data;
 using MovieSystem.Models;
 using MovieSystem.MovieServices.Abstract;
@@ -15,10 +16,12 @@ namespace MovieSystem.MovieServices
     public class MovieService : IMovieService
     {
         private readonly MovieSystemDbContext dbContext;
+        private readonly IPageSort pageSort;
 
-        public MovieService(MovieSystemDbContext dbContext)
+        public MovieService(MovieSystemDbContext dbContext, IPageSort pageSort)
         {
             this.dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+            this.pageSort = pageSort;
         }
 
         public async Task Add(string title, DateTime releaseDate, decimal price, string Genre)
@@ -73,7 +76,7 @@ namespace MovieSystem.MovieServices
             return await this.dbContext.Movies.AnyAsync(e => e.Id == id);
         }
 
-        public async Task<IList<MovieDto>> AllFiltered(string searchString, string movieGenre)
+        public async Task<IList<MovieDto>> All(string sortOrder, string searchString)
         {
             var moviesDbQueryEntities = dbContext.Movies
                 .OrderBy(m => m.Genre)
@@ -86,14 +89,12 @@ namespace MovieSystem.MovieServices
                     .Where(s => s.Title.Contains(searchString) && !s.IsDeleted);
             }
 
-            if (!string.IsNullOrEmpty(movieGenre))
+            if (!string.IsNullOrEmpty(sortOrder))
             {
-                moviesDbQueryEntities = moviesDbQueryEntities
-                    .Where(m => m.Genre == movieGenre && !m.IsDeleted)
-                    .Distinct();
+                moviesDbQueryEntities = await this.pageSort.Sort(sortOrder);
             }
 
-            var filteredAllMovies = await moviesDbQueryEntities.ToListAsync();
+            var filteredAllMovies =  moviesDbQueryEntities.ToList();
 
             var serviceModelDto = filteredAllMovies.Select(m => new MovieDto()
             {
@@ -141,6 +142,8 @@ namespace MovieSystem.MovieServices
             if (dbQueryEntity != null)
             {
                 dbQueryEntity.IsDeleted = true;
+
+                this.dbContext.Update(dbQueryEntity).State = EntityState.Modified;
                 await this.dbContext.SaveChangesAsync();
             }
         }

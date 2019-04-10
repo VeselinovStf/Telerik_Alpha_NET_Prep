@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\RazorPagesInAspNetCore\ValidatorGuard\ValidatorGuard.csproj" />
+    <ProjectReference Include="..\ContentSorting\ContentSorting.csproj" />
     <ProjectReference Include="..\MovieSystem.Data\MovieSystem.Data.csproj" />
     <ProjectReference Include="..\MovieSystem.Models\MovieSystem.Models.csproj" />
   </ItemGroup>
