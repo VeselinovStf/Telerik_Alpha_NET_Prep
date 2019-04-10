@@ -4,6 +4,7 @@ using MovieSystem.Data;
 using MovieSystem.Models;
 using MovieSystem.MovieServices.Abstract;
 using MovieSystem.MovieServices.DTOs;
+using MovieSystem.MovieServices.DTOs.PaggingDTOs;
 using MovieSystem.MovieServices.Exceptions;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace MovieSystem.MovieServices
     {
         private readonly MovieSystemDbContext dbContext;
         private readonly IPageSort pageSort;
+        public int PageSize = 2;
 
         public MovieService(MovieSystemDbContext dbContext, IPageSort pageSort)
         {
@@ -76,11 +78,13 @@ namespace MovieSystem.MovieServices
             return await this.dbContext.Movies.AnyAsync(e => e.Id == id);
         }
 
-        public async Task<IList<MovieDto>> All(string sortOrder, string searchString)
+        public async Task<MoviesListDto> All(string sortOrder, string searchString, int moviePage = 1)
         {
             var moviesDbQueryEntities = dbContext.Movies
                 .OrderBy(m => m.Genre)
                 .Where(s => !s.IsDeleted)
+                .Skip((moviePage - 1) * PageSize)
+                .Take(PageSize)
                 .AsQueryable();
 
             if (!string.IsNullOrEmpty(searchString))
@@ -98,15 +102,28 @@ namespace MovieSystem.MovieServices
            
 
             var filteredAllMovies =  moviesDbQueryEntities.ToList();
-
-            var serviceModelDto = filteredAllMovies.Select(m => new MovieDto()
+            //TODO: FIX THE BUG
+            var serviceModelDto = new MoviesListDto()
             {
-                Id = m.Id,
-                Title = m.Title,
-                ReleaseDate = m.ReleaseDate,
-                Genre = m.Genre,
-                Price = m.Price
-            }).ToList();
+                Movies = filteredAllMovies.Select(m => new MovieDto()
+                {
+                    Id = m.Id,
+                    Title = m.Title,
+                    ReleaseDate = m.ReleaseDate,
+                    Genre = m.Genre,
+                    Price = m.Price
+                }),
+                PagingInfo = new PagingDto()
+                {
+                    TotalItems = searchString == null ?
+                        await moviesDbQueryEntities.CountAsync()
+                        :
+                       await moviesDbQueryEntities
+                    .Where(s => s.Title.Contains(searchString) && !s.IsDeleted).CountAsync(),
+                    CurrentPage = moviePage,
+                    ItemsPerPage = this.PageSize
+                }
+            };
 
             return serviceModelDto;
         }

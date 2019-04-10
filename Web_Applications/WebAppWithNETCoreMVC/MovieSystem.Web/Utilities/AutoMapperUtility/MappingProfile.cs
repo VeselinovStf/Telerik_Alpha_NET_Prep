@@ -16,7 +16,7 @@ namespace MovieSystem.Web.Utilities.AutoMapperUtility
             CreateMap<List<MovieDto>, List<MovieViewModel>>();
             CreateMap<MovieDto, MovieViewModel>();
             CreateMap<MovieDto, Movie>();
-
+            CreateMap<MoviesListDto, MovieViewModel>();
         }
     }
 }
