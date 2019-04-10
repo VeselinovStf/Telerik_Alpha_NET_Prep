@@ -13,7 +13,7 @@ namespace RazorPagesMovie.Data.Config
         {
             builder.Property(m => m.ReleaseDate)
                 .HasColumnType("Datetime2")
-                .HasColumnName("Release Datge");
+                .HasColumnName("Release Date");
 
             builder.Property(m => m.Price)
                 .HasColumnType("decimal(18,2)");
@@ -24,6 +24,7 @@ namespace RazorPagesMovie.Data.Config
 
             builder.Property(m => m.Genre)
                 .HasMaxLength(50)
+
                 .IsRequired();
         }
     }
