@@ -11,6 +11,11 @@ namespace MovieSystem.Data
     public class MovieSystemDbContext : DbContext
     {
         public DbSet<Movie> Movies { get; set; }
+
+        public MovieSystemDbContext()
+        {
+
+        }
         public MovieSystemDbContext(DbContextOptions<MovieSystemDbContext> options) 
             : base(options)
         {
