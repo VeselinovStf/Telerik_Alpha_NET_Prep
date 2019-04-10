@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -34,7 +35,13 @@ namespace MovieSystem.Web
             });
 
             ConfigureDb(services);
+            ConfigureAutoMapper(services);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+        }
+
+        private void ConfigureAutoMapper(IServiceCollection services)
+        {
+            services.AddAutoMapper();
         }
 
         private void ConfigureDb(IServiceCollection services)
