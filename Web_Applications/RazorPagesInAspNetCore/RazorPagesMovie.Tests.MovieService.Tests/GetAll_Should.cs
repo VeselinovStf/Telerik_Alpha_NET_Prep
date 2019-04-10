@@ -34,7 +34,7 @@ namespace RazorPagesMovie.Tests.MovieService.Tests
 
                 var movieService = new MovieServices.MovieService(context);
 
-                var resultDto = await movieService.GetAll();
+                var resultDto = await movieService.GetAllMoviesFiltered(null,null);
 
                 Assert.IsTrue(resultDto.Count == 4);
 

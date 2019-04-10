@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Data;
 using RazorPagesMovie.Models;
 using RazorPagesMovie.MovieServices.Abstract;
@@ -72,13 +73,29 @@ namespace RazorPagesMovie.MovieServices
             return await this.dbContext.Movies.AnyAsync(e => e.Id == id);
         }
 
-        public async Task<IList<MovieDto>> GetAll()
-        {
-            var dbQueryEntities = await dbContext.Movies
-                .Where(m => !m.IsDeleted)
-                .ToListAsync();
+        public async Task<IList<MovieDto>> GetAllMoviesFiltered(string searchString, string movieGenre)
+        {          
+            var moviesDbQueryEntities =  dbContext.Movies
+                .OrderBy(m => m.Genre)
+                .Where(s => !s.IsDeleted)
+                .AsQueryable();
 
-            var serviceModelDto = dbQueryEntities.Select(m => new MovieDto()
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                moviesDbQueryEntities =  moviesDbQueryEntities
+                    .Where(s => s.Title.Contains(searchString) && !s.IsDeleted);
+            }
+           
+            if (!string.IsNullOrEmpty(movieGenre))
+            {
+                moviesDbQueryEntities = moviesDbQueryEntities
+                    .Where(m => m.Genre == movieGenre && !m.IsDeleted)
+                    .Distinct();
+            }
+
+            var filteredAllMovies = await moviesDbQueryEntities.ToListAsync();
+
+            var serviceModelDto = filteredAllMovies.Select(m => new MovieDto()
             {
                 Id = m.Id,
                 Title = m.Title,
@@ -89,6 +106,8 @@ namespace RazorPagesMovie.MovieServices
 
             return serviceModelDto;
         }
+
+     
 
         public async Task<MovieDto> GetById(int? id)
         {

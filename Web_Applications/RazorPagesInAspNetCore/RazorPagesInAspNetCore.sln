@@ -7,27 +7,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3F3B9B12-146
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{0C358214-B9EF-42DD-8514-EDA7403EEA2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesMovie", "RazorPagesMovie\RazorPagesMovie.csproj", "{DF243109-FB6A-4A02-BC51-1E297C24FD27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesMovie", "RazorPagesMovie\RazorPagesMovie.csproj", "{DF243109-FB6A-4A02-BC51-1E297C24FD27}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{E750FCE1-C71F-47BB-A80C-07FFB3F8F162}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesMovie.Models", "RazorPagesMovie.Models\RazorPagesMovie.Models.csproj", "{43F04F08-0A20-4E8F-8E4F-1BD95055D514}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesMovie.Models", "RazorPagesMovie.Models\RazorPagesMovie.Models.csproj", "{43F04F08-0A20-4E8F-8E4F-1BD95055D514}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{B2FA4DC6-B7AD-44E6-A623-15737DC8647C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesMovie.Data", "RazorPagesMovie.Data\RazorPagesMovie.Data.csproj", "{F1DB521A-A9E6-4646-A2D3-D5B32CF2A6C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesMovie.Data", "RazorPagesMovie.Data\RazorPagesMovie.Data.csproj", "{F1DB521A-A9E6-4646-A2D3-D5B32CF2A6C0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{5BD9653F-1F85-4E71-94BD-AAADAA111542}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesMovie.MovieServices", "RazorPagesMovie.MovieServices\RazorPagesMovie.MovieServices.csproj", "{C7866E7A-6130-4A48-A0E8-CC04F67D4F51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesMovie.MovieServices", "RazorPagesMovie.MovieServices\RazorPagesMovie.MovieServices.csproj", "{C7866E7A-6130-4A48-A0E8-CC04F67D4F51}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{51E00D72-0587-436B-BA59-A3DBD6B3D02F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServicesTests", "ServicesTests", "{0D8B0073-40F8-4BC1-9EB8-452925E653A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesMovie.Tests.MovieService.Tests", "RazorPagesMovie.Tests.MovieService.Tests\RazorPagesMovie.Tests.MovieService.Tests.csproj", "{1C09CDDC-BEDC-42AB-8ED7-A8CCDCA6DBE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesMovie.Tests.MovieService.Tests", "RazorPagesMovie.Tests.MovieService.Tests\RazorPagesMovie.Tests.MovieService.Tests.csproj", "{1C09CDDC-BEDC-42AB-8ED7-A8CCDCA6DBE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidatorGuard", "ValidatorGuard\ValidatorGuard.csproj", "{997F8A53-420F-43A2-9D73-F0196416D8F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidatorGuard", "ValidatorGuard\ValidatorGuard.csproj", "{997F8A53-420F-43A2-9D73-F0196416D8F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
