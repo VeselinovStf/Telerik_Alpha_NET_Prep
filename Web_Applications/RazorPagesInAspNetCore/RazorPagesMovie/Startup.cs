@@ -68,6 +68,7 @@ namespace RazorPagesMovie
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
             }
             else
             {

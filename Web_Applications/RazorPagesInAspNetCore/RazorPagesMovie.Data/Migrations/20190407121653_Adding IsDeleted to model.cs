@@ -30,7 +30,7 @@ namespace RazorPagesMovie.Data.Migrations
                 oldClrType: typeof(decimal));
 
             migrationBuilder.AlterColumn<string>(
-                name: "Gender",
+                name: "Genre",
                 table: "Movies",
                 maxLength: 10,
                 nullable: false,
@@ -72,7 +72,7 @@ namespace RazorPagesMovie.Data.Migrations
                 oldType: "money");
 
             migrationBuilder.AlterColumn<string>(
-                name: "Gender",
+                name: "Genre",
                 table: "Movies",
                 nullable: true,
                 oldClrType: typeof(string),

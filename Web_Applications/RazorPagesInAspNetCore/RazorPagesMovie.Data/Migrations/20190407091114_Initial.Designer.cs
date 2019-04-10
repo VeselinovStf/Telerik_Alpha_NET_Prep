@@ -27,7 +27,7 @@ namespace RazorPagesMovie.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Gender");
+                    b.Property<string>("Genre");
 
                     b.Property<decimal>("Price");
 

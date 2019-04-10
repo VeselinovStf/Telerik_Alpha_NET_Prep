@@ -20,13 +20,13 @@ namespace RazorPagesMovie.MovieServices
             this.dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public async Task Add( string title, DateTime releaseDate, decimal price, string gender)
+        public async Task Add( string title, DateTime releaseDate, decimal price, string Genre)
         {
            
             Validator.IsStringNotNullOrWhiteSpace(title);
             Validator.IsDateNotBiggerThanCorrent(releaseDate);
             Validator.IsDecimalBiggerThanZero(price);
-            Validator.IsStringNotNullOrWhiteSpace(gender);
+            Validator.IsStringNotNullOrWhiteSpace(Genre);
 
             var newMovie = new Movie()
             {
@@ -34,7 +34,7 @@ namespace RazorPagesMovie.MovieServices
                 Title = title,
                 ReleaseDate = releaseDate,
                 Price = price,
-                Gender = gender
+                Genre = Genre
             };
 
             await this.dbContext.Movies.AddAsync(newMovie);
@@ -83,7 +83,7 @@ namespace RazorPagesMovie.MovieServices
                 Id = m.Id,
                 Title = m.Title,
                 ReleaseDate = m.ReleaseDate,
-                Gender = m.Gender,
+                Genre = m.Genre,
                 Price = m.Price
             }).ToList();
 
@@ -105,7 +105,7 @@ namespace RazorPagesMovie.MovieServices
                 Id = dbQueryEntiti.Id,
                 Title = dbQueryEntiti.Title,
                 ReleaseDate = dbQueryEntiti.ReleaseDate,
-                Gender = dbQueryEntiti.Gender,
+                Genre = dbQueryEntiti.Genre,
                 Price = dbQueryEntiti.Price
             };
 

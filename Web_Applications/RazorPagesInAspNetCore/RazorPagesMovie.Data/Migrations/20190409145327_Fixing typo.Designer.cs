@@ -10,8 +10,8 @@ using RazorPagesMovie.Data;
 namespace RazorPagesMovie.Data.Migrations
 {
     [DbContext(typeof(RazorPagesMovieDbContext))]
-    [Migration("20190407121653_Adding IsDeleted to model")]
-    partial class AddingIsDeletedtomodel
+    [Migration("20190409145327_Fixing typo")]
+    partial class Fixingtypo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -25,16 +25,17 @@ namespace RazorPagesMovie.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Gender")
+                    b.Property<string>("Genre")
                         .IsRequired()
-                        .HasMaxLength(10);
+                        .HasMaxLength(50);
 
                     b.Property<bool>("IsDeleted");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("money");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("ReleaseDate")
+                        .HasColumnName("Release Datge")
                         .HasColumnType("Datetime2");
 
                     b.Property<string>("Title")

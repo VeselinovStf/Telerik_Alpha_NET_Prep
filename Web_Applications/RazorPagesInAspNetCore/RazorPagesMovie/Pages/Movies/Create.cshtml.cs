@@ -30,7 +30,7 @@ namespace RazorPagesMovie.Pages.Movies
                 return Page();
             }
 
-            await this.movieService.Add( Movie.Title, Movie.ReleaseDate, Movie.Price, Movie.Gender);
+            await this.movieService.Add( Movie.Title, Movie.ReleaseDate, Movie.Price, Movie.Genre);
 
             return RedirectToPage("./Index");
         }

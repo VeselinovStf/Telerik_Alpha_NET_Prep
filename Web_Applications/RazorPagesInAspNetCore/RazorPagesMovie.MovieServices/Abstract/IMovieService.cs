@@ -10,7 +10,7 @@ namespace RazorPagesMovie.MovieServices.Abstract
     public interface IMovieService
     {
         Task<IList<MovieDto>> GetAll();
-        Task Add(string title, DateTime releaseDate, decimal price, string gender);
+        Task Add(string title, DateTime releaseDate, decimal price, string Genre);
         Task<MovieDto> GetById(int? id);
 
         Task RemoveMovie(int? id);

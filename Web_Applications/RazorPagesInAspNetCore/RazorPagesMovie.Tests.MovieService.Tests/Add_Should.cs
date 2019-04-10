@@ -23,14 +23,14 @@ namespace RazorPagesMovie.Tests.MovieService.Tests
             DateTime releaseDate = DateTime.Now;
           
             decimal price = 220m;
-            string gender = "Action";
+            string Genre = "Action";
 
             var dbMock = new Mock<RazorPagesMovieDbContext>();
 
             var service = new MovieServices.MovieService(dbMock.Object);
 
 
-            await Assert.ThrowsExceptionAsync<StringIsNullOrWhiteSpaceException>(async () => await service.Add(title, releaseDate, price, gender));
+            await Assert.ThrowsExceptionAsync<StringIsNullOrWhiteSpaceException>(async () => await service.Add(title, releaseDate, price, Genre));
         }
 
         [TestMethod]
@@ -40,14 +40,14 @@ namespace RazorPagesMovie.Tests.MovieService.Tests
             DateTime releaseDate = DateTime.Now;
             
             decimal price = 220m;
-            string gender = "Action";
+            string Genre = "Action";
 
             var dbMock = new Mock<RazorPagesMovieDbContext>();
 
             var service = new MovieServices.MovieService(dbMock.Object);
 
 
-            await Assert.ThrowsExceptionAsync<DateTimeIsOldException>(async () => await service.Add( title, releaseDate, price, gender));
+            await Assert.ThrowsExceptionAsync<DateTimeIsOldException>(async () => await service.Add( title, releaseDate, price, Genre));
         }
 
         [TestMethod]
@@ -57,14 +57,14 @@ namespace RazorPagesMovie.Tests.MovieService.Tests
             string title = "DieHard1";
             DateTime releaseDate = DateTime.Now.AddYears(1);
             decimal price = -10m;
-            string gender = "Action";
+            string Genre = "Action";
 
             var dbMock = new Mock<RazorPagesMovieDbContext>();
 
             var service = new MovieServices.MovieService(dbMock.Object);
 
 
-            await Assert.ThrowsExceptionAsync<LessThenZeroValueException>(async () => await service.Add(title, releaseDate, price, gender));
+            await Assert.ThrowsExceptionAsync<LessThenZeroValueException>(async () => await service.Add(title, releaseDate, price, Genre));
         }
 
         [TestMethod]
@@ -75,32 +75,32 @@ namespace RazorPagesMovie.Tests.MovieService.Tests
             DateTime releaseDate = DateTime.Now.AddYears(1);
             
             decimal price = 0m;
-            string gender = "Action";
+            string Genre = "Action";
 
             var dbMock = new Mock<RazorPagesMovieDbContext>();
 
             var service = new MovieServices.MovieService(dbMock.Object);
 
 
-            await Assert.ThrowsExceptionAsync<LessThenZeroValueException>(async () => await service.Add( title, releaseDate, price, gender));
+            await Assert.ThrowsExceptionAsync<LessThenZeroValueException>(async () => await service.Add( title, releaseDate, price, Genre));
         }
 
         [TestMethod]
-        public async Task Throw_StringIsNullOrWhiteSpaceException_WhenStringGendersNull()
+        public async Task Throw_StringIsNullOrWhiteSpaceException_WhenStringGenresNull()
         {
           
             string title = "DieHard1";
             DateTime releaseDate = DateTime.Now.AddYears(1);
            
             decimal price = 220m;
-            string gender = null;
+            string Genre = null;
 
             var dbMock = new Mock<RazorPagesMovieDbContext>();
 
             var service = new MovieServices.MovieService(dbMock.Object);
 
 
-            await Assert.ThrowsExceptionAsync<StringIsNullOrWhiteSpaceException>(async () => await service.Add(title, releaseDate, price, gender));
+            await Assert.ThrowsExceptionAsync<StringIsNullOrWhiteSpaceException>(async () => await service.Add(title, releaseDate, price, Genre));
         }
 
         [TestMethod]
@@ -110,7 +110,7 @@ namespace RazorPagesMovie.Tests.MovieService.Tests
             string title = "DieHard1";
             DateTime releaseDate = DateTime.Now.AddYears(1);
             decimal price = 220m;
-            string gender = "Action";
+            string Genre = "Action";
 
             var options = new DbContextOptionsBuilder<RazorPagesMovieDbContext>()
                 .UseInMemoryDatabase(databaseName: "AddToDatabase_WhenCorrectParametersArePassed")
@@ -120,7 +120,7 @@ namespace RazorPagesMovie.Tests.MovieService.Tests
             {
                 var service = new MovieServices.MovieService(context);
 
-                await service.Add( title, releaseDate, price, gender);
+                await service.Add( title, releaseDate, price, Genre);
 
                 var currentMovie = await context.Movies.ToListAsync();
 
@@ -129,7 +129,7 @@ namespace RazorPagesMovie.Tests.MovieService.Tests
                 Assert.AreEqual(title, currentMovie[0].Title);
                 Assert.AreEqual(releaseDate, currentMovie[0].ReleaseDate);
                 Assert.AreEqual(price, currentMovie[0].Price);
-                Assert.AreEqual(gender, currentMovie[0].Gender);
+                Assert.AreEqual(Genre, currentMovie[0].Genre);
             }
         }
     }

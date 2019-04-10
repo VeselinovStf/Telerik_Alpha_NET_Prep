@@ -10,8 +10,8 @@ using RazorPagesMovie.Data;
 namespace RazorPagesMovie.Data.Migrations
 {
     [DbContext(typeof(RazorPagesMovieDbContext))]
-    [Migration("20190407121653_Adding IsDeleted to model")]
-    partial class AddingIsDeletedtomodel
+    [Migration("20190410031520_Changing model Config")]
+    partial class ChangingmodelConfig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,14 +29,15 @@ namespace RazorPagesMovie.Data.Migrations
 
                     b.Property<string>("Genre")
                         .IsRequired()
-                        .HasMaxLength(10);
+                        .HasMaxLength(50);
 
                     b.Property<bool>("IsDeleted");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("money");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("ReleaseDate")
+                        .HasColumnName("Release Datge")
                         .HasColumnType("Datetime2");
 
                     b.Property<string>("Title")
