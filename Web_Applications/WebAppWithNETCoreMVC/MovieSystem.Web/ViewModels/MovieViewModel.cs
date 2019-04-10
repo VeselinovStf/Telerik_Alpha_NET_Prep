@@ -13,7 +13,6 @@ namespace MovieSystem.Web.ViewModels
 
         public DateTime ReleaseDate { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-ZA-Z""'\s-]*$"), Required, StringLength(30)]
         public string Genre { get; set; }
         public decimal Price { get; set; }
 

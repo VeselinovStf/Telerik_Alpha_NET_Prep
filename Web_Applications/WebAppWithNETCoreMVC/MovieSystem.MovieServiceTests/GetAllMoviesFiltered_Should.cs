@@ -37,7 +37,7 @@ namespace MovieSystem.MovieServiceTests
 
                 var movieService = new MovieServices.MovieService(context);
 
-                var resultDto = await movieService.GetAllMoviesFiltered(null, null);
+                var resultDto = await movieService.AllFiltered(null, null);
 
                 Assert.IsTrue(resultDto.Count == 4);
 
@@ -83,7 +83,7 @@ namespace MovieSystem.MovieServiceTests
 
                 var movieService = new MovieServices.MovieService(context);
 
-                var resultDto = await movieService.GetAllMoviesFiltered(null, genreAction);
+                var resultDto = await movieService.AllFiltered(null, genreAction);
 
                 Assert.IsTrue(resultDto.Count == 2);
 
@@ -125,7 +125,7 @@ namespace MovieSystem.MovieServiceTests
 
                 var movieService = new MovieServices.MovieService(context);
 
-                var resultDto = await movieService.GetAllMoviesFiltered(searchString, null);
+                var resultDto = await movieService.AllFiltered(searchString, null);
 
                 Assert.IsTrue(resultDto.Count == 1);
 
@@ -167,7 +167,7 @@ namespace MovieSystem.MovieServiceTests
 
                 var movieService = new MovieServices.MovieService(context);
 
-                var resultDto = await movieService.GetAllMoviesFiltered(searchString, genreComedy);
+                var resultDto = await movieService.AllFiltered(searchString, genreComedy);
 
                 Assert.IsTrue(resultDto.Count == 1);
 

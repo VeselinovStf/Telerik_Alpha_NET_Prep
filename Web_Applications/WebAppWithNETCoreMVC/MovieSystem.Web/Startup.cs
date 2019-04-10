@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MovieSystem.Data;
+using MovieSystem.MovieServices;
+using MovieSystem.MovieServices.Abstract;
+using mapperUtils = MovieSystem.Web.Utilities;
 
 namespace MovieSystem.Web
 {
@@ -36,7 +34,13 @@ namespace MovieSystem.Web
 
             ConfigureDb(services);
             ConfigureAutoMapper(services);
+            ConfigureMovieSystemServicess(services);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+        }
+
+        private void ConfigureMovieSystemServicess(IServiceCollection services)
+        {
+            services.AddScoped<IMovieService, MovieService>();
         }
 
         private void ConfigureAutoMapper(IServiceCollection services)
@@ -67,6 +71,8 @@ namespace MovieSystem.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            mapperUtils.MapperConfiguration.Config();
 
             app.UseMvc(routes =>
             {

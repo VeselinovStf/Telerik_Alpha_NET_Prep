@@ -9,12 +9,12 @@ namespace MovieSystem.MovieServices.Abstract
 {
     public interface IMovieService
     {
-        Task<IList<MovieDto>> GetAllMoviesFiltered(string searchString, string movieGenre);
+        Task<IList<MovieDto>> AllFiltered(string searchString, string movieGenre);
 
         Task Add(string title, DateTime releaseDate, decimal price, string Genre);
-        Task<MovieDto> GetById(int? id);
+        Task<MovieDto> FirstOrDefaultAsync(int? id);
 
-        Task RemoveMovie(int? id);
-        Task Edit(Movie movie);
+        Task Remove(int? id);
+        Task Update(Movie movie);
     }
 }

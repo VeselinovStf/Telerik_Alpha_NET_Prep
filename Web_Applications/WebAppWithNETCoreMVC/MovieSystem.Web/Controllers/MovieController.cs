@@ -2,45 +2,68 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using MovieSystem.Data;
 using MovieSystem.Models;
+using MovieSystem.MovieServices.Abstract;
+using MovieSystem.MovieServices.Exceptions;
+using MovieSystem.Web.ViewModels;
+using ValidatorGuard.CustomExceptions;
 
 namespace MovieSystem.Web.Controllers
 {
     public class MovieController : Controller
     {
-        private readonly MovieSystemDbContext _context;
+        private readonly IMovieService movieService;
+        private readonly ILogger<MovieController> logger;
 
-        public MovieController(MovieSystemDbContext context)
+        public MovieController(IMovieService movieService, ILogger<MovieController> logger)
         {
-            _context = context;
+            this.movieService = movieService;
+            this.logger = logger;
         }
 
         // GET: Movie
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Movies.ToListAsync());
+            var serviceCall = await this.movieService.AllFiltered(null, null);
+
+            var model = Mapper.Map<IList<MovieViewModel>>(serviceCall);
+
+            return View(model);
         }
 
         // GET: Movie/Details/5
         public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
+        {           
+            try
             {
+                var serviceCall = await this.movieService.FirstOrDefaultAsync(id);
+
+                var model = Mapper.Map<MovieViewModel>(serviceCall);
+
+                return View(model);
+            }
+            catch (LessThenZeroValueException ex)
+            {
+                this.logger.LogError(ex.Message);
                 return NotFound();
             }
-
-            var movie = await _context.Movies
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (movie == null)
+           catch    (ObjectNullException ex)
             {
+                this.logger.LogError(ex.Message);
                 return NotFound();
             }
-
-            return View(movie);
+            catch (Exception ex)
+            {
+                this.logger.LogError(ex.Message);
+                return NotFound();
+            }
+           
         }
 
         // GET: Movie/Create
@@ -58,8 +81,8 @@ namespace MovieSystem.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(movie);
-                await _context.SaveChangesAsync();
+                await this.movieService.Add(movie.Title, movie.ReleaseDate, movie.Price, movie.Genre);
+
                 return RedirectToAction(nameof(Index));
             }
             return View(movie);
@@ -68,16 +91,10 @@ namespace MovieSystem.Web.Controllers
         // GET: Movie/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            var serviceCall = await this.movieService.FirstOrDefaultAsync(id);
 
-            var movie = await _context.Movies.FindAsync(id);
-            if (movie == null)
-            {
-                return NotFound();
-            }
+            var movie = Mapper.Map<MovieViewModel>(serviceCall);
+
             return View(movie);
         }
 
@@ -87,49 +104,37 @@ namespace MovieSystem.Web.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,IsDeleted")] Movie movie)
-        {
-            if (id != movie.Id)
-            {
-                return NotFound();
-            }
-
+        {          
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(movie);
-                    await _context.SaveChangesAsync();
+                    await this.movieService.Update(movie);
+                    this.logger.LogInformation("Succesfull Edit");
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (EntitiNotFoundException ex)
                 {
-                    if (!MovieExists(movie.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    this.logger.LogError(ex.Message);
+                    return NotFound();
                 }
+                catch (DbUpdateConcurrencyException ex)
+                {
+                    this.logger.LogError(ex.Message);
+                    return NotFound();
+                }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(movie);
         }
 
         // GET: Movie/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            var serviceCall = await this.movieService.FirstOrDefaultAsync(id);
 
-            var movie = await _context.Movies
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (movie == null)
-            {
-                return NotFound();
-            }
+            var movie = Mapper.Map<MovieViewModel>(serviceCall);
 
             return View(movie);
         }
@@ -139,15 +144,11 @@ namespace MovieSystem.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var movie = await _context.Movies.FindAsync(id);
-            _context.Movies.Remove(movie);
-            await _context.SaveChangesAsync();
+            await this.movieService.Remove(id);
+
             return RedirectToAction(nameof(Index));
         }
 
-        private bool MovieExists(int id)
-        {
-            return _context.Movies.Any(e => e.Id == id);
-        }
+      
     }
 }

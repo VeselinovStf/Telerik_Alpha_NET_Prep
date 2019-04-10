@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MovieSystem.Data;
 using MovieSystem.Models;
+using MovieSystem.MovieServices.Abstract;
 using MovieSystem.MovieServices.DTOs;
 using MovieSystem.MovieServices.Exceptions;
 using System;
@@ -11,7 +12,7 @@ using ValidatorGuard;
 
 namespace MovieSystem.MovieServices
 {
-    public class MovieService
+    public class MovieService : IMovieService
     {
         private readonly MovieSystemDbContext dbContext;
 
@@ -42,11 +43,11 @@ namespace MovieSystem.MovieServices
         }
 
 
-        public async Task Edit(Movie movie)
+        public async Task Update(Movie movie)
         {
             Validator.IsObjectNull(movie);
 
-            this.dbContext.Attach(movie).State = EntityState.Modified;
+            this.dbContext.Update(movie).State = EntityState.Modified;
 
             try
             {
@@ -72,7 +73,7 @@ namespace MovieSystem.MovieServices
             return await this.dbContext.Movies.AnyAsync(e => e.Id == id);
         }
 
-        public async Task<IList<MovieDto>> GetAllMoviesFiltered(string searchString, string movieGenre)
+        public async Task<IList<MovieDto>> AllFiltered(string searchString, string movieGenre)
         {
             var moviesDbQueryEntities = dbContext.Movies
                 .OrderBy(m => m.Genre)
@@ -108,7 +109,7 @@ namespace MovieSystem.MovieServices
 
 
 
-        public async Task<MovieDto> GetById(int? id)
+        public async Task<MovieDto> FirstOrDefaultAsync(int? id)
         {
             Validator.IsIntegerBiggerThanZero(id);
 
@@ -130,7 +131,7 @@ namespace MovieSystem.MovieServices
             return serviceDto;
         }
 
-        public async Task RemoveMovie(int? id)
+        public async Task Remove(int? id)
         {
             Validator.IsIntegerBiggerThanZero(id);
 
