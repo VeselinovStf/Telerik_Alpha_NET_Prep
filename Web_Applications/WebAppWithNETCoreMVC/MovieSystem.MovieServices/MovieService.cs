@@ -88,11 +88,14 @@ namespace MovieSystem.MovieServices
                 moviesDbQueryEntities = moviesDbQueryEntities
                     .Where(s => s.Title.Contains(searchString) && !s.IsDeleted);
             }
-
-            if (!string.IsNullOrEmpty(sortOrder))
+            else
             {
-                moviesDbQueryEntities = await this.pageSort.Sort(sortOrder);
+                if (!string.IsNullOrEmpty(sortOrder))
+                {
+                    moviesDbQueryEntities = await this.pageSort.Sort(sortOrder);
+                }
             }
+           
 
             var filteredAllMovies =  moviesDbQueryEntities.ToList();
 
