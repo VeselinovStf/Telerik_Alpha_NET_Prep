@@ -28,9 +28,14 @@ namespace UniversitySystem.Web.Controllers
         }
 
         // GET: Student
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string searchString, int pageNumber = 1)
         {
-            var serviceCall = await this.studentService.All();
+            ViewData["FirstNameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "FirstName" : "";
+            ViewData["LastNameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "LastName" : "";
+            ViewData["EnrollmentDateSortParm"] = String.IsNullOrEmpty(sortOrder) ? "EnrollmentDate" : "";
+            ViewData["SearchFilter"] = searchString;
+
+            var serviceCall = await this.studentService.All(sortOrder, searchString, pageNumber);
 
             var model = Mapper.Map<StudentListViewModel>(serviceCall);
 
@@ -80,9 +85,16 @@ namespace UniversitySystem.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                await this.studentService.Add(student.FirstMidName, student.LastName, student.EnrollmentDate);
-
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    await this.studentService.Add(student.FirstMidName, student.LastName, student.EnrollmentDate);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (DbUpdateException ex)
+                {
+                    ModelState.AddModelError("",ex.Message);
+                }
+                               
             }
             return View(student);
         }
@@ -100,7 +112,7 @@ namespace UniversitySystem.Web.Controllers
         // POST: Student/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("FirstMidName,LastName,EnrollmentDate,Id")] Student student)
         {
@@ -117,6 +129,16 @@ namespace UniversitySystem.Web.Controllers
                     return NotFound();
                 }
                 catch (DbUpdateConcurrencyException ex)
+                {
+                    this.logger.LogError(ex.Message);
+                    return NotFound();
+                }
+                catch (DbUpdateException ex)
+                {
+                    this.logger.LogError(ex.Message);
+                    return NotFound();
+                }
+                catch(Exception ex)
                 {
                     this.logger.LogError(ex.Message);
                     return NotFound();

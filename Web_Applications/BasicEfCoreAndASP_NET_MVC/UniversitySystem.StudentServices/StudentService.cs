@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CustomContentSorter.Abstract;
+using CustomPagging;
+using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UniversiteySystem.Data;
@@ -16,10 +16,13 @@ namespace UniversitySystem.StudentServices
     public class StudentService : IStudentService
     {
         private readonly UniversitySystemDbContext dbContext;
+        private readonly IPageSort pageSort;
+        public int PageSize = 3;
 
-        public StudentService(UniversitySystemDbContext dbContext)
+        public StudentService(UniversitySystemDbContext dbContext, IPageSort pageSort)
         {
             this.dbContext = dbContext;
+            this.pageSort = pageSort;
         }
 
         public async Task Add(string FirstMidName, string lastName, DateTime? enrollmentDate)
@@ -35,26 +38,48 @@ namespace UniversitySystem.StudentServices
                 EnrollmentDate = enrollmentDate
             };
 
+
             await this.dbContext.Students.AddAsync(newMovie);
             await this.dbContext.SaveChangesAsync();
         }
 
-        public async Task<StudentListDto> All()
+        public async Task<StudentListDto> All(string sortOrder, string searchString, int pageNumber)
         {
             var dbQueryEntity = await this.dbContext
                 .Students
                 .Where(s => !s.IsDeleted)
+                .OrderBy(s => s.FirstMidName)
                 .ToListAsync();
 
+            if (!string.IsNullOrEmpty(sortOrder))
+            {
+                dbQueryEntity =  this.pageSort.Sort(sortOrder, dbQueryEntity).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                dbQueryEntity = dbQueryEntity
+                    .Where(s => s.FirstMidName.Contains(searchString)
+                                    || s.LastName.Contains(searchString)).ToList();
+            }
+
+            
+            var paggedQuery = PagingList<Student>.CreateAsync(dbQueryEntity, pageNumber, PageSize);
+            
             var serviceDto = new StudentListDto()
             {
-                Students = dbQueryEntity.Select(s => new StudentDto()
+                Students = paggedQuery.Select(s => new StudentDto()
                 {
                     Id = s.Id,
                     EnrollmentDate = s.EnrollmentDate,
                     FirstMidName = s.FirstMidName,
                     LastName = s.LastName
-                })
+                }),
+                PagingInfo = new PageingInfo()
+                {
+                     PageIndex = paggedQuery.PageIndex,
+                     TotalPages = paggedQuery.TotalPages,                      
+                }
             };
                        
             return serviceDto;

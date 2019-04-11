@@ -5,9 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\RazorPagesInAspNetCore\ValidatorGuard\ValidatorGuard.csproj" />
-    <ProjectReference Include="..\CustomContentSorter\CustomContentSorter.csproj" />
-    <ProjectReference Include="..\CustomPagging\CustomPagging.csproj" />
     <ProjectReference Include="..\UniversiteySystem.Data\UniversiteySystem.Data.csproj" />
     <ProjectReference Include="..\UniversitySystem.Models\UniversitySystem.Models.csproj" />
   </ItemGroup>

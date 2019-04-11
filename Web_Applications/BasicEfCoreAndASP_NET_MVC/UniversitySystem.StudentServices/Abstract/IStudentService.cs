@@ -9,7 +9,7 @@ namespace UniversitySystem.StudentServices.Abstract
 {
     public interface IStudentService
     {
-        Task<StudentListDto> All();
+        Task<StudentListDto> All(string sortOrder, string searchString, int pageNumber);
 
         Task Add(string FirstMidName, string lastName, DateTime? enrollmentDate);
         Task<StudentDto> FirstOrDefaultAsync(int? id);

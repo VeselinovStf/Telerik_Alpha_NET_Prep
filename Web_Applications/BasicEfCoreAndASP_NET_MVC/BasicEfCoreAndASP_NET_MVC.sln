@@ -32,6 +32,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversitySystem.StudentSer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidatorGuard", "..\RazorPagesInAspNetCore\ValidatorGuard\ValidatorGuard.csproj", "{A51FF47B-F33C-4CF3-9470-E1228BEE5E22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomContentSorter", "CustomContentSorter\CustomContentSorter.csproj", "{6B205095-B5A9-411A-A6BB-CF9E45BA82C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomPagging", "CustomPagging\CustomPagging.csproj", "{9CD905A6-01A4-4F5A-980D-9195E7868AC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +62,14 @@ Global
 		{A51FF47B-F33C-4CF3-9470-E1228BEE5E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A51FF47B-F33C-4CF3-9470-E1228BEE5E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A51FF47B-F33C-4CF3-9470-E1228BEE5E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B205095-B5A9-411A-A6BB-CF9E45BA82C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B205095-B5A9-411A-A6BB-CF9E45BA82C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B205095-B5A9-411A-A6BB-CF9E45BA82C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B205095-B5A9-411A-A6BB-CF9E45BA82C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD905A6-01A4-4F5A-980D-9195E7868AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD905A6-01A4-4F5A-980D-9195E7868AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD905A6-01A4-4F5A-980D-9195E7868AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD905A6-01A4-4F5A-980D-9195E7868AC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +86,8 @@ Global
 		{E7F79C42-53F9-417B-832A-404A3B9D2F2B} = {ED26E8E1-BBBC-4398-902D-D41D2DD00122}
 		{AEF76F1C-DBC6-4C06-8DB6-49866E9CAC66} = {26B4B0D4-0A94-4CE0-BB53-1E4D993631B9}
 		{A51FF47B-F33C-4CF3-9470-E1228BEE5E22} = {77719F3E-5D58-41DE-807D-34EC50A5FE36}
+		{6B205095-B5A9-411A-A6BB-CF9E45BA82C1} = {77719F3E-5D58-41DE-807D-34EC50A5FE36}
+		{9CD905A6-01A4-4F5A-980D-9195E7868AC5} = {77719F3E-5D58-41DE-807D-34EC50A5FE36}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {694E129A-0DF0-4FBC-B66C-6297BEBE5F2E}

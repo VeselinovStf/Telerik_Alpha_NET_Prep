@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using ContentSorting;
+using CustomContentSorter.Abstract;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -47,6 +49,7 @@ namespace UniversitySystem.Web
         private void ConfigureAppServices(IServiceCollection services)
         {
             services.AddScoped<IStudentService, StudentService>();
+            services.AddScoped<IPageSort, StudentSort>();
         }
 
         private void ConfigureDb(IServiceCollection services)

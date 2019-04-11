@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using UniversitySystem.Models.Entities;
 
 namespace ContentSorting
 {
@@ -23,7 +24,7 @@ namespace ContentSorting
             this.Options.Add(PageSortRule.ReleaseDate, new MovieReleseDateDescSort(context));
         }
        
-        public async Task<IQueryable<Movie>> Sort(string order)
+        public async Task<IQueryable<Student>> Sort<IQueryable<Movie>>(string order)
         {
             var orderKey = (PageSortRule)Enum.Parse(typeof(PageSortRule), order, true);
 
