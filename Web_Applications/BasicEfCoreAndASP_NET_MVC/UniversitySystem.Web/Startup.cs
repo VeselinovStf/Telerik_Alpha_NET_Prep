@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -11,6 +12,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using UniversiteySystem.Data;
+using UniversitySystem.StudentServices;
+using UniversitySystem.StudentServices.Abstract;
 
 namespace UniversitySystem.Web
 {
@@ -34,8 +37,16 @@ namespace UniversitySystem.Web
             });
 
             ConfigureDb(services);
+            ConfigureAppServices(services);
+
+            services.AddAutoMapper();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+        }
+
+        private void ConfigureAppServices(IServiceCollection services)
+        {
+            services.AddScoped<IStudentService, StudentService>();
         }
 
         private void ConfigureDb(IServiceCollection services)
@@ -61,6 +72,8 @@ namespace UniversitySystem.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            UniversitySystem.Web.Utilities.AutoMapperConfigurations.MapperConfiguration.Config();
 
             app.UseMvc(routes =>
             {

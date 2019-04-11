@@ -11,11 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-   
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Config\" />
+    <ProjectReference Include="..\UniversitySystem.Models\UniversitySystem.Models.csproj" />
   </ItemGroup>
 
 </Project>

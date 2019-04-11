@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\RazorPagesInAspNetCore\ValidatorGuard\ValidatorGuard.csproj" />
+    <ProjectReference Include="..\UniversiteySystem.Data\UniversiteySystem.Data.csproj" />
+    <ProjectReference Include="..\UniversitySystem.Models\UniversitySystem.Models.csproj" />
+  </ItemGroup>
+
+</Project>
