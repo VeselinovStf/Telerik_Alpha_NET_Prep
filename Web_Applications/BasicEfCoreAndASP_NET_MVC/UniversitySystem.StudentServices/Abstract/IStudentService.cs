@@ -14,6 +14,8 @@ namespace UniversitySystem.StudentServices.Abstract
         Task Add(string FirstMidName, string lastName, DateTime? enrollmentDate);
         Task<StudentDto> FirstOrDefaultAsync(int? id);
 
+        Task<StudentDetailsDto> DetailsAsync(int? id);
+
         Task Remove(int? id);
         Task Update(Student student);
     }

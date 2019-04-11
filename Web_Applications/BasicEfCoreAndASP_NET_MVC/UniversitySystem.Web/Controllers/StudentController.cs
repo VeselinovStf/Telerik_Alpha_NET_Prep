@@ -42,9 +42,9 @@ namespace UniversitySystem.Web.Controllers
         {
             try
             {
-                var serviceCall = await this.studentService.FirstOrDefaultAsync(id);
+                var serviceCall = await this.studentService.DetailsAsync(id);
 
-                var model = Mapper.Map<StudentViewModel>(serviceCall);
+                var model = Mapper.Map<StudentDetailsViewModel>(serviceCall);
 
                 return View(model);
             }

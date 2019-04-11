@@ -14,6 +14,7 @@ namespace UniversitySystem.Web.Utilities.AutoMapperConfigurations
         {
             CreateMap<StudentDto, StudentViewModel>();
             CreateMap<StudentListDto, StudentListViewModel>();
+            CreateMap<StudentDetailsDto, StudentDetailsViewModel>();
         }
     }
 }

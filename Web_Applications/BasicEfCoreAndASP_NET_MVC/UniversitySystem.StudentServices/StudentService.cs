@@ -60,6 +60,35 @@ namespace UniversitySystem.StudentServices
             return serviceDto;
         }
 
+        public async Task<StudentDetailsDto> DetailsAsync(int? id)
+        {
+            Validator.IsIntegerBiggerThanZero(id);
+
+            var dbQueryEntiti = await this.dbContext.Students
+                .Include( s => s.Enrollments)
+                    .Include("Enrollments.Course")
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+           
+            Validator.IsObjectNull(dbQueryEntiti);
+
+            var serviceDto = new StudentDetailsDto()
+            {
+                Id = dbQueryEntiti.Id,
+                EnrollmentDate = dbQueryEntiti.EnrollmentDate,
+                FirstMidName = dbQueryEntiti.FirstMidName,
+                LastName = dbQueryEntiti.LastName,
+                Enrollments = dbQueryEntiti.Enrollments.Select(e => new EnrollmentsDto()
+                {
+                      Course_Title = e.Course.Title,
+                      Enrolment_Grade = e.Grade.ToString()
+                }).ToList()               
+            };
+
+            return serviceDto;
+        }
+
         public async Task<StudentDto> FirstOrDefaultAsync(int? id)
         {
             Validator.IsIntegerBiggerThanZero(id);
