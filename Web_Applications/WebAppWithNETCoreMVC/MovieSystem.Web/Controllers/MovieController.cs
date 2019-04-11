@@ -29,14 +29,14 @@ namespace MovieSystem.Web.Controllers
 
         //TODO: IMPLEMENT PAGING IN RAZOR
         // GET: Movie
-        public async Task<IActionResult> Index(string sortOrder, string searchString, int productPage = 1)
+        public async Task<IActionResult> Index(string sortOrder, string searchString, int moviePage = 1)
         {
             ViewBag.TitleSortParam = String.IsNullOrEmpty(sortOrder) ? "Title" : "";
             ViewBag.ReleaseDateSortParam = String.IsNullOrEmpty(sortOrder) ? "ReleaseDate" : "";
             ViewBag.GenreSortParam = String.IsNullOrEmpty(sortOrder) ? "Genre" : "";
             ViewBag.PriceSortParam = String.IsNullOrEmpty(sortOrder) ? "Price" : "";
 
-            var serviceCall = await this.movieService.All(sortOrder, searchString, productPage);
+            var serviceCall = await this.movieService.All(sortOrder, searchString, moviePage);
 
             var model = Mapper.Map<MovieListViewModel>(serviceCall);
 

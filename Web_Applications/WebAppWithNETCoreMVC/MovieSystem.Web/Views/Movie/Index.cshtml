@@ -18,47 +18,51 @@
         <input type="submit" value="Search" />
     </p>
 }
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.TitleSortParam })
-            </th>
-            <th>
-                @Html.ActionLink("Release Date", "Index", new { sortOrder = ViewBag.ReleaseDateSortParam })
-            </th>
-            <th>
-                 @Html.ActionLink("Genre", "Index", new { sortOrder = ViewBag.GenreSortParam })
-            </th>
-            <th>
-                @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParam })
-            </th>
-           
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Movies) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReleaseDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-          
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.TitleSortParam })
+                </th>
+                <th>
+                    @Html.ActionLink("Release Date", "Index", new { sortOrder = ViewBag.ReleaseDateSortParam })
+                </th>
+                <th>
+                    @Html.ActionLink("Genre", "Index", new { sortOrder = ViewBag.GenreSortParam })
+                </th>
+                <th>
+                    @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParam })
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Movies)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReleaseDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Genre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        
+    </table>
+    <div-page-link page-model="@Model.PagingInfo" page-action="Index"
+                   class="btn-group pull-right m-1"></div-page-link>

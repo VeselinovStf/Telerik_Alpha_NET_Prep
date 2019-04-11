@@ -102,7 +102,7 @@ namespace MovieSystem.MovieServices
            
 
             var filteredAllMovies =  moviesDbQueryEntities.ToList();
-            //TODO: FIX THE BUG
+            
             var serviceModelDto = new MoviesListDto()
             {
                 Movies = filteredAllMovies.Select(m => new MovieDto()
@@ -116,10 +116,10 @@ namespace MovieSystem.MovieServices
                 PagingInfo = new PagingDto()
                 {
                     TotalItems = searchString == null ?
-                        await moviesDbQueryEntities.CountAsync()
+                        await this.dbContext.Movies.CountAsync()
                         :
-                       await moviesDbQueryEntities
-                    .Where(s => s.Title.Contains(searchString) && !s.IsDeleted).CountAsync(),
+                       await this.dbContext.Movies
+                    .Where(s => s.Title.Contains(searchString ) && !s.IsDeleted).CountAsync(),
                     CurrentPage = moviePage,
                     ItemsPerPage = this.PageSize
                 }
